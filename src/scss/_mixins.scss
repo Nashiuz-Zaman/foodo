@@ -1,0 +1,301 @@
+//pseudo elements mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin pseudo-reset() {
+  content: "";
+  display: block;
+}
+
+// element size mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin same-size() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin widescreen-size {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+//general button mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin button-reset() {
+  appearance: none;
+  background-color: transparent;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+
+  &:focus {
+    outline-color: $primary !important;
+  }
+}
+
+@mixin invert-buttons($color, $background) {
+  color: $color;
+  background-color: $background;
+
+  &:hover,
+  &:active {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+//unordered list mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin list-reset() {
+  list-style-type: none;
+}
+
+//link mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin link-reset() {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:focus {
+    outline-color: green !important;
+  }
+}
+
+@mixin invert-links($color, $background) {
+  &:link,
+  &:visited {
+    color: $color;
+    background-color: $background;
+  }
+
+  &:hover,
+  &:active {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+//overflow mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin no-flow() {
+  overflow: hidden;
+}
+
+@mixin no-flow-y() {
+  overflow-y: hidden;
+}
+
+@mixin no-flow-x() {
+  overflow-x: hidden;
+}
+
+//aspect ratio mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin squarebox() {
+  aspect-ratio: 1/1 !important;
+}
+
+//flex mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin flex-row($justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-row-rev($justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-col($justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-col-rev($justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-row-center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-col-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//transform mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin position-center($position) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//background image mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin bg-cover-center {
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+@mixin bg-cover-custom($position: 50% 50%) {
+  background-position: $position !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+//background color mixin
+@mixin bg($color: $primary) {
+  background-color: $color;
+}
+
+@mixin bg-gradient($dir: to right, $firstColor: red, $secondColor: green) {
+  background-image: linear-gradient($dir, $firstColor, $secondColor);
+}
+
+@mixin bg-trans($color: $primary, $opacity: 0.9) {
+  background-color: rgba($color, $opacity);
+}
+
+//image
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin img-default() {
+  display: block;
+  width: 100%;
+}
+
+// blur filter
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin bg-blur($size: 4px) {
+  backdrop-filter: blur($size);
+}
+
+//gradient mixin
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin shade-gradient($dir: to right) {
+  background-image: linear-gradient($dir, $lightShade, darken($lightShade, 5%));
+}
+
+@mixin primary-gradient($dir: to right) {
+  background-image: linear-gradient($dir, $primaryLight, $primaryDark);
+}
+
+// box shadow
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin box-shadow-down {
+  box-shadow: 0 2rem 4rem rgba($darkText, 0.15);
+}
+
+@mixin box-shadow-middle() {
+  box-shadow: 0 0 20px rgba($darkText, 0.2);
+}
+
+@mixin header-box-shadow() {
+  box-shadow: 0 20px 30px rgba($darkText, 0.15);
+}
+
+@mixin box-shadow-middle-darker() {
+  box-shadow: 0 0 20px rgba($darkText, 0.3);
+}
+
+@mixin box-shadow-buttons() {
+  box-shadow: 0 2px 6px rgba($darkText, 0.15);
+}
+
+//border
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin border-all-sides($width: 1px, $color: $primary) {
+  border: $width solid $color;
+}
+
+// hover and active state content mixin
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin link-normal {
+  &:link,
+  &:visited {
+    @content;
+  }
+}
+
+@mixin link-alt {
+  &:hover,
+  &:active {
+    @content;
+  }
+}
+
+// media query mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin mediaMin($screenSize: 24em) {
+  @media (min-width: $screenSize) {
+    @content;
+  }
+}
+
+@mixin mediaMax($screenSize: 24em) {
+  @media (max-width: $screenSize) {
+    @content;
+  }
+}
+
+// animation mixins
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+@mixin animation($name: null, $duration: 1s, $timing: ease, $iteration: 1) {
+  animation: $name $duration $timing backwards;
+  animation-iteration-count: $iteration;
+}

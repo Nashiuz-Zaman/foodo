@@ -1,0 +1,84 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.02rem;
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  line-height: 1;
+  max-width: 140rem;
+  font-weight: 400;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  color: $darkText;
+  font-family: $poppins;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+#root {
+  height: 100%;
+  color: inherit;
+
+  .App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+    // background-image: linear-gradient(to right, $lightShade, $white);
+    /* margin-top: auto FOR footer */
+  }
+
+  ::selection {
+    background-color: transparent;
+  }
+}
+
+a:link,
+a:visited {
+  @include link-reset();
+}
+
+ul {
+  @include list-reset();
+}
+
+button {
+  @include button-reset();
+
+  &:disabled {
+    cursor: default !important;
+  }
+}
+
+@media (max-width: 23em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 22.5em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 20em) {
+  html {
+    font-size: 55%;
+  }
+}

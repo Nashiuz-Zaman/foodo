@@ -1,0 +1,25 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.link-element-main {
+  &:link,
+  &:visited {
+    color: $darkText;
+    text-decoration: none;
+    @include flex-row(_, center);
+    font-size: 1.55rem;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    width: max-content;
+  }
+
+  &__image-main {
+    width: fit-content;
+    padding: 0;
+
+    img {
+      filter: $filterWhite;
+      height: 1.5rem;
+    }
+  }
+}

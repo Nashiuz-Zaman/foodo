@@ -1,0 +1,33 @@
+.link-element-main:link, .link-element-main:visited {
+  color: #1b1b1b;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: _;
+      -ms-flex-pack: _;
+          justify-content: _;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.55rem;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; }
+.link-element-main__image-main {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0; }
+  .link-element-main__image-main img {
+    -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
+    height: 1.5rem; }
+
+/*# sourceMappingURL=LinkElement.module.css.map */

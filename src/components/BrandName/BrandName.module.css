@@ -1,0 +1,17 @@
+.brand-name-main__link:link, .brand-name-main__link:visited {
+  color: #e23d28;
+  font-size: 2rem;
+  font-weight: 400;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  text-transform: lowercase; }
+.brand-name-main--alternative .brand-name-main__link:link, .brand-name-main--alternative .brand-name-main__link:visited {
+  color: #1b1b1b; }
+
+@media (min-width: 60em) {
+  .brand-name-main__link:link, .brand-name-main__link:visited {
+    color: #1b1b1b;
+    font-size: 2.2rem;
+    font-weight: 500; } }
+
+/*# sourceMappingURL=BrandName.module.css.map */

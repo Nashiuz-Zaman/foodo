@@ -1,0 +1,36 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+//360px styles are default
+.brand-name-main {
+  &__link {
+    &:link,
+    &:visited {
+      color: $primary;
+      font-size: 2rem;
+      font-weight: 400;
+      transition: $basic;
+      text-transform: lowercase;
+    }
+  }
+
+  &--alternative &__link {
+    &:link,
+    &:visited {
+      color: $darkText;
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .brand-name-main {
+    &__link {
+      &:link,
+      &:visited {
+        color: $darkText;
+        font-size: 2.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
