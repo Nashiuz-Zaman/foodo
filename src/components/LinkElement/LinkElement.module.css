@@ -20,14 +20,9 @@
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content; }
-.link-element-main__image-main {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0; }
-  .link-element-main__image-main img {
-    -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
-            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
-    height: 1.5rem; }
+.link-element-main img {
+  -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
+          filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
+  height: 1.5rem; }
 
 /*# sourceMappingURL=LinkElement.module.css.map */

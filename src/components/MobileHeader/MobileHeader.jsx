@@ -2,6 +2,7 @@
 import BrandName from "../BrandName/BrandName";
 // import MobileNavigation from '../MobileNavbar/MobileNavigation/MobileNavigation';
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+import SearchButton from "../SearchButton/SearchButton";
 
 //hooks
 
@@ -16,7 +17,11 @@ export default function MobileHeader({
     <>
       <header className={styles["mobile-header-main"]}>
         <BrandName title={brandName} />
-        <HamburgerMenu />
+
+        <div className={styles["mobile-header-main__buttons"]}>
+          <SearchButton />
+          <HamburgerMenu />
+        </div>
       </header>
     </>
   );

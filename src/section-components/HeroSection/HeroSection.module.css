@@ -1,0 +1,22 @@
+.hero-section-main {
+  position: relative; }
+  .hero-section-main__hero-image {
+    height: 65rem;
+    border-bottom-right-radius: 5rem;
+    overflow: hidden; }
+  .hero-section-main__heading-description-button-main {
+    position: absolute;
+    top: 47.5%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-top-right-radius: 100rem;
+    border-bottom-right-radius: 100rem;
+    width: 65%;
+    padding: 2.5rem; }
+    .hero-section-main__heading-description-button-main [class*='__heading'] {
+      color: #e23d28;
+      margin-bottom: 1.5rem; }
+    .hero-section-main__heading-description-button-main__link-button-main a:link, .hero-section-main__heading-description-button-main__link-button-main a:visited {
+      border-radius: 1rem; }
+
+/*# sourceMappingURL=HeroSection.module.css.map */

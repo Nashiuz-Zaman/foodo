@@ -1,0 +1,13 @@
+.showcase-main {
+  display: block;
+  width: 100% !important;
+  width: 100%;
+  aspect-ratio: 16/9; }
+  .showcase-main .showcase-main__imgbox {
+    background-position: 50% 50% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 100%;
+    height: 100%; }
+
+/*# sourceMappingURL=Showcase.module.css.map */

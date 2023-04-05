@@ -1,5 +1,5 @@
-@import "../../scss/variables";
-@import "../../scss/mixins";
+@import '../../scss/variables';
+@import '../../scss/mixins';
 
 .link-element-main {
   &:link,
@@ -13,13 +13,8 @@
     width: max-content;
   }
 
-  &__image-main {
-    width: fit-content;
-    padding: 0;
-
-    img {
-      filter: $filterWhite;
-      height: 1.5rem;
-    }
+  img {
+    filter: $filterWhite;
+    height: 1.5rem;
   }
 }

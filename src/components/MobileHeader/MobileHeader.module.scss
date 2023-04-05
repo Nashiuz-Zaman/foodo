@@ -1,15 +1,21 @@
-@import "../../scss/variables";
-@import "../../scss/mixins";
+@import '../../scss/variables';
+@import '../../scss/mixins';
 
 .mobile-header-main {
   @include flex-row(space-between, center);
-  @include bg-trans($white, 0.9);
+  @include bg-trans($black, 0.65);
   padding: 2rem 2.5rem;
-  position: sticky;
+  position: fixed;
   max-width: 140rem;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 5;
   transition: $basic;
+  @include bg-blur(3px);
+
+  &__buttons {
+    @include flex-row(_, center);
+    gap: 1rem;
+  }
 }

@@ -71,6 +71,10 @@ button {
   button:disabled {
     cursor: default !important; }
 
+img {
+  display: block;
+  width: 100%; }
+
 @media (max-width: 23em) {
   html {
     font-size: 60%; } }

@@ -1,0 +1,13 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.showcase-main {
+  display: block;
+  width: 100% !important;
+  @include widescreen-size();
+
+  .showcase-main__imgbox {
+    @include bg-cover-center();
+    @include same-size();
+  }
+}

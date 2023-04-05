@@ -26,9 +26,9 @@
     position: absolute;
     left: 0; }
   .hamburger-menu-container::before {
-    top: 10%; }
+    top: 15%; }
   .hamburger-menu-container::after {
-    bottom: 10%; }
+    bottom: 15%; }
 
 .menu-active div[class*="menu-bar"] {
   -webkit-transform: scale(0);

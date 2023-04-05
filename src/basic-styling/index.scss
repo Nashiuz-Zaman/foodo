@@ -65,6 +65,10 @@ button {
   }
 }
 
+img {
+  @include img-default();
+}
+
 @media (max-width: 23em) {
   html {
     font-size: 60%;
