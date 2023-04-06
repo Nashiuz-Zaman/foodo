@@ -12,6 +12,7 @@
 /build
 /src/assets
 /.prettierrc
+/index.html
 
 # misc
 .DS_Store

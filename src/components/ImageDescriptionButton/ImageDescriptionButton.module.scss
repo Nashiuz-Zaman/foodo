@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.image-description-button-main {
+  width: 100%;
+  @include bg($primary);
+
+  border-bottom-right-radius: 5rem;
+  color: $white;
+  @include no-flow();
+  box-shadow: 0 0 1rem rgba($black, 0.2);
+
+  &__plain-description-main {
+    padding: 2.5rem;
+    color: inherit;
+    p {
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+}

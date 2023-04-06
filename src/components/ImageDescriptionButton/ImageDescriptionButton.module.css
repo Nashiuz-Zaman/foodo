@@ -1,0 +1,16 @@
+.image-description-button-main {
+  width: 100%;
+  background-color: #e23d28;
+  border-bottom-right-radius: 5rem;
+  color: #fff;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
+  .image-description-button-main__plain-description-main {
+    padding: 2.5rem;
+    color: inherit; }
+    .image-description-button-main__plain-description-main p {
+      font-weight: 400;
+      line-height: 1.5; }
+
+/*# sourceMappingURL=ImageDescriptionButton.module.css.map */

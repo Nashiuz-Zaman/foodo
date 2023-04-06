@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,WAAY;EACV,KAAK,EAAE,IAAI;EAEX,uBAAc;IACZ,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,IAAI",
+"sources": ["ImageElement.module.scss"],
+"names": [],
+"file": "ImageElement.module.css"
+}

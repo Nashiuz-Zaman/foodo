@@ -3,7 +3,7 @@
 
 .mobile-header-main {
   @include flex-row(space-between, center);
-  @include bg-trans($black, 0.65);
+  @include bg-trans($black, 0.8);
   padding: 2rem 2.5rem;
   position: fixed;
   max-width: 140rem;

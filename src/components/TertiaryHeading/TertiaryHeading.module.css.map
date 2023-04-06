@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIE,+BAAW;EACT,WAAW,EAAE,GAAG;EAChB,KAAK,ECLC,OAAO;EDMb,SAAS,EAAE,MAAM;EACjB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,MAAM;;AEiRpB,wBAAgC;EF3Q9B,+BAAW;IACT,SAAS,EAAE,MAAM",
+"sources": ["TertiaryHeading.module.scss","../../scss/_variables.scss","../../scss/_mixins.scss"],
+"names": [],
+"file": "TertiaryHeading.module.css"
+}

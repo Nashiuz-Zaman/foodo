@@ -1,0 +1,20 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.tertiary-heading-main {
+  &__heading {
+    font-weight: 600;
+    color: $primary;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
+
+@include mediaMin(64em) {
+  .tertiary-heading-main {
+    &__heading {
+      font-size: 2.2rem;
+    }
+  }
+}

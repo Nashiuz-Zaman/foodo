@@ -1,0 +1,33 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.how-it-works-section-main {
+  height: 100%;
+  padding: 0 2.5rem;
+
+  &__section-title {
+    margin-bottom: 2rem;
+  }
+
+  &__top-plain-description {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    p {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__how-it-works-list {
+    list-style-type: none;
+    @include flex-col();
+    gap: 6rem;
+
+    &__item-number {
+      font-size: 6rem;
+      font-weight: 600;
+      color: $primary;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+}

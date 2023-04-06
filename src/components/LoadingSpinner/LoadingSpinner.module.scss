@@ -1,0 +1,42 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner-main {
+  @include same-size();
+
+  &__text-and-spinner-container {
+    @include flex-row(_, center);
+    gap: 1rem;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  &__non-default-spinner,
+  &__default-spinner {
+    display: block;
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  &__default-spinner {
+    @include border-all-sides($darkText, 3px);
+    border-radius: 50%;
+    border-right-color: $primary;
+  }
+}
+
+.spinning {
+  animation: rotate360 2s linear infinite;
+}

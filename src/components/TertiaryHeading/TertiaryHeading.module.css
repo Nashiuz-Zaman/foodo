@@ -1,0 +1,12 @@
+.tertiary-heading-main__heading {
+  font-weight: 600;
+  color: #e23d28;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  text-align: center; }
+
+@media (min-width: 64em) {
+  .tertiary-heading-main__heading {
+    font-size: 2.2rem; } }
+
+/*# sourceMappingURL=TertiaryHeading.module.css.map */
