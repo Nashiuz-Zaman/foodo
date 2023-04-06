@@ -3,7 +3,7 @@
 /////////////////////////////
 /////////////////////////////
 @mixin pseudo-reset() {
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -222,7 +222,7 @@
 }
 
 @mixin primary-gradient($dir: to right) {
-  background-image: linear-gradient($dir, $primaryLight, $primaryDark);
+  background-image: linear-gradient($dir, $primary, $primaryDark);
 }
 
 // box shadow
