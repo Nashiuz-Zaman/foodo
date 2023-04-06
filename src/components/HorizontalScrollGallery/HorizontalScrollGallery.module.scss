@@ -1,0 +1,107 @@
+@import '../../scss/variables';
+
+.horizontal-scroll-gallery {
+  width: 100%;
+
+  &:hover {
+    ::-webkit-scrollbar-thumb {
+      background-color: darken($white, 60%);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    height: 0.6rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $white;
+    margin-inline: 5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 100rem;
+    background-color: $white;
+  }
+
+  &__scroller {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 27%;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0 5rem;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 5rem;
+    overscroll-behavior-inline: contain;
+
+    a:link,
+    a:visited {
+      width: 100%;
+      height: auto;
+      display: block;
+      text-decoration: none;
+      color: $black;
+      scroll-snap-align: start;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 4rem;
+
+    &--img {
+      width: 100%;
+      aspect-ratio: 16/16;
+      margin-bottom: 1.8rem;
+    }
+
+    &--name {
+      font-size: 1.8rem;
+      color: $black;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  //768px
+  .horizontal-scroll-gallery {
+    ::-webkit-scrollbar-thumb {
+      background-color: darken($white, 60%) !important;
+      border-radius: 100rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: darken($white, 10%);
+      margin-inline: 3.5rem;
+    }
+
+    &__scroller {
+      grid-auto-columns: 40%;
+      scroll-padding-inline: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: 34em) {
+  //534px
+  .horizontal-scroll-gallery {
+    &__scroller {
+      grid-auto-columns: 85%;
+      scroll-padding-inline: 3.5rem;
+    }
+  }
+}
+
+@media (max-width: 30em) {
+  //448px
+
+  .horizontal-scroll-gallery {
+    ::-webkit-scrollbar-track {
+      margin-inline: 2rem;
+    }
+
+    &__scroller {
+      scroll-padding-inline: 2rem;
+    }
+  }
+}
