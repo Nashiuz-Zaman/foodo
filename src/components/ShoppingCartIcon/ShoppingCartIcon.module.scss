@@ -1,0 +1,20 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.shopping-cart-icon-container {
+  width: 2.5rem;
+  @include squarebox();
+  @include flex-row-center();
+}
+
+.primary-color {
+  img {
+    filter: $filterPrimary;
+  }
+}
+
+.white-color {
+  img {
+    filter: $filterWhite;
+  }
+}

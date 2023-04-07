@@ -1,0 +1,9 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.shopping-cart-button-main {
+  &__button {
+    @include flex-row(_, center);
+    gap: 1rem;
+  }
+}
