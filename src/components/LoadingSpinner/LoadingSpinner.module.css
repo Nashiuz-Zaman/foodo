@@ -16,6 +16,9 @@
   width: 100%;
   height: 100%; }
   .loading-spinner-main__text-and-spinner-container {
+    width: 100%;
+    height: 100%;
+    min-height: 20rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -23,15 +26,16 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: _;
-        -ms-flex-pack: _;
-            justify-content: _;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     gap: 1rem; }
     .loading-spinner-main__text-and-spinner-container p {
-      font-size: 2rem; }
+      font-size: 2rem;
+      color: #1b1b1b; }
   .loading-spinner-main__non-default-spinner, .loading-spinner-main__default-spinner {
     display: block;
     width: 3rem !important;

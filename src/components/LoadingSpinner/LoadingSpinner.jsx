@@ -8,7 +8,7 @@ export default function LoadingSpinner({
 }) {
   return (
     <div
-      className={`${styles['loading-spinner-main']} flex-row-center-all ${
+      className={`${styles['loading-spinner-main']} ${
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >

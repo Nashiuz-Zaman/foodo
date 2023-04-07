@@ -15,11 +15,14 @@
   @include same-size();
 
   &__text-and-spinner-container {
-    @include flex-row(_, center);
+    @include same-size();
+    min-height: 20rem;
+    @include flex-row-center;
     gap: 1rem;
 
     p {
       font-size: 2rem;
+      color: $darkText;
     }
   }
 

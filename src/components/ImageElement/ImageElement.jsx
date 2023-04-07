@@ -22,7 +22,10 @@ export default function ImageElement({
       }`}
     >
       {!imageLoaded && (
-        <LoadingSpinner isPending={imageLoaded ? false : true} />
+        <LoadingSpinner
+          extraClass={[styles['image-main__loading-spinner']]}
+          isPending={imageLoaded ? false : true}
+        />
       )}
 
       <img
