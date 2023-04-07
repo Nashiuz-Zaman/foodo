@@ -1,7 +1,7 @@
-@import "../../scss/variables";
-@import "../../scss/mixins";
+@import '../../scss/variables';
+@import '../../scss/mixins';
 
-.searchIcon-container {
+.search-icon-container {
   width: 2.5rem;
   @include squarebox();
   @include flex-row-center();
