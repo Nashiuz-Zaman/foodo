@@ -79,8 +79,8 @@
           gap: 0.2rem; }
           .food-card-main__item__info__bottom-info__rating-container__rating-star {
             height: 1.1rem;
-            -webkit-filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%);
-                    filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%); }
+            -webkit-filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%) !important;
+                    filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%) !important; }
           .food-card-main__item__info__bottom-info__rating-container__rating-count {
             color: #8e8e8e; }
 

@@ -10,7 +10,6 @@ import styles from './FoodCard.module.css';
 //FoodCard starts here
 export default function FoodCard({
   linkFor = 'samesite',
-  toUrl = '#',
   extraClass = undefined,
   cardData = null,
 }) {
@@ -26,7 +25,7 @@ export default function FoodCard({
         linkFor={linkFor}
         isText={false}
         card={true}
-        to={toUrl}
+        toUrl={cardData.link}
       >
         <article className={styles['food-card-main__item']}>
           <div
@@ -74,6 +73,7 @@ export default function FoodCard({
                 >
                   {cardData.rating}
                 </span>
+
                 <img
                   className={
                     styles[
@@ -83,6 +83,7 @@ export default function FoodCard({
                   src={ratingStar}
                   alt={'golden star'}
                 />
+
                 <span
                   className={
                     styles[
