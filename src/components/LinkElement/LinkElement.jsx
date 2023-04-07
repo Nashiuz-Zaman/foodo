@@ -1,76 +1,81 @@
 //react
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 //image source
-import goBackIcon from "./images/leftcaret.svg";
+import goBackIcon from './images/leftcaret.svg';
 
 //styles
-import styles from "./LinkElement.module.css";
+import styles from './LinkElement.module.css';
 
 export default function LinkElement({
-  linkFor = "samesite",
-  toUrl = "",
-  text = "no text provided",
+  linkFor = 'samesite',
+  toUrl = '',
+  text = 'no text provided',
   extraClass = undefined,
   customStyle = {},
-  ariaLabel = "",
+  ariaLabel = '',
   isText = true,
   iconImagesource = null,
   goBackLink = false,
+  card = false,
+  children = null,
 }) {
   return (
     <>
       {/* external websites */}
-      {linkFor === "external" && (
+      {linkFor === 'external' && (
         <a
           aria-label={ariaLabel}
           style={customStyle}
-          className={`${styles["link-element-main"]} ${
-            extraClass ? extraClass.join(" ") : "no-extra-class"
+          className={`${styles['link-element-main']} ${
+            extraClass ? extraClass.join(' ') : 'no-extra-class'
           }`}
           href={toUrl}
         >
-          {goBackLink && <img src={goBackIcon} alt={"left caret"} />}
+          {goBackLink && <img src={goBackIcon} alt={'left caret'} />}
           {isText && text}
+          {!isText && card && children}
           {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={"left caret"} />
+            <img src={iconImagesource} alt={'left caret'} />
           )}
         </a>
       )}
 
       {/* hashtag id in the same page */}
-      {linkFor === "hashed" && (
+      {linkFor === 'hashed' && (
         <HashLink
           aria-label={ariaLabel}
           style={customStyle}
-          className={`${styles["link-element-main"]} ${
-            extraClass ? extraClass.join(" ") : "no-extra-class"
+          className={`${styles['link-element-main']} ${
+            extraClass ? extraClass.join(' ') : 'no-extra-class'
           }`}
           to={`/${toUrl}`}
         >
-          {goBackLink && <img src={goBackIcon} alt={"left caret"} />}
+          {goBackLink && <img src={goBackIcon} alt={'left caret'} />}
           {isText && text}
+          {!isText && card && children}
           {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={"left caret"} />
+            <img src={iconImagesource} alt={'left caret'} />
           )}
         </HashLink>
       )}
 
       {/* routing to another page on the same website */}
-      {linkFor === "samesite" && (
+      {linkFor === 'samesite' && (
         <Link
           aria-label={ariaLabel}
           style={customStyle}
-          className={`${styles["link-element-main"]} ${
-            extraClass ? extraClass.join(" ") : "no-extra-class"
+          className={`${styles['link-element-main']} ${
+            extraClass ? extraClass.join(' ') : 'no-extra-class'
           }`}
           to={`/${toUrl}`}
         >
-          {goBackLink && <img src={goBackIcon} alt={"left caret"} />}
+          {goBackLink && <img src={goBackIcon} alt={'left caret'} />}
           {isText && text}
+          {!isText && card && children}
           {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={"left caret"} />
+            <img src={iconImagesource} alt={'left caret'} />
           )}
         </Link>
       )}
