@@ -10,6 +10,7 @@ $primaryTrans: rgba($primary, 0.9);
 $primaryLightTrans: rgba($primaryLight, 0.9);
 
 $darkText: #1b1b1b;
+$lightText: lighten($darkText, 45%);
 $filterDarkText: invert(0%) sepia(3%) saturate(1243%) hue-rotate(323deg)
   brightness(101%) contrast(79%);
 
@@ -35,7 +36,7 @@ $sectionMargin: 15rem;
 $buttonPadding: 1.7rem;
 
 //font family
-$poppins: "Poppins", sans-serif;
+$poppins: 'Poppins', sans-serif;
 
 //animation
 $basic: all 0.2s ease-out;

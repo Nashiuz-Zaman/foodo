@@ -2,19 +2,21 @@
   width: 100%;
   color: #fff; }
   .image-description-button-main__image-main {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     border-radius: 3rem;
-    overflow: hidden; }
+    overflow: hidden;
+    width: 100%; }
+    .image-description-button-main__image-main img {
+      width: 100%;
+      height: 100%; }
   .image-description-button-main__plain-description-main {
     padding: 2.5rem;
     color: inherit;
     background-color: #e23d28;
     border-top-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#e23d28), to(#d4311d));
-    background-image: linear-gradient(to bottom right, #e23d28, #d4311d); }
+    border-bottom-right-radius: 3rem; }
     .image-description-button-main__plain-description-main p {
       font-weight: 400;
       line-height: 1.5; }

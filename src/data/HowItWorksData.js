@@ -15,7 +15,7 @@ export const howItWorksData = [
     heading: 'Pay for your order',
     imageSource: payImage,
     description:
-      'Adipisicing elit. Animi et, quidem expedita eos minus repudiandae, reiciendis vero reprehenderit ea asperiores enim.',
+      'Adipisicing elit. Animi et, quidem and expedita eos minus repudiandae, et reiciendis vero reprehenderit ea orot asperiores enim.',
   },
   {
     id: 2,

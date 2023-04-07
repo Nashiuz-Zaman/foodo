@@ -1,6 +1,7 @@
 //component
 import HeroSection from '../../section-components/HeroSection/HeroSection';
 import HowItWorksSection from '../../section-components/HowItWorksSection/HowItWorksSection';
+import FoodItemsSection from '../../section-components/FoodItemsSection/FoodItemsSection';
 
 //image source
 import heroImage from '../../assets/hero.webp';
@@ -37,6 +38,8 @@ export default function Home({ extraClass = undefined }) {
         howItWorksDataArray={howItWorksData}
         extraClass={['section-margin', 'scroll-offset']}
       />
+
+      <FoodItemsSection extraClass={['section-margin', 'scroll-offset']} />
     </div>
   );
 }
