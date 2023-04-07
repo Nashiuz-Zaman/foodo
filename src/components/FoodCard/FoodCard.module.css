@@ -1,0 +1,87 @@
+.food-card-main {
+  width: 100%;
+  height: auto;
+  scroll-snap-align: start; }
+  .food-card-main__containing-link-element:link, .food-card-main__containing-link-element:visited {
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none; }
+  .food-card-main__item {
+    width: 100%;
+    margin-bottom: 4rem;
+    padding: 0.75rem 0.75rem 1rem;
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 0.3rem; }
+    .food-card-main__item__img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      margin-bottom: 1.8rem;
+      background-position: 50% 50% !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      border-radius: 0.2rem; }
+    .food-card-main__item__info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 0.55rem; }
+      .food-card-main__item__info__name {
+        font-size: 1.35rem;
+        font-weight: 500; }
+      .food-card-main__item__info__category {
+        font-size: 1.2rem;
+        color: #8e8e8e; }
+      .food-card-main__item__info__bottom-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: _;
+            -ms-flex-pack: _;
+                justify-content: _;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.75rem; }
+        .food-card-main__item__info__bottom-info > p {
+          background-color: #f3f3f7;
+          padding: 0.5rem 0.8rem;
+          font-size: 1.2rem; }
+        .food-card-main__item__info__bottom-info__rating-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-pack: _;
+              -ms-flex-pack: _;
+                  justify-content: _;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          gap: 0.2rem; }
+          .food-card-main__item__info__bottom-info__rating-container__rating-star {
+            height: 1.1rem;
+            -webkit-filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%);
+                    filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%); }
+          .food-card-main__item__info__bottom-info__rating-container__rating-count {
+            color: #8e8e8e; }
+
+/*# sourceMappingURL=FoodCard.module.css.map */

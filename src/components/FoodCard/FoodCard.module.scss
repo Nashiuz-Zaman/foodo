@@ -1,0 +1,73 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.food-card-main {
+  width: 100%;
+  height: auto;
+  scroll-snap-align: start;
+
+  &__containing-link-element {
+    @include link-normal {
+      @include same-size();
+      display: block;
+      text-decoration: none;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 4rem;
+    padding: 0.75rem 0.75rem 1rem;
+    box-shadow: 0 2px 10px rgba($black, 0.15);
+    border-radius: 0.3rem;
+
+    &__img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      margin-bottom: 1.8rem;
+      @include bg-cover-center();
+      border-radius: 0.2rem;
+    }
+
+    &__info {
+      @include flex-col();
+      gap: 0.55rem;
+
+      &__name {
+        font-size: 1.35rem;
+        font-weight: 500;
+      }
+
+      &__category {
+        font-size: 1.2rem;
+        color: $lightText;
+      }
+
+      &__bottom-info {
+        @include flex-row(_, center);
+        gap: 0.75rem;
+
+        & > p {
+          @include bg($lightShade);
+          padding: 0.5rem 0.8rem;
+          font-size: 1.2rem;
+        }
+
+        &__rating-container {
+          @include flex-row(_, center);
+          gap: 0.2rem;
+
+          &__rating-star {
+            height: 1.1rem;
+            filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg)
+              brightness(100%) contrast(106%);
+          }
+
+          &__rating-count {
+            color: $lightText;
+          }
+        }
+      }
+    }
+  }
+}
