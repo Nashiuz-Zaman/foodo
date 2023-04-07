@@ -1,42 +1,28 @@
 //react
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
 
-//custom hooks import
-import useShuffleArr from "../../hooks/useShuffleArr.js";
+//component
+import FoodCard from '../FoodCard/FoodCard';
+
+//hooks
+import useShuffleArr from '../../hooks/useShuffleArr';
 
 //styles
-import styles from "./HorizontalScrollGallery.module.css";
+import styles from './HorizontalScrollGallery.module.css';
 
-export default function HorizontalScrollGallery({ images = [] }) {
+export default function HorizontalScrollGallery({ imageSourceArray = [] }) {
   const [galleryItems, setGalleryItems] = useState([]);
   const { shuffleArr } = useShuffleArr();
 
   useEffect(() => {
-    setGalleryItems(shuffleArr(images));
-  }, [images, shuffleArr]);
+    setGalleryItems(shuffleArr(imageSourceArray !== null && imageSourceArray));
+  }, [imageSourceArray, shuffleArr]);
 
   return (
-    <section className={styles["horizontal-scroll-gallery"]}>
-      <div className={styles["horizontal-scroll-gallery__scroller"]}>
-        {galleryItems.map((item) => {
-          return (
-            <Link to="#" key={item.id}>
-              <article className={styles["horizontal-scroll-gallery__item"]}>
-                <div
-                  className={styles["horizontal-scroll-gallery__item--img"]}
-                  style={{
-                    background: `url(${item.url})`,
-                    backgroundPosition: "center",
-                    backgroundSize: "cover",
-                  }}
-                ></div>
-                <p className={styles["horizontal-scroll-gallery__item--name"]}>
-                  {item.productCategoryName}
-                </p>
-              </article>
-            </Link>
-          );
+    <section className={styles['horizontal-scroll-gallery']}>
+      <div className={styles['horizontal-scroll-gallery__scroller']}>
+        {galleryItems.map((single) => {
+          return <FoodCard key={single.id} cardData={single} />;
         })}
       </div>
     </section>
