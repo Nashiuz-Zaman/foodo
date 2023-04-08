@@ -72,8 +72,7 @@ button {
     cursor: default !important; }
 
 img {
-  display: block;
-  width: 100%; }
+  display: block; }
 
 @media (max-width: 23em) {
   html {

@@ -12,7 +12,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 4rem; }
+  margin-bottom: 6rem; }
   .testimonial__img {
     -ms-flex-preferred-size: 38%;
         flex-basis: 38%;
@@ -21,7 +21,9 @@
     background-size: cover !important;
     background-repeat: no-repeat !important;
     -ms-flex-negative: 0 !important;
-        flex-shrink: 0 !important; }
+        flex-shrink: 0 !important;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem; }
   .testimonial__text-container {
     display: -webkit-box;
     display: -ms-flexbox;

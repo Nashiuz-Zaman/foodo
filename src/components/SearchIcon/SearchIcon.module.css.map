@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,sBAAuB;EACrB,KAAK,EAAE,MAAM;ECyGb,YAAY,EAAE,cAAc;EAoC5B,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;;AD1InB,kBAAI;EACF,MAAM,EENM,uFACe;;AFU7B,gBAAI;EACF,MAAM,EEMI,sFACmB",
+"mappings": "AAGA,sBAAuB;EACrB,KAAK,EAAE,MAAM;ECyGb,YAAY,EAAE,cAAc;EAoC5B,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;ED5InB,0BAAI;IACF,KAAK,EAAE,IAAI;;AAKb,kBAAI;EACF,MAAM,EEVM,uFACe;;AFc7B,gBAAI;EACF,MAAM,EEEI,sFACmB",
 "sources": ["SearchIcon.module.scss","../../scss/_mixins.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "SearchIcon.module.css"

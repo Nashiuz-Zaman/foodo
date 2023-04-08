@@ -40,9 +40,9 @@ export default function Home({ extraClass = undefined }) {
         extraClass={['section-margin', 'scroll-offset']}
       />
 
-      <FoodItemsSection extraClass={['section-margin', 'scroll-offset']} />
+      <FoodItemsSection extraClass={['section-margin']} />
 
-      <ReviewSection />
+      <ReviewSection extraClass={['section-margin']} />
     </div>
   );
 }

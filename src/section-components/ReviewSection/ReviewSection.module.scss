@@ -1,0 +1,11 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.review-section-main {
+  &__section-title {
+    margin-bottom: 6rem;
+    width: 70%;
+    text-align: center;
+    margin-inline: auto !important;
+  }
+}

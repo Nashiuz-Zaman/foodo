@@ -1,3 +1,7 @@
-
+.review-section-main__section-title {
+  margin-bottom: 6rem;
+  width: 70%;
+  text-align: center;
+  margin-inline: auto !important; }
 
 /*# sourceMappingURL=ReviewSection.module.css.map */

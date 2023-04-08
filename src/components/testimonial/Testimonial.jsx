@@ -9,6 +9,7 @@ export default function Testimonial({
   personName = '',
   oneLiner = '',
   details = '',
+  rating = null,
   extraClass = [],
   extraInlineStyle = {},
 }) {

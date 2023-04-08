@@ -184,6 +184,9 @@
 }
 
 //background color mixin
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
 @mixin bg($color: $primary) {
   background-color: $color;
 }
@@ -202,7 +205,6 @@
 /////////////////////////////
 @mixin img-default() {
   display: block;
-  width: 100%;
 }
 
 // blur filter

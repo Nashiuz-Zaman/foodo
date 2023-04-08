@@ -11,7 +11,11 @@
           justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  gap: 1rem; }
+  .rating-stars-main img {
+    width: auto;
+    height: 1.5rem; }
 
 .gold-filter {
   -webkit-filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%) !important;

@@ -3,6 +3,12 @@
 
 .rating-stars-main {
   @include flex-row();
+  gap: 1rem;
+
+  img {
+    width: auto;
+    height: 1.5rem;
+  }
 }
 
 .gold-filter {

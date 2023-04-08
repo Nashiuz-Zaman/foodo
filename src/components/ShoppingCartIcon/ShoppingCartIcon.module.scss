@@ -5,6 +5,10 @@
   width: 2.5rem;
   @include squarebox();
   @include flex-row-center();
+
+  img {
+    width: 100%;
+  }
 }
 
 .primary-color {

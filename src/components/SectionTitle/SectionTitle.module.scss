@@ -16,7 +16,7 @@
 
     &::before {
       @include pseudo-reset();
-      width: 20%;
+      width: 4rem;
       height: 0.3rem;
       @include bg($primary);
       position: absolute;

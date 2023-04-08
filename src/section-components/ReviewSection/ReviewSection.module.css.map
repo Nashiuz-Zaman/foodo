@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAIE,mCAAiB;EACf,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,GAAG;EACV,UAAU,EAAE,MAAM;EAClB,aAAa,EAAE,eAAe",
+"sources": ["ReviewSection.module.scss"],
 "names": [],
 "file": "ReviewSection.module.css"
 }

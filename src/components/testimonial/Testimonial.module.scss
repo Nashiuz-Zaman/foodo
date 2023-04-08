@@ -3,13 +3,16 @@
 
 .testimonial {
   @include flex-row();
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 
   &__img {
     flex-basis: 38%;
     aspect-ratio: 16/25;
     @include bg-cover-center();
     flex-shrink: 0 !important;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    // @include no-flow();
   }
 
   &__text-container {
