@@ -1,0 +1,107 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.testimonial {
+  @include flexRow();
+  margin-bottom: 4rem;
+
+  &__img {
+    flex-basis: 38%;
+    aspect-ratio: 16/25;
+    background-position: 50% 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    flex-shrink: 0 !important;
+  }
+
+  &__text-container {
+    @include flexColumn();
+    align-items: flex-end;
+
+    &__one-liner {
+      padding: 1rem 1rem 1.25rem;
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: $secondary;
+    }
+
+    &__details {
+      font-size: 1.5rem;
+      color: $white;
+      background-color: $primary;
+      width: 100%;
+      padding: 1.45rem;
+      padding-bottom: 2rem;
+      line-height: 1.4;
+      letter-spacing: 0.02rem;
+      margin-bottom: 2rem;
+    }
+
+    &__person-name {
+      padding: 1rem;
+      font-size: 1.45rem;
+      color: $darkText;
+      letter-spacing: 0.02rem;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (min-width: 37em) {
+  .testimonial {
+    width: 28rem;
+    @include flexColumn();
+    align-items: center;
+    margin: 0;
+    background-color: $primary;
+    transform: translateY(5rem);
+    opacity: 0;
+
+    &__img {
+      width: 17.5rem;
+      height: 17.5rem;
+      border-radius: 50%;
+      flex-basis: unset;
+      aspect-ratio: unset;
+      background-size: cover !important;
+      border: 0.6rem solid $white;
+      background-position: 50% 0% !important;
+      transform: translateY(-3rem);
+      margin-bottom: -3rem;
+    }
+
+    &__text-container {
+      padding: 2.5rem;
+      flex-grow: 1;
+      @include flexColumn();
+      align-items: stretch;
+      color: $white;
+
+      &__one-liner {
+        padding: 0;
+        font-size: 2.15rem;
+        line-height: 1.2;
+        color: inherit;
+        margin: 0;
+        margin-bottom: 2rem;
+        text-align: center !important;
+      }
+
+      &__details {
+        font-size: 1.5rem;
+        color: inherit;
+        padding: 0;
+        margin-bottom: 4rem;
+      }
+
+      &__person-name {
+        padding: 0;
+        margin-top: auto;
+        font-size: 1.5rem;
+        color: inherit;
+        font-weight: 500;
+        align-self: flex-end !important;
+      }
+    }
+  }
+}
