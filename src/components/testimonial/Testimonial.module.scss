@@ -1,28 +1,25 @@
-@import "../../scss/variables";
-@import "../../scss/mixin";
+@import '../../scss/variables';
+@import '../../scss/mixins';
 
 .testimonial {
-  @include flexRow();
+  @include flex-row();
   margin-bottom: 4rem;
 
   &__img {
     flex-basis: 38%;
     aspect-ratio: 16/25;
-    background-position: 50% 50% !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
+    @include bg-cover-center();
     flex-shrink: 0 !important;
   }
 
   &__text-container {
-    @include flexColumn();
-    align-items: flex-end;
+    @include flex-col(_, flex-end);
 
     &__one-liner {
       padding: 1rem 1rem 1.25rem;
       font-size: 1.9rem;
       font-weight: 500;
-      color: $secondary;
+      color: $primary;
     }
 
     &__details {
@@ -50,8 +47,8 @@
 @media (min-width: 37em) {
   .testimonial {
     width: 28rem;
-    @include flexColumn();
-    align-items: center;
+    @include flex-col(_, center);
+
     margin: 0;
     background-color: $primary;
     transform: translateY(5rem);
@@ -73,8 +70,7 @@
     &__text-container {
       padding: 2.5rem;
       flex-grow: 1;
-      @include flexColumn();
-      align-items: stretch;
+      @include flex-col(_, stretch);
       color: $white;
 
       &__one-liner {

@@ -6,14 +6,20 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 4rem; }
   .testimonial__img {
     -ms-flex-preferred-size: 38%;
         flex-basis: 38%;
     aspect-ratio: 16/25;
     background-position: 50% 50% !important;
-    background-repeat: no-repeat !important;
     background-size: cover !important;
+    background-repeat: no-repeat !important;
     -ms-flex-negative: 0 !important;
         flex-shrink: 0 !important; }
   .testimonial__text-container {
@@ -24,6 +30,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
@@ -31,11 +40,11 @@
       padding: 1rem 1rem 1.25rem;
       font-size: 1.9rem;
       font-weight: 500;
-      color: #0099a8; }
+      color: #e23d28; }
     .testimonial__text-container__details {
       font-size: 1.5rem;
       color: #fff;
-      background-color: #af0061;
+      background-color: #e23d28;
       width: 100%;
       padding: 1.45rem;
       padding-bottom: 2rem;
@@ -45,7 +54,7 @@
     .testimonial__text-container__person-name {
       padding: 1rem;
       font-size: 1.45rem;
-      color: #222222;
+      color: #1b1b1b;
       letter-spacing: 0.02rem;
       font-weight: 400; }
 
@@ -59,11 +68,14 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin: 0;
-    background-color: #af0061;
+    background-color: #e23d28;
     -webkit-transform: translateY(5rem);
             transform: translateY(5rem);
     opacity: 0; }
@@ -92,6 +104,9 @@
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
+      -webkit-box-pack: _;
+          -ms-flex-pack: _;
+              justify-content: _;
       -webkit-box-align: stretch;
           -ms-flex-align: stretch;
               align-items: stretch;
