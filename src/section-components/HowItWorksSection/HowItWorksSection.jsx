@@ -5,9 +5,6 @@ import ImageDescriptionButton from '../../components/ImageDescriptionButton/Imag
 import TertiaryHeading from '../../components/TertiaryHeading/TertiaryHeading';
 import LinkButton from '../../components/LinkButton/LinkButton';
 
-//image
-import rightCaret from '../../components/LinkButton/images/caret-right.svg';
-
 //styles
 import styles from './HowItWorksSection.module.css';
 
@@ -31,12 +28,12 @@ export default function HowItWorksSection({
         title={sectionTitle}
         extraClass={[styles['how-it-works-section-main__section-title']]}
       />
-      <PlainDescription
+      {/* <PlainDescription
         description={description}
         extraClass={[
           styles['how-it-works-section-main__top-plain-description'],
         ]}
-      />
+      /> */}
 
       <ol className={styles['how-it-works-section-main__how-it-works-list']}>
         {howItWorksDataArray &&
@@ -65,10 +62,10 @@ export default function HowItWorksSection({
 
       <LinkButton
         extraClass={[styles['how-it-works-section-main__order-button']]}
-        buttonText={'Order now'}
+        buttonText={'Order food now'}
         toUrl="menu"
         linkFor={'samesite'}
-        iconImageSource={rightCaret}
+        rightCaret={true}
       />
     </section>
   );

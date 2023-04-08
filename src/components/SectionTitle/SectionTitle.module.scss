@@ -11,12 +11,12 @@
     color: $primary;
     letter-spacing: 0.05rem;
     text-transform: capitalize;
-    padding-bottom: 2rem;
+    padding-bottom: 1.75rem;
     position: relative;
 
     &::before {
       @include pseudo-reset();
-      width: 30%;
+      width: 20%;
       height: 0.3rem;
       @include bg($primary);
       position: absolute;

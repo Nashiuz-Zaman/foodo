@@ -1,10 +1,10 @@
 //components
 import Showcase from '../../components/Showcase/Showcase';
 import LinkButton from '../../components/LinkButton/LinkButton';
+import HeadingDescriptionButton from '../../components/HeadingDescriptionButton/HeadingDescriptionButton';
 
 //styles
 import styles from './HeroSection.module.css';
-import HeadingDescriptionButton from '../../components/HeadingDescriptionButton/HeadingDescriptionButton';
 
 //HeroSection starts here
 export default function HeroSection({
@@ -35,6 +35,7 @@ export default function HeroSection({
             buttonText={buttonText}
             linkFor={linkFor}
             toUrl={toUrl}
+            rightCaret={true}
             extraClass={[
               styles[
                 'hero-section-main__heading-description-button-main__link-button-main'

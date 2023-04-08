@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 //image source
-import goBackIcon from './images/leftcaret.svg';
+import leftCaret from './images/leftcaret.svg';
+import rightCaretIcon from './images/rightcaret.svg';
 
 //styles
 import styles from './LinkElement.module.css';
@@ -21,6 +22,7 @@ export default function LinkElement({
   goBackLink = false,
   card = false,
   children = null,
+  rightCaret = false,
 }) {
   return (
     <>
@@ -34,11 +36,11 @@ export default function LinkElement({
           }`}
           href={toUrl}
         >
-          {goBackLink && <img src={goBackIcon} alt={'left caret'} />}
+          {goBackLink && <img src={leftCaret} alt={'left caret'} />}
           {isText && text}
           {!isText && card && children}
-          {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={altForIcon} />
+          {!goBackLink && rightCaret && (
+            <img src={rightCaretIcon} alt={altForIcon} />
           )}
         </a>
       )}
@@ -53,11 +55,11 @@ export default function LinkElement({
           }`}
           to={`/${toUrl}`}
         >
-          {goBackLink && <img src={goBackIcon} alt={'left caret'} />}
+          {goBackLink && <img src={leftCaret} alt={'left caret'} />}
           {isText && text}
           {!isText && card && children}
-          {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={altForIcon} />
+          {!goBackLink && rightCaret && (
+            <img src={rightCaretIcon} alt={altForIcon} />
           )}
         </HashLink>
       )}
@@ -72,11 +74,11 @@ export default function LinkElement({
           }`}
           to={`/${toUrl}`}
         >
-          {goBackLink && <img src={goBackIcon} alt={'left caret'} />}
+          {goBackLink && <img src={leftCaret} alt={'left caret'} />}
           {isText && text}
           {!isText && card && children}
-          {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={altForIcon} />
+          {!goBackLink && rightCaret && (
+            <img src={rightCaretIcon} alt={altForIcon} />
           )}
         </Link>
       )}

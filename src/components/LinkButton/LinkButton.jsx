@@ -11,6 +11,7 @@ export default function LinkButton({
   extraClass = undefined,
   iconImageSource = undefined,
   goBackButton = false,
+  rightCaret = false,
 }) {
   return (
     <div
@@ -24,6 +25,7 @@ export default function LinkButton({
         linkFor={linkFor}
         iconImagesource={iconImageSource}
         goBackLink={goBackButton}
+        rightCaret={rightCaret}
       />
     </div>
   );

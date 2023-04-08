@@ -19,12 +19,12 @@
     color: #e23d28;
     letter-spacing: 0.05rem;
     text-transform: capitalize;
-    padding-bottom: 2rem;
+    padding-bottom: 1.75rem;
     position: relative; }
     .section-title-box__section-title::before {
       content: '';
       display: block;
-      width: 30%;
+      width: 20%;
       height: 0.3rem;
       background-color: #e23d28;
       position: absolute;
