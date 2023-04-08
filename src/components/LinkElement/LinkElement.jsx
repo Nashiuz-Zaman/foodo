@@ -17,6 +17,7 @@ export default function LinkElement({
   ariaLabel = '',
   isText = true,
   iconImagesource = null,
+  altForIcon = '',
   goBackLink = false,
   card = false,
   children = null,
@@ -37,7 +38,7 @@ export default function LinkElement({
           {isText && text}
           {!isText && card && children}
           {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={'left caret'} />
+            <img src={iconImagesource} alt={altForIcon} />
           )}
         </a>
       )}
@@ -56,7 +57,7 @@ export default function LinkElement({
           {isText && text}
           {!isText && card && children}
           {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={'left caret'} />
+            <img src={iconImagesource} alt={altForIcon} />
           )}
         </HashLink>
       )}
@@ -75,7 +76,7 @@ export default function LinkElement({
           {isText && text}
           {!isText && card && children}
           {!goBackLink && iconImagesource && (
-            <img src={iconImagesource} alt={'left caret'} />
+            <img src={iconImagesource} alt={altForIcon} />
           )}
         </Link>
       )}

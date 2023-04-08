@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,iBAAkB;EAChB,OAAO,EAAE,YAAY;EACrB,KAAK,EAAE,WAAW;EAClB,UAAU,ECmCJ,iBAAiB;EC+MvB,UAAU,EAAE,gCAA+B;EAgB3C,qDACU;IF9PN,OAAO,ECwBG,MAAM;IDvBhB,KAAK,ECOH,IAAI;ICwKV,gBAAgB,ED1LR,OAAO;EDeb,0BAAS;IE2KX,gBAAgB,EDzLH,OAAqB",
+"mappings": "AAGA,iBAAkB;EAChB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,WAAW;EAClB,UAAU,ECmCJ,iBAAiB;EC+MvB,UAAU,EAAE,gCAA+B;EFhP3C,aAAa,EAAE,MAAM;EEmLrB,gBAAgB,ED1LR,OAAO;EDSf,OAAO,ECyBO,MAAM;ECqOpB,qDACU;IF3PN,KAAK,ECKH,IAAI;EDFR,0BAAS;IE0KX,gBAAgB,EDzLH,OAAqB",
 "sources": ["LinkButton.module.scss","../../scss/_variables.scss","../../scss/_mixins.scss"],
 "names": [],
 "file": "LinkButton.module.css"

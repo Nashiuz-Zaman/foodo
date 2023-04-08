@@ -16,13 +16,15 @@
           align-items: center;
   font-size: 1.55rem;
   gap: 0.5rem;
-  text-transform: capitalize;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content; }
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
 .link-element-main img {
   -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
           filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
-  height: 1.5rem; }
+  height: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
 
 /*# sourceMappingURL=LinkElement.module.css.map */

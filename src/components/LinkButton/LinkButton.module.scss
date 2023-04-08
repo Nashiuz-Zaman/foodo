@@ -2,16 +2,17 @@
 @import '../../scss/mixins';
 
 .link-button-main {
-  display: inline-block;
+  display: block;
   width: max-content;
   transition: $basic;
   @include box-shadow-buttons();
+  border-radius: 100rem;
+  @include bg($primary);
+  padding: $buttonPadding;
 
   a {
     @include link-normal {
-      padding: $buttonPadding;
       color: $white;
-      @include bg($primary);
     }
 
     &:active {
