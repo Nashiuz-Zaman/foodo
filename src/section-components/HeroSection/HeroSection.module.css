@@ -16,7 +16,5 @@
     .hero-section-main__heading-description-button-main [class*='__heading'] {
       color: #e23d28;
       margin-bottom: 1.5rem; }
-    .hero-section-main__heading-description-button-main__link-button-main a:link, .hero-section-main__heading-description-button-main__link-button-main a:visited {
-      border-radius: 1rem; }
 
 /*# sourceMappingURL=HeroSection.module.css.map */

@@ -24,13 +24,5 @@
       color: $primary;
       margin-bottom: 1.5rem;
     }
-
-    &__link-button-main {
-      a {
-        @include link-normal {
-          border-radius: 1rem;
-        }
-      }
-    }
   }
 }
