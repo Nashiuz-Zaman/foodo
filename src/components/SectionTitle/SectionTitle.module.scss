@@ -6,11 +6,24 @@
   @include flex-row-center();
 
   &__section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
     color: $primary;
     letter-spacing: 0.05rem;
     text-transform: capitalize;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &::before {
+      @include pseudo-reset();
+      width: 30%;
+      height: 0.3rem;
+      @include bg($primary);
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+    }
   }
 }
 
