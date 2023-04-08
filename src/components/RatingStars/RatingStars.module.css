@@ -1,0 +1,20 @@
+.rating-stars-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.gold-filter {
+  -webkit-filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%) !important;
+          filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%) !important; }
+
+/*# sourceMappingURL=RatingStars.module.css.map */
