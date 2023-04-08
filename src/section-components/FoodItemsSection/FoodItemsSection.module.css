@@ -1,3 +1,12 @@
-
+.food-items-section-main__error-message {
+  text-align: center;
+  font-size: 1.5rem; }
+.food-items-section-main__top-picks {
+  margin-bottom: 4rem; }
+.food-items-section-main__gallery-heading {
+  margin: 0;
+  text-align: left !important;
+  padding: 0 2.5rem;
+  margin-bottom: 1rem !important; }
 
 /*# sourceMappingURL=FoodItemsSection.module.css.map */

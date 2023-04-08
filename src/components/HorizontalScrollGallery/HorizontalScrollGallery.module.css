@@ -11,10 +11,10 @@
   .horizontal-scroll-gallery__scroller {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 93%;
+    grid-auto-columns: 90%;
     gap: 1rem;
     overflow-x: auto;
-    padding: 1rem 2.5rem;
+    padding: 0.75rem 2.5rem;
     -webkit-scroll-snap-type: x mandatory;
         -ms-scroll-snap-type: x mandatory;
             scroll-snap-type: x mandatory;

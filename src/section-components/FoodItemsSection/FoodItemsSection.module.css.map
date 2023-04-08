@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAIE,uCAAiB;EACf,UAAU,EAAE,MAAM;EAClB,SAAS,EAAE,MAAM;AAGnB,mCAAa;EACX,aAAa,EAAE,IAAI;AAGrB,yCAAmB;EACjB,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,eAAe;EAC3B,OAAO,EAAE,QAAQ;EACjB,aAAa,EAAE,eAAe",
+"sources": ["FoodItemsSection.module.scss"],
 "names": [],
 "file": "FoodItemsSection.module.css"
 }

@@ -9,7 +9,7 @@ import { foodItemsApi } from '../data/ApiInformation';
 
 export default function useFetchFoodItems() {
   const { getData } = useFetch();
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(undefined);
   const [isPending, setIsPending] = useState(true); // at first it's pending since it's async
   const [error, setError] = useState(null);
 
@@ -22,6 +22,8 @@ export default function useFetchFoodItems() {
         // set fooditems = data received
         if (response.data.success) {
           setData(response.data.data);
+        } else {
+          setError('Something went wrong with the request');
         }
       })
       .catch((error) => {
@@ -29,7 +31,7 @@ export default function useFetchFoodItems() {
         setIsPending(false);
 
         // set error = error.message
-        setError(error.message);
+        setError('Something went wrong with the request');
       });
   }, [getData]);
 

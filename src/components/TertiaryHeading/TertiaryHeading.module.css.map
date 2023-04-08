@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAIE,+BAAW;EACT,WAAW,EAAE,GAAG;EAChB,KAAK,ECLC,OAAO;EDMb,SAAS,EAAE,MAAM;EACjB,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,MAAM;;AEiRpB,wBAAgC;EF3Q9B,+BAAW;IACT,SAAS,EAAE,MAAM",
+"mappings": "AAGA,sBAAuB;EACrB,aAAa,EAAE,MAAM;EACrB,UAAU,EAAE,MAAM;EAElB,+BAAW;IACT,WAAW,EAAE,GAAG;IAChB,KAAK,ECRC,OAAO;IDSb,SAAS,EAAE,MAAM;;AEgRnB,wBAAgC;EF1Q9B,+BAAW;IACT,SAAS,EAAE,MAAM",
 "sources": ["TertiaryHeading.module.scss","../../scss/_variables.scss","../../scss/_mixins.scss"],
 "names": [],
 "file": "TertiaryHeading.module.css"
