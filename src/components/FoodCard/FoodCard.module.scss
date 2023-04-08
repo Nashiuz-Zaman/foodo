@@ -59,8 +59,7 @@
 
           &__rating-star {
             height: 1.1rem;
-            filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg)
-              brightness(100%) contrast(106%) !important;
+            filter: $filterGold !important;
           }
 
           &__rating-count {

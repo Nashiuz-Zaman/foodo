@@ -11,6 +11,7 @@ import { howItWorksData } from '../../data/HowItWorksData';
 
 //styles
 import styles from './Home.module.css';
+import ReviewSection from '../../section-components/ReviewSection/ReviewSection';
 
 //Home starts here
 export default function Home({ extraClass = undefined }) {
@@ -40,6 +41,8 @@ export default function Home({ extraClass = undefined }) {
       />
 
       <FoodItemsSection extraClass={['section-margin', 'scroll-offset']} />
+
+      <ReviewSection />
     </div>
   );
 }
