@@ -3,6 +3,10 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import PlainDescription from '../../components/PlainDescription/PlainDescription';
 import ImageDescriptionButton from '../../components/ImageDescriptionButton/ImageDescriptionButton';
 import TertiaryHeading from '../../components/TertiaryHeading/TertiaryHeading';
+import LinkButton from '../../components/LinkButton/LinkButton';
+
+//image
+import rightCaret from '../../components/LinkButton/images/caret-right.svg';
 
 //styles
 import styles from './HowItWorksSection.module.css';
@@ -46,7 +50,7 @@ export default function HowItWorksSection({
                     ]
                   }
                 >
-                  {single.id + 1}.
+                  {single.id + 1}
                 </p>
                 <TertiaryHeading heading={single.heading} />
                 <ImageDescriptionButton
@@ -58,6 +62,14 @@ export default function HowItWorksSection({
             );
           })}
       </ol>
+
+      <LinkButton
+        extraClass={[styles['how-it-works-section-main__order-button']]}
+        buttonText={'Order now'}
+        toUrl="menu"
+        linkFor={'samesite'}
+        iconImageSource={rightCaret}
+      />
     </section>
   );
 }

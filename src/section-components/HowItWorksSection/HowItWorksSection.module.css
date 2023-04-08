@@ -23,12 +23,33 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 6rem; }
+    gap: 6rem;
+    margin-bottom: 6rem; }
     .how-it-works-section-main__how-it-works-list__item-number {
-      font-size: 6rem;
+      font-size: 4.25rem;
       font-weight: 600;
-      color: #e23d28;
       text-align: center;
-      margin-bottom: 2rem; }
+      width: 7rem;
+      aspect-ratio: 1/1 !important;
+      border-radius: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: #e23d28;
+      margin: 0 auto;
+      margin-bottom: 2rem !important;
+      border: #e23d28 solid 2px; }
+  .how-it-works-section-main__order-button {
+    margin: 0 auto !important; }
 
 /*# sourceMappingURL=HowItWorksSection.module.css.map */
