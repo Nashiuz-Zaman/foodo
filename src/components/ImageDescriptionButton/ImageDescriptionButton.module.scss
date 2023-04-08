@@ -4,12 +4,12 @@
 .image-description-button-main {
   width: 100%;
   color: $white;
+  border-radius: 3rem;
+  @include no-flow();
+  box-shadow: 0 0 1.5rem rgba($black, 0.15);
+  border-radius: 2rem;
 
   &__image-main {
-    margin-bottom: 1.5rem;
-    box-shadow: 0 0 1rem rgba($black, 0.2);
-    border-radius: 3rem;
-    @include no-flow();
     width: 100%;
 
     img {
@@ -18,11 +18,9 @@
   }
 
   &__plain-description-main {
-    padding: 2.5rem;
+    padding: 1.8rem 1.5rem;
     color: inherit;
     @include bg($primary);
-    border-top-left-radius: 3rem;
-    border-bottom-right-radius: 3rem;
 
     p {
       font-weight: 400;
