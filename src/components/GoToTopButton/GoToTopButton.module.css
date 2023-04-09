@@ -1,0 +1,60 @@
+.go-to-top-button-main {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .go-to-top-button-main__button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #fff;
+    border-radius: 100rem;
+    padding: 0.5rem; }
+    .go-to-top-button-main__button:focus {
+      outline-color: #e23d28 !important; }
+    .go-to-top-button-main__button__icon-image {
+      background-color: #e23d28;
+      border-radius: 50%;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      width: 4rem;
+      height: 4rem;
+      padding: 0.75rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .go-to-top-button-main__button__icon-image img {
+        -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
+                filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%); }
+
+/*# sourceMappingURL=GoToTopButton.module.css.map */

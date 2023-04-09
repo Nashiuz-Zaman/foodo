@@ -24,7 +24,7 @@ export default function FoodCard({
         extraClass={[styles['food-card-main__containing-link-element']]}
         linkFor={linkFor}
         isText={false}
-        card={true}
+        htmlElement={true}
         toUrl={cardData.link}
       >
         <article className={styles['food-card-main__item']}>

@@ -1,0 +1,16 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.app-store-links-main {
+  @include flex-col(_, center);
+  gap: 1.8rem;
+
+  &__link {
+    width: fit-content;
+
+    img {
+      height: 4rem;
+      filter: none;
+    }
+  }
+}

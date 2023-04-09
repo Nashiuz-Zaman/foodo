@@ -17,10 +17,9 @@ export default function LinkElement({
   customStyle = {},
   ariaLabel = '',
   isText = true,
-  iconImagesource = null,
   altForIcon = '',
   goBackLink = false,
-  card = false,
+  htmlElement = false,
   children = null,
   rightCaret = false,
 }) {
@@ -38,7 +37,7 @@ export default function LinkElement({
         >
           {goBackLink && <img src={leftCaret} alt={'left caret'} />}
           {isText && text}
-          {!isText && card && children}
+          {!isText && htmlElement && children}
           {!goBackLink && rightCaret && (
             <img src={rightCaretIcon} alt={altForIcon} />
           )}
@@ -57,7 +56,7 @@ export default function LinkElement({
         >
           {goBackLink && <img src={leftCaret} alt={'left caret'} />}
           {isText && text}
-          {!isText && card && children}
+          {!isText && htmlElement && children}
           {!goBackLink && rightCaret && (
             <img src={rightCaretIcon} alt={altForIcon} />
           )}
@@ -76,7 +75,7 @@ export default function LinkElement({
         >
           {goBackLink && <img src={leftCaret} alt={'left caret'} />}
           {isText && text}
-          {!isText && card && children}
+          {!isText && htmlElement && children}
           {!goBackLink && rightCaret && (
             <img src={rightCaretIcon} alt={altForIcon} />
           )}

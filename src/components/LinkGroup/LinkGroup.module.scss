@@ -1,0 +1,44 @@
+@import "../../scss/variables";
+@import "../../scss/mixin";
+
+.link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__heading {
+    color: $white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+
+    &-link {
+      &:link,
+      &:visited {
+        @include link-reset();
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: inherit;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    list-style-type: none;
+
+    &-item {
+      &-link {
+        &:link,
+        &:visited {
+          @include link-reset();
+          color: $white;
+          font-size: 1.4rem;
+          letter-spacing: 0.02rem;
+        }
+      }
+    }
+  }
+}

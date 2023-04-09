@@ -1,0 +1,23 @@
+.image-link-button-main {
+  display: block;
+  width: 3rem;
+  aspect-ratio: 16/16;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+  .image-link-button-main:hover {
+    background-color: #fff; }
+  .image-link-button-main__link:link, .image-link-button-main__link:visited {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%); }
+    .image-link-button-main__link:link:focus, .image-link-button-main__link:visited:focus {
+      outline-color: green !important; }
+
+/*# sourceMappingURL=ImageLinkButton.module.css.map */
