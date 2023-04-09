@@ -4,4 +4,8 @@
 .scroll-offset {
   scroll-margin-top: 10rem; }
 
+.data-not-load-error-message {
+  text-align: center;
+  font-size: 1.5rem; }
+
 /*# sourceMappingURL=App.css.map */

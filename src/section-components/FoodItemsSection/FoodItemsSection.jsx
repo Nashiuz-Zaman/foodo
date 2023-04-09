@@ -37,11 +37,7 @@ export default function FoodItemsSection({ extraClass = undefined }) {
       }`}
     >
       {isPending && <LoadingSpinner isPending={isPending ? true : false} />}
-      {error && (
-        <p className={styles['food-items-section-main__error-message']}>
-          {error}
-        </p>
-      )}
+      {error && <p className={'data-not-load-error-message'}>{error}</p>}
       {shuffledData && topPicks && (
         <>
           <div className={styles['food-items-section-main__top-picks']}>

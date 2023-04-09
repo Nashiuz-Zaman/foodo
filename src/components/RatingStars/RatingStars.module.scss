@@ -3,7 +3,8 @@
 
 .rating-stars-main {
   @include flex-row();
-  gap: 1rem;
+  gap: 0.5rem;
+  padding-right: 1.1rem;
 
   img {
     width: auto;
