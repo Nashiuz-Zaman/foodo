@@ -1,0 +1,17 @@
+.copyright-info-main {
+  text-align: center; }
+  .copyright-info-main__copyright-info--details {
+    color: #fff;
+    font-size: 1.2rem; }
+
+@media (max-width: 24em) {
+  .copyright-info-main {
+    text-align: center; }
+    .copyright-info-main__copyright-info--details {
+      font-size: 1.15rem;
+      line-height: 1.5; } }
+@media (min-width: 62em) {
+  .copyright-info-main__copyright-info--details {
+    font-size: 1.3rem; } }
+
+/*# sourceMappingURL=CopyrightInfo.module.css.map */

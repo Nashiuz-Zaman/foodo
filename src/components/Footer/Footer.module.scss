@@ -3,30 +3,43 @@
 
 .footer-main {
   @include bg($primary);
-  min-height: 50rem;
   position: relative;
-  padding: 0 2.5rem;
+  padding: 0 2.5rem 2.5rem;
 
-  &__brand-name-main {
-    margin-top: 6rem;
-    @include flex-row-center;
-    margin-bottom: 3rem;
+  &__top-part {
+    margin-bottom: 4rem;
 
-    a {
-      @include link-normal {
-        color: $white;
-        font-size: 2.5rem;
+    &__brand-name-main {
+      margin-top: 6rem;
+      @include flex-row-center;
+      margin-bottom: 3rem;
+
+      a {
+        @include link-normal {
+          color: $white;
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    &__social-media-links-main {
+      position: relative;
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+
+      &::after {
+        @include pseudo-underline(80%, 0.1rem, $white);
       }
     }
   }
 
-  &__social-media-links-main {
-    position: relative;
-    padding-bottom: 2rem;
-    margin-bottom: 3rem;
-
-    &::after {
-      @include pseudo-underline(80%, 0.1rem, $white);
+  &__bottom-part {
+    width: 100%;
+    margin-bottom: 4rem;
+    &__link-group-main {
+      & > ul[class*='list'] {
+        align-items: center;
+      }
     }
   }
 }

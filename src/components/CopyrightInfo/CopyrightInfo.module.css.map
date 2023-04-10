@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,oBAAqB;EACnB,UAAU,EAAE,MAAM;EAClB,6CAA2B;IACzB,KAAK,ECgBD,IAAI;IDfR,SAAS,EAAE,MAAM;;AEsSnB,wBAAgC;EFjShC,oBAAqB;IACnB,UAAU,EAAE,MAAM;IAClB,6CAA2B;MACzB,SAAS,EAAE,OAAO;MAClB,WAAW,EAAE,GAAG;AEuRpB,wBAAgC;EFhR9B,6CAA2B;IACzB,SAAS,EAAE,MAAM",
+"sources": ["CopyrightInfo.module.scss","../../scss/_variables.scss","../../scss/_mixins.scss"],
+"names": [],
+"file": "CopyrightInfo.module.css"
+}

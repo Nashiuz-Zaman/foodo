@@ -3,9 +3,11 @@ import GoToTopButton from '../GoToTopButton/GoToTopButton';
 import BrandName from '../BrandName/BrandName';
 import SocialMediaLinks from '../SocialMediaLinks/SocialMediaLinks';
 import AppStoreLinks from '../AppStoreLinks/AppStoreLinks';
+import LinkGroup from '../LinkGroup/LinkGroup';
+import CopyrightInfo from '../CopyrightInfo/CopyrightInfo';
 
 //data
-import { socialmediaButtonsData } from '../../data/FooterData';
+import { socialmediaButtonsData, options } from '../../data/FooterData';
 
 //styles
 import styles from './Footer.module.css';
@@ -21,17 +23,32 @@ export default function Footer({ extraClass = undefined }) {
     >
       <GoToTopButton />
 
-      <BrandName
-        extraClass={[styles['footer-main__brand-name-main']]}
-        title={'~ Foodo ~'}
-      />
+      <div className={styles['footer-main__top-part']}>
+        <BrandName
+          extraClass={[styles['footer-main__top-part__brand-name-main']]}
+          title={'foodo'}
+        />
 
-      <SocialMediaLinks
-        extraClass={[styles['footer-main__social-media-links-main']]}
-        logoButtonsArray={socialmediaButtonsData}
-      />
+        <SocialMediaLinks
+          extraClass={[
+            styles['footer-main__top-part__social-media-links-main'],
+          ]}
+          logoButtonsArray={socialmediaButtonsData}
+        />
 
-      <AppStoreLinks />
+        <AppStoreLinks
+          extraClass={[styles['footer-main__top-part__app-store-links-main']]}
+        />
+      </div>
+
+      <div className={styles['footer-main__bottom-part']}>
+        <LinkGroup
+          extraClass={[styles['footer-main__bottom-part__link-group-main']]}
+          singleListObject={options}
+        />
+      </div>
+
+      <CopyrightInfo developer={'Nashiuz Zaman'} />
     </footer>
   );
 }

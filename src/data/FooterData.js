@@ -42,3 +42,16 @@ export const socialmediaButtonsData = [
     linkFor: 'external',
   },
 ];
+
+export const options = {
+  id: 0,
+  options: [
+    { text: 'Order Online', link: '#', linkFor: 'samesite' },
+    { text: 'Gift Cards', link: '#' },
+    { text: 'Terms of Use & Gift Card Terms', link: '#' },
+    { text: 'Nutritional Info', link: '#' },
+    { text: 'Careers', link: '#' },
+    { text: 'Privacy Policy', link: '#' },
+    { text: 'FAQs', link: '#' },
+  ],
+};
