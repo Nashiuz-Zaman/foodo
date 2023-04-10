@@ -270,6 +270,18 @@
   border: $width solid $color;
 }
 
+@mixin border-radius(
+  $top-left: 0,
+  $top-right: 0,
+  $bottom-right: 0,
+  $bottom-left: 0
+) {
+  border-top-left-radius: $top-left;
+  border-top-right-radius: $top-right;
+  border-bottom-right-radius: $bottom-right;
+  border-bottom-left-radius: $bottom-left;
+}
+
 // hover and active state content mixin
 /////////////////////////////
 /////////////////////////////

@@ -1,0 +1,56 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.mobile-navigation-menu-main {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: fit-content !important;
+  @include no-flow;
+  @include border-radius(_, _, 3rem, 3rem);
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0s ease-out 1.5s, opacity 0s ease-out 1.5s; // so that when closing the menu the main containing div has 2s of delay, otherwise the sequential animations can't be seen
+
+  &__options-list {
+    @include flex-col(_, center);
+
+    // increase padding top, top of the menu looks nice
+    & > :first-child {
+      padding-top: 4rem;
+    }
+
+    // increase padding bottom, bottom of the menu looks nice
+    & > :last-child {
+      padding-bottom: 4rem;
+    }
+
+    li {
+      width: 100%;
+      @include bg($primary);
+      @include flex-row-center;
+      transform: translateX(-100%);
+      opacity: 0;
+      padding: 2rem 0;
+
+      a {
+        @include link-normal {
+          color: $white;
+          font-size: 1.55rem;
+        }
+      }
+    }
+  }
+}
+
+.menu-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0s; // So that at first the containing div animates without delay, and individual list item animations can be seen as planned one after another
+
+  li {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

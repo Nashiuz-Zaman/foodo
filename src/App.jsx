@@ -9,15 +9,23 @@ import Footer from './components/Footer/Footer';
 import Home from './page-components/Home/Home';
 
 //image source
-import foodTransparent from './assets/food-transparent.png';
+import brandLogo from './assets/food-transparent.png';
 
 //styles
 import './basic-styling/App.css';
 
+//data
+import { mobileNavigationOptions } from './data/NavigationMenuData';
+const brandName = 'foodo';
+
 function App() {
   return (
     <div className="App">
-      <MobileHeader brandName={'foodo'} brandLogo={foodTransparent} />
+      <MobileHeader
+        brandName={brandName}
+        brandLogo={brandLogo}
+        navigationOptions={mobileNavigationOptions}
+      />
 
       <main>
         <Routes>
@@ -25,7 +33,7 @@ function App() {
         </Routes>
       </main>
 
-      <Footer brandName={'foodo'} brandLogo={foodTransparent} />
+      <Footer brandName={brandName} brandLogo={brandLogo} />
     </div>
   );
 }

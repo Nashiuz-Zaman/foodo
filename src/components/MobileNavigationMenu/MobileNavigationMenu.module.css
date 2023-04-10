@@ -1,0 +1,74 @@
+.mobile-navigation-menu-main {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  overflow: hidden;
+  border-top-left-radius: _;
+  border-top-right-radius: _;
+  border-bottom-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: opacity 0s ease-out 1.5s, -webkit-transform 0s ease-out 1.5s;
+  transition: opacity 0s ease-out 1.5s, -webkit-transform 0s ease-out 1.5s;
+  transition: transform 0s ease-out 1.5s, opacity 0s ease-out 1.5s;
+  transition: transform 0s ease-out 1.5s, opacity 0s ease-out 1.5s, -webkit-transform 0s ease-out 1.5s; }
+  .mobile-navigation-menu-main__options-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .mobile-navigation-menu-main__options-list > :first-child {
+      padding-top: 4rem; }
+    .mobile-navigation-menu-main__options-list > :last-child {
+      padding-bottom: 4rem; }
+    .mobile-navigation-menu-main__options-list li {
+      width: 100%;
+      background-color: #e23d28;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+      opacity: 0;
+      padding: 2rem 0; }
+      .mobile-navigation-menu-main__options-list li a:link, .mobile-navigation-menu-main__options-list li a:visited {
+        color: #fff;
+        font-size: 1.55rem; }
+
+.menu-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: all 0s;
+  transition: all 0s; }
+  .menu-active li {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; }
+
+/*# sourceMappingURL=MobileNavigationMenu.module.css.map */
