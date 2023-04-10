@@ -16,9 +16,12 @@
   position: relative; }
   .hamburger-menu-container__menu-bar, .hamburger-menu-container::before, .hamburger-menu-container::after {
     width: 100%;
-    height: 2px;
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
+    height: 0.3rem;
+    border-radius: 100rem;
+    -webkit-transition: top 0.2s ease-out 0.2s, bottom 0.2s ease-out 0.2s, -webkit-transform 0.2s ease-out;
+    transition: top 0.2s ease-out 0.2s, bottom 0.2s ease-out 0.2s, -webkit-transform 0.2s ease-out;
+    transition: top 0.2s ease-out 0.2s, bottom 0.2s ease-out 0.2s, transform 0.2s ease-out;
+    transition: top 0.2s ease-out 0.2s, bottom 0.2s ease-out 0.2s, transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
     background-color: #e23d28; }
   .hamburger-menu-container::before, .hamburger-menu-container::after {
     content: '';
@@ -30,18 +33,21 @@
   .hamburger-menu-container::after {
     bottom: 15%; }
 
-.menu-active div[class*="menu-bar"] {
+.menu-active div[class*='menu-bar'] {
   -webkit-transform: scale(0);
           transform: scale(0); }
 .menu-active::before, .menu-active::after {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  -webkit-transition: top 0.2s ease-out, bottom 0.2s ease-out, -webkit-transform 0.2s ease-out 0.2s;
+  transition: top 0.2s ease-out, bottom 0.2s ease-out, -webkit-transform 0.2s ease-out 0.2s;
+  transition: top 0.2s ease-out, bottom 0.2s ease-out, transform 0.2s ease-out 0.2s;
+  transition: top 0.2s ease-out, bottom 0.2s ease-out, transform 0.2s ease-out 0.2s, -webkit-transform 0.2s ease-out 0.2s; }
 .menu-active::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); }
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg); }
 .menu-active::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
+  bottom: 50%;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+          transform: translateY(50%) rotate(-45deg); }
 
 /*# sourceMappingURL=HamburgerMenu.module.css.map */

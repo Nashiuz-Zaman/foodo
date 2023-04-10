@@ -1,5 +1,5 @@
-@import "../../scss/variables";
-@import "../../scss/mixins";
+@import '../../scss/variables';
+@import '../../scss/mixins';
 
 .hamburger-menu-container {
   @include flex-col(space-around, center);
@@ -11,8 +11,10 @@
   &::before,
   &::after {
     width: 100%;
-    height: 2px;
-    transition: $basic;
+    height: 0.3rem;
+    border-radius: 100rem;
+    transition: top 0.2s ease-out 0.2s, bottom 0.2s ease-out 0.2s,
+      transform 0.2s ease-out;
     @include bg($primary);
   }
 
@@ -33,21 +35,25 @@
 }
 
 .menu-active {
-  div[class*="menu-bar"] {
+  div[class*='menu-bar'] {
     transform: scale(0);
   }
 
   &::before,
   &::after {
-    top: 50%;
-    transform: translateY(-50%);
+    transition: top 0.2s ease-out, bottom 0.2s ease-out,
+      transform 0.2s ease-out 0.2s;
   }
 
   &::before {
-    transform: rotate(45deg);
+    top: 50%;
+
+    transform: translateY(-50%) rotate(45deg);
   }
 
   &::after {
-    transform: rotate(-45deg);
+    bottom: 50%;
+
+    transform: translateY(50%) rotate(-45deg);
   }
 }
