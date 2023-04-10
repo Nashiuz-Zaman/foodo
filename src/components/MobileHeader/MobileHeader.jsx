@@ -7,6 +7,7 @@ import MobileNavigationMenu from '../MobileNavigationMenu/MobileNavigationMenu';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import SearchButton from '../SearchButton/SearchButton';
 import ShoppingCartButton from '../ShoppingCartButton/ShoppingCartButton';
+import MobileSearchbar from '../MobileSearchbar/MobileSearchbar';
 
 //styles
 import styles from './MobileHeader.module.css';
@@ -54,6 +55,7 @@ export default function MobileHeader({
         navigationActive={navigationActive}
         onClick={handleClick}
       />
+      <MobileSearchbar marginTop={headerHeight} />
     </>
   );
 }
