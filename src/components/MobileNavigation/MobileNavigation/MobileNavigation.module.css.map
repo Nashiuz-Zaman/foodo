@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,WAAY;EACV,UAAU,ECyCJ,iBAAiB;EDvCvB,sBAAa;IACX,QAAQ,EAAE,KAAK;IACf,GAAG,EAAE,CAAC;IACN,KAAK,EAAE,CAAC;IACR,KAAK,EAAE,GAAG;IACV,MAAM,EAAE,KAAK;IACb,UAAU,EAAE,MAAM;IAClB,UAAU,EAAE,IAAI;IAChB,mBAAmB,EAAE,OAAO;IAC5B,OAAO,EAAE,IAAI;IACb,SAAS,EAAE,gBAAgB;IAC3B,UAAU,EC4BN,iBAAiB;ID1BrB,4BAAQ;MACN,SAAS,EAAE,cAAc;;AAK/B,wBAAyB;EAErB,sBAAa;IACX,KAAK,EAAE,gBAAgB",
-"sources": ["MobileNavigation.module.scss","../../../scss/_variables.scss"],
-"names": [],
-"file": "MobileNavigation.module.css"
-}
