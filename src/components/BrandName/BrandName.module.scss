@@ -3,6 +3,9 @@
 
 //390px styles are default
 .brand-name-main {
+  @include flex-row(_, center);
+  gap: 0.5rem;
+
   &__link {
     &:link,
     &:visited {
@@ -14,11 +17,8 @@
     }
   }
 
-  &--alternative &__link {
-    &:link,
-    &:visited {
-      color: $darkText;
-    }
+  &__image {
+    height: 2.2rem;
   }
 }
 

@@ -1,0 +1,142 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixin";
+
+.mobile-navigation-innermenu {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  background-image: linear-gradient(to right, $primary, $primaryLight);
+  backdrop-filter: blur(1rem);
+  padding: 1rem 3em 3rem;
+  transition: $basic;
+  overscroll-behavior: contain;
+  overflow-y: auto;
+
+  &__closelisticon-container {
+    @include flexRow();
+    justify-content: flex-end;
+    padding: 1.5rem 0;
+  }
+
+  &__leftcareticon-container {
+    padding: 5rem 0 4rem;
+
+    .leftcareticon {
+      @include button-reset;
+      display: flex;
+      align-items: center;
+      font-family: inherit;
+      gap: 1.4rem;
+      font-size: 1.5rem;
+      font-weight: 300 !important;
+      color: $white;
+      cursor: pointer;
+
+      img {
+        display: block;
+        width: 1.6rem;
+        aspect-ratio: 16/16;
+      }
+    }
+  }
+
+  &__list-of-options {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+
+    &__heading,
+    &__single-option,
+    &__single-option--main-list {
+      // for <span> css rules see below
+      span,
+      a:link,
+      a:visited {
+        @include link-reset();
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        letter-spacing: inherit;
+        text-transform: capitalize;
+      }
+    }
+
+    &__heading {
+      span,
+      a:link,
+      a:visited {
+        @include link-reset();
+        font-size: 2.4rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        display: inline-block;
+        color: $white;
+      }
+    }
+
+    &__single-option {
+      span,
+      a:link,
+      a:visited {
+        @include link-reset();
+        line-height: 1.5;
+        font-size: 1.5rem;
+        font-weight: 400 !important;
+        color: $white;
+        cursor: pointer;
+      }
+
+      &--main-list {
+        span,
+        a:link,
+        a:visited {
+          @include link-reset();
+          color: $white;
+          font-size: 2rem;
+          font-weight: 400;
+          cursor: pointer;
+        }
+      }
+    }
+
+    img {
+      height: 2rem;
+    }
+  }
+
+  &__social-media-links {
+    div[class*="social-media-links-main__image-buttons__buttons"] {
+      gap: 1.5rem;
+    }
+
+    h3 {
+      text-align: left;
+      // margin-bottom: 2.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    div[class*="image-buttons__buttons"] {
+      justify-content: left;
+    }
+  }
+}
+
+.show {
+  transform: translateX(0%) !important;
+}
+
+.previously-shown {
+  transform: translateX(-100%) !important;
+}
+
+@media (min-width: 77em) {
+  .mobile-navigation-innermenu {
+    padding: 1rem 3.5rem 3rem;
+  }
+}

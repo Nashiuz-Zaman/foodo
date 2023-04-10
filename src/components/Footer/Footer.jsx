@@ -13,7 +13,11 @@ import { socialmediaButtonsData, options } from '../../data/FooterData';
 import styles from './Footer.module.css';
 
 //Footer starts here
-export default function Footer({ extraClass = undefined }) {
+export default function Footer({
+  brandName = '',
+  brandLogo = null,
+  extraClass = undefined,
+}) {
   // jsx template
   return (
     <footer
@@ -26,7 +30,8 @@ export default function Footer({ extraClass = undefined }) {
       <div className={styles['footer-main__top-part']}>
         <BrandName
           extraClass={[styles['footer-main__top-part__brand-name-main']]}
-          title={'foodo'}
+          title={brandName}
+          imageSource={brandLogo}
         />
 
         <SocialMediaLinks

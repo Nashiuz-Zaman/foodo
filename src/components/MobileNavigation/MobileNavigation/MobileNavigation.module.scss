@@ -1,0 +1,32 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixin";
+
+.mobile-nav {
+  transition: $basic;
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 82%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: $basic;
+
+    &--open {
+      transform: translateX(0%);
+    }
+  }
+}
+
+@media (min-width: 30em) {
+  .mobile-nav {
+    &__container {
+      width: 35rem !important;
+    }
+  }
+}

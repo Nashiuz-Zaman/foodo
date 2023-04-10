@@ -2,8 +2,6 @@
 @import '../../scss/mixins';
 
 .review-section-main {
-  padding: 0 2.5rem;
-
   &__section-title {
     margin-bottom: 6rem;
     text-align: center;
@@ -14,5 +12,7 @@
     list-style-type: none;
     @include flex-col();
     gap: 6rem;
+    position: relative;
+    padding: 2.5rem;
   }
 }

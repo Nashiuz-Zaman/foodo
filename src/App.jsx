@@ -8,13 +8,16 @@ import Footer from './components/Footer/Footer';
 //page components
 import Home from './page-components/Home/Home';
 
+//image source
+import foodTransparent from './assets/food-transparent.png';
+
 //styles
 import './basic-styling/App.css';
 
 function App() {
   return (
     <div className="App">
-      <MobileHeader brandName={'foodo'} />
+      <MobileHeader brandName={'foodo'} brandLogo={foodTransparent} />
 
       <main>
         <Routes>
@@ -22,7 +25,7 @@ function App() {
         </Routes>
       </main>
 
-      <Footer />
+      <Footer brandName={'foodo'} brandLogo={foodTransparent} />
     </div>
   );
 }

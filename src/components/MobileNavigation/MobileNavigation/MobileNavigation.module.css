@@ -1,0 +1,26 @@
+.mobile-nav {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out; }
+  .mobile-nav__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 82%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 1001;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out; }
+    .mobile-nav__container--open {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%); }
+
+@media (min-width: 30em) {
+  .mobile-nav__container {
+    width: 35rem !important; } }
+
+/*# sourceMappingURL=MobileNavigation.module.css.map */
