@@ -10,6 +10,7 @@ export default function MobileNavigationMenu({
   navigationActive = false,
   marginTop = null,
   extraClass = undefined,
+  onClick = null,
 }) {
   // jsx template
   return (
@@ -28,10 +29,11 @@ export default function MobileNavigationMenu({
             <li
               key={single.id}
               className={``}
-              style={{ transition: `all 0.2s ease ${i * 0.1}s` }}
+              style={{ transition: `all 0.2s ease-out ${i * 0.05}s` }}
             >
               <LinkElement
-                toUrl={single.toUrl}
+                onClick={onClick}
+                toUrl={single.link}
                 linkFor={single.linkFor}
                 text={single.text}
               />

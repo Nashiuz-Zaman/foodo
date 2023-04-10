@@ -52,6 +52,7 @@ export default function MobileHeader({
         marginTop={headerHeight}
         navigationOptions={navigationOptions}
         navigationActive={navigationActive}
+        onClick={handleClick}
       />
     </>
   );

@@ -22,12 +22,14 @@ export default function LinkElement({
   htmlElement = false,
   children = null,
   rightCaret = false,
+  onClick = null,
 }) {
   return (
     <>
       {/* external websites */}
       {linkFor === 'external' && (
         <a
+          onClick={onClick}
           aria-label={ariaLabel}
           style={customStyle}
           className={`${styles['link-element-main']} ${
@@ -47,6 +49,7 @@ export default function LinkElement({
       {/* hashtag id in the same page */}
       {linkFor === 'hashed' && (
         <HashLink
+          onClick={onClick}
           aria-label={ariaLabel}
           style={customStyle}
           className={`${styles['link-element-main']} ${
@@ -66,6 +69,7 @@ export default function LinkElement({
       {/* routing to another page on the same website */}
       {linkFor === 'samesite' && (
         <Link
+          onClick={onClick}
           aria-label={ariaLabel}
           style={customStyle}
           className={`${styles['link-element-main']} ${

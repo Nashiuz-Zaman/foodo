@@ -9,15 +9,15 @@
   overflow: hidden;
   border-top-left-radius: _;
   border-top-right-radius: _;
-  border-bottom-right-radius: 3rem;
-  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 4rem;
+  border-bottom-left-radius: 4rem;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   opacity: 0;
-  -webkit-transition: opacity 0s ease-out 1.5s, -webkit-transform 0s ease-out 1.5s;
-  transition: opacity 0s ease-out 1.5s, -webkit-transform 0s ease-out 1.5s;
-  transition: transform 0s ease-out 1.5s, opacity 0s ease-out 1.5s;
-  transition: transform 0s ease-out 1.5s, opacity 0s ease-out 1.5s, -webkit-transform 0s ease-out 1.5s; }
+  -webkit-transition: opacity 0s ease-out 1.2s, -webkit-transform 0s ease-out 1.2s;
+  transition: opacity 0s ease-out 1.2s, -webkit-transform 0s ease-out 1.2s;
+  transition: transform 0s ease-out 1.2s, opacity 0s ease-out 1.2s;
+  transition: transform 0s ease-out 1.2s, opacity 0s ease-out 1.2s, -webkit-transform 0s ease-out 1.2s; }
   .mobile-navigation-menu-main__options-list {
     display: -webkit-box;
     display: -ms-flexbox;
