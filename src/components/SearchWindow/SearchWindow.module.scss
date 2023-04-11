@@ -2,6 +2,7 @@
 @import '../../scss/mixins';
 
 .search-window-main {
+  @include fixed-layer;
   @include bg($primaryLight);
   padding-top: 3.5rem;
 }
