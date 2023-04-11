@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,mBAAoB;EAClB,QAAQ,EAAE,KAAK;EACf,KAAK,EAAE,IAAI;EACX,GAAG,EAAE,CAAC;EACN,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,CAAC;ECiMV,gBAAgB,ECvMH,OAAqB",
+"mappings": "AAGA,mBAAoB;ECsMlB,gBAAgB,ECvMH,OAAqB;EFGlC,WAAW,EAAE,MAAM",
 "sources": ["SearchWindow.module.scss","../../scss/_mixins.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "SearchWindow.module.css"
