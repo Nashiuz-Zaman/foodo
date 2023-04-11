@@ -282,6 +282,26 @@
   border-bottom-left-radius: $bottom-left;
 }
 
+// input
+/////////////////////////////
+/////////////////////////////
+/////////////////////////////
+
+@mixin no-focus() {
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+@mixin placeholder-def() {
+  &::placeholder {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+  }
+}
+
 // hover and active state content mixin
 /////////////////////////////
 /////////////////////////////
