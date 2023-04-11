@@ -10,6 +10,7 @@ export default function SearchButton({
   buttonText = 'no text-provided',
   extraClass = undefined,
   primaryColor = true,
+  onClick = null,
 }) {
   // jsx template
   return (
@@ -19,6 +20,7 @@ export default function SearchButton({
       }`}
     >
       <button
+        onClick={onClick}
         className={styles['search-button-main__button']}
         aria-label={'A button used to search the database'}
       >
