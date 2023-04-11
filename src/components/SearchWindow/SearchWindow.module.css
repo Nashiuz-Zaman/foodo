@@ -1,9 +1,5 @@
 .search-window-main {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background-color: #e5513e; }
+  background-color: #e5513e;
+  padding-top: 3.5rem; }
 
 /*# sourceMappingURL=SearchWindow.module.css.map */

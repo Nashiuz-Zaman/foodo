@@ -13,7 +13,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 2.5rem;
-  padding-top: 2.5rem; }
+  margin-bottom: 4rem; }
   .searchbar-main__form__label {
     width: -webkit-max-content;
     width: -moz-max-content;

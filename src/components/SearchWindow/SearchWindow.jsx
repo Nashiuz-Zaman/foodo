@@ -22,6 +22,8 @@ export default function SearchWindow({
       className={`${styles['search-window-main']} ${
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
-    ></div>
+    >
+      <Searchbar />
+    </div>
   );
 }
