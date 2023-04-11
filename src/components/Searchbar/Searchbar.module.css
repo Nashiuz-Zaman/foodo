@@ -1,0 +1,75 @@
+.searchbar-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.5rem;
+  padding-top: 2.5rem; }
+  .searchbar-main__form__label {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    border-radius: 100rem;
+    overflow: hidden;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    background-color: #fff; }
+    .searchbar-main__form__label__search-icon-container {
+      padding-left: 1.25rem; }
+      .searchbar-main__form__label__search-icon-container img {
+        width: 2.2rem; }
+    .searchbar-main__form__label__input {
+      border: none;
+      font-family: inherit;
+      color: #e23d28;
+      font-size: 1.5rem;
+      padding: 1rem 1rem 1rem 0; }
+      .searchbar-main__form__label__input:focus {
+        border: none;
+        outline: none; }
+      .searchbar-main__form__label__input::-webkit-input-placeholder {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit; }
+      .searchbar-main__form__label__input:-ms-input-placeholder {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit; }
+      .searchbar-main__form__label__input::-ms-input-placeholder {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit; }
+      .searchbar-main__form__label__input::placeholder {
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit; }
+  .searchbar-main__close-button {
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100rem; }
+
+/*# sourceMappingURL=Searchbar.module.css.map */

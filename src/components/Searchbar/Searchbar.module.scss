@@ -1,0 +1,45 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.searchbar-main {
+  @include flex-row-center;
+  gap: 2.5rem;
+  padding-top: 2.5rem;
+
+  &__form {
+    &__label {
+      width: max-content;
+      border-radius: 100rem;
+      @include no-flow;
+      margin: 0 auto;
+      @include flex-row(flex-start, center);
+      gap: 1rem;
+      @include bg($white);
+
+      &__search-icon-container {
+        padding-left: 1.25rem;
+        img {
+          width: 2.2rem;
+        }
+      }
+
+      &__input {
+        border: none;
+        font-family: inherit;
+        color: $primary;
+        font-size: 1.5rem;
+        padding: 1rem 1rem 1rem 0;
+        @include no-focus;
+        @include placeholder-def;
+      }
+    }
+  }
+
+  &__close-button {
+    font-size: 1.5rem;
+    padding: 1rem 1.25rem;
+    color: $white;
+    @include border-all-sides(1px, $white);
+    border-radius: 100rem;
+  }
+}
