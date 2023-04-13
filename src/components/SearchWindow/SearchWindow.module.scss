@@ -5,4 +5,12 @@
   @include fixed-layer;
   @include bg($primaryLight);
   padding-top: 3.5rem;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: $basic;
+}
+
+.search-active {
+  opacity: 1;
+  transform: translateY(0);
 }

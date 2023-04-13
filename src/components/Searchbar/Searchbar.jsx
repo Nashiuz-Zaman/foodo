@@ -7,23 +7,15 @@ import styles from './Searchbar.module.css';
 export default function Searchbar({
   searchTerm = '',
   setSearchTerm = '',
-  expand = false,
-  handleOpenClick = null,
-  handleCloseClick = null,
   extraClass = undefined,
 }) {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    handleCloseClick();
-  };
-
   return (
     <div
       className={`${styles['searchbar-main']} ${
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      <form onSubmit={handleSubmit} className={styles['searchbar-main__form']}>
+      <form className={styles['searchbar-main__form']}>
         <label className={styles['searchbar-main__form__label']}>
           <SearchIcon
             extraClass={[
@@ -31,7 +23,6 @@ export default function Searchbar({
             ]}
           />
           <input
-            onClick={handleOpenClick}
             className={styles['searchbar-main__form__label__input']}
             type="text"
             // value={searchTerm}
@@ -41,12 +32,7 @@ export default function Searchbar({
         </label>
       </form>
 
-      <button
-        onClick={handleCloseClick}
-        className={styles['searchbar-main__close-button']}
-      >
-        Close
-      </button>
+      <button className={styles['searchbar-main__close-button']}>Close</button>
     </div>
   );
 }

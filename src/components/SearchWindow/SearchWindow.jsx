@@ -1,3 +1,6 @@
+//redux store
+import { useSelector } from 'react-redux';
+
 //component
 import Searchbar from '../Searchbar/Searchbar';
 
@@ -9,8 +12,9 @@ export default function SearchWindow({
   headerHeight = null,
   extraClass = undefined,
 }) {
-  // jsx template
+  const { isOpen } = useSelector((state) => state.searchWindow);
 
+  // jsx template
   const customStyles = {
     marginTop: `${headerHeight}px`,
     height: `calc(100vh - ${headerHeight}px)`,
@@ -20,8 +24,8 @@ export default function SearchWindow({
     <div
       style={customStyles}
       className={`${styles['search-window-main']} ${
-        extraClass ? extraClass.join(' ') : 'no-extra-class'
-      }`}
+        isOpen ? styles['search-active'] : 'not-active'
+      } ${extraClass ? extraClass.join(' ') : 'no-extra-class'}`}
     >
       <Searchbar />
     </div>

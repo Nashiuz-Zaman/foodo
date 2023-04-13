@@ -1,13 +1,17 @@
 //react
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
+
+//redux
+import { useDispatch, useSelector } from 'react-redux';
+import { setHeaderHeight } from '../../features/header/headerSlice';
+import { toggleNavigation } from '../../features/navigation/navigationSlice';
+import { toggleSearchWindow } from '../../features/searchWindow/searchWindowSlice';
 
 //components
 import BrandName from '../BrandName/BrandName';
-import MobileNavigationMenu from '../MobileNavigationMenu/MobileNavigationMenu';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import SearchButton from '../SearchButton/SearchButton';
 import ShoppingCartButton from '../ShoppingCartButton/ShoppingCartButton';
-import SearchWindow from '../SearchWindow/SearchWindow';
 
 //styles
 import styles from './MobileHeader.module.css';
@@ -15,53 +19,42 @@ import styles from './MobileHeader.module.css';
 export default function MobileHeader({
   brandName = undefined,
   brandLogo = null,
-  navigationOptions = [],
+  isMenuIconActive = false,
 }) {
   const headerRef = useRef(null);
-  // state for header height
-  const [headerHeight, setHeaderHeight] = useState(null);
-  // state for navigation menu
-  const [navigationActive, setNavigationActive] = useState(false);
-  const [searchActive, setSearchActive] = useState(false);
-
-  // this handle click will handle state changes in both hamburger menu and mobile navigaton menu
-  const handleNavigationClick = () => {
-    setNavigationActive((prev) => !prev);
-  };
-
-  const handleSearchClick = () => {
-    setSearchActive((prev) => !prev);
-  };
+  const dispatch = useDispatch();
+  const appState = useSelector((state) => state);
 
   useEffect(() => {
     if (headerRef) {
-      setHeaderHeight(headerRef.current.scrollHeight);
+      dispatch(setHeaderHeight(headerRef.current.scrollHeight));
     }
-  }, [headerRef]);
+  }, [headerRef, dispatch]);
 
   return (
-    <>
-      <header ref={headerRef} className={styles['mobile-header-main']}>
-        <BrandName title={brandName} imageSource={brandLogo} />
+    <header ref={headerRef} className={styles['mobile-header-main']}>
+      <BrandName title={brandName} imageSource={brandLogo} />
 
-        <div className={styles['mobile-header-main__buttons']}>
-          <SearchButton onClick={handleSearchClick} />
-          <ShoppingCartButton />
-          <HamburgerMenu
-            navigationActive={navigationActive}
-            onClick={handleNavigationClick}
-          />
-        </div>
-      </header>
-
-      <MobileNavigationMenu
-        marginTop={headerHeight}
-        navigationOptions={navigationOptions}
-        navigationActive={navigationActive}
-        onClick={handleNavigationClick}
-      />
-
-      <SearchWindow searchActive={searchActive} headerHeight={headerHeight} />
-    </>
+      <div className={styles['mobile-header-main__buttons']}>
+        <SearchButton
+          onClick={() => {
+            if (appState.navigation.isOpen) {
+              dispatch(toggleNavigation());
+            }
+            dispatch(toggleSearchWindow());
+          }}
+        />
+        <ShoppingCartButton />
+        <HamburgerMenu
+          navigationActive={isMenuIconActive}
+          onClick={() => {
+            if (appState.searchWindow.isOpen) {
+              dispatch(toggleSearchWindow());
+            }
+            dispatch(toggleNavigation());
+          }}
+        />
+      </div>
+    </header>
   );
 }
