@@ -3,14 +3,7 @@
   left: 0;
   width: 100%;
   z-index: 1;
-  height: -webkit-fit-content !important;
-  height: -moz-fit-content !important;
-  height: fit-content !important;
-  overflow: hidden;
-  border-top-left-radius: _;
-  border-top-right-radius: _;
-  border-bottom-right-radius: 4rem;
-  border-bottom-left-radius: 4rem;
+  overflow-y: auto;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   opacity: 0;
@@ -38,7 +31,7 @@
       padding-bottom: 4rem; }
     .mobile-navigation-menu-main__options-list li {
       width: 100%;
-      background-color: #e23d28;
+      background-color: #e5513e;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;

@@ -17,6 +17,7 @@ export default function MobileNavigationMenu({
     <nav
       style={{
         marginTop: `${marginTop}px`,
+        height: `calc(100vh - ${marginTop}px)`,
       }}
       className={`${styles['mobile-navigation-menu-main']} ${
         navigationActive ? styles['menu-active'] : 'not-active'

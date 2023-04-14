@@ -6,9 +6,7 @@
   left: 0;
   width: 100%;
   z-index: 1;
-  height: fit-content !important;
-  @include no-flow;
-  @include border-radius(_, _, 4rem, 4rem);
+  overflow-y: auto;
   transform: translateX(-100%);
   opacity: 0;
   transition: transform 0s ease-out 1.2s, opacity 0s ease-out 1.2s; // so that when closing the menu the main containing div has 2s of delay, otherwise the sequential animations can't be seen
@@ -28,7 +26,7 @@
 
     li {
       width: 100%;
-      @include bg($primary);
+      @include bg($primaryLight);
       @include flex-row-center;
       transform: translateX(-100%);
       opacity: 0;
