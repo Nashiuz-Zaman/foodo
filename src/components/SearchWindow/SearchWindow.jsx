@@ -1,5 +1,6 @@
-//redux store
-import { useSelector } from 'react-redux';
+//redux
+import { useSelector, useDispatch } from 'react-redux';
+import { closeSearchWindow } from '../../features/searchWindow/searchWindowSlice';
 
 //component
 import Searchbar from '../Searchbar/Searchbar';
@@ -13,6 +14,7 @@ export default function SearchWindow({
   extraClass = undefined,
 }) {
   const { isOpen } = useSelector((state) => state.searchWindow);
+  const dispatch = useDispatch();
 
   // jsx template
   const customStyles = {
@@ -27,7 +29,11 @@ export default function SearchWindow({
         isOpen ? styles['search-active'] : 'not-active'
       } ${extraClass ? extraClass.join(' ') : 'no-extra-class'}`}
     >
-      <Searchbar />
+      <Searchbar
+        closeFunction={() => {
+          dispatch(closeSearchWindow());
+        }}
+      />
     </div>
   );
 }

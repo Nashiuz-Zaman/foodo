@@ -8,6 +8,7 @@ export default function Searchbar({
   searchTerm = '',
   setSearchTerm = '',
   extraClass = undefined,
+  closeFunction = null,
 }) {
   return (
     <div
@@ -32,7 +33,12 @@ export default function Searchbar({
         </label>
       </form>
 
-      <button className={styles['searchbar-main__close-button']}>Close</button>
+      <button
+        onClick={closeFunction}
+        className={styles['searchbar-main__close-button']}
+      >
+        Close
+      </button>
     </div>
   );
 }

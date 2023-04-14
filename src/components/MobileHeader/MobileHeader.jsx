@@ -5,7 +5,10 @@ import { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setHeaderHeight } from '../../features/header/headerSlice';
 import { toggleNavigation } from '../../features/navigation/navigationSlice';
-import { toggleSearchWindow } from '../../features/searchWindow/searchWindowSlice';
+import {
+  openSearchWindow,
+  closeSearchWindow,
+} from '../../features/searchWindow/searchWindowSlice';
 
 //components
 import BrandName from '../BrandName/BrandName';
@@ -41,7 +44,7 @@ export default function MobileHeader({
             if (appState.navigation.isOpen) {
               dispatch(toggleNavigation());
             }
-            dispatch(toggleSearchWindow());
+            dispatch(openSearchWindow());
           }}
         />
         <ShoppingCartButton />
@@ -49,7 +52,7 @@ export default function MobileHeader({
           navigationActive={isMenuIconActive}
           onClick={() => {
             if (appState.searchWindow.isOpen) {
-              dispatch(toggleSearchWindow());
+              dispatch(closeSearchWindow());
             }
             dispatch(toggleNavigation());
           }}
