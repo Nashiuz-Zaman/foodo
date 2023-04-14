@@ -1,13 +1,13 @@
 //react
+import { memo } from 'react';
+
+//component
 import LinkElement from '../LinkElement/LinkElement';
 
 //styles
 import styles from './LinkGroup.module.css';
 
-export default function LinkGroup({
-  singleListObject = {},
-  extraClass = undefined,
-}) {
+function LinkGroup({ singleListObject = {}, extraClass = undefined }) {
   return (
     <div
       className={`${styles['link-group']} ${
@@ -50,3 +50,5 @@ export default function LinkGroup({
     </div>
   );
 }
+
+export default memo(LinkGroup);
