@@ -13,7 +13,10 @@ import useShuffleArr from '../../hooks/useShuffleArr';
 import styles from './ReviewSection.module.css';
 
 //ReviewSection starts here
-export default function ReviewSection({ extraClass = undefined }) {
+export default function ReviewSection({
+  sectionTitle = 'no title provided',
+  extraClass = undefined,
+}) {
   const { data, error, isPending } = useFetchReviews();
   const { shuffleArr } = useShuffleArr();
   const [listOfReviews, setListOfReviews] = useState(null);
@@ -31,7 +34,7 @@ export default function ReviewSection({ extraClass = undefined }) {
     >
       <SectionTitle
         extraClass={[styles['review-section-main__section-title']]}
-        title={'Customer Reviews'}
+        title={sectionTitle}
       />
       {isPending && <LoadingSpinner isPending={isPending ? true : false} />}
       {error && <p className={'data-not-load-error-message'}>{error}</p>}
