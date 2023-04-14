@@ -1,3 +1,6 @@
+//react
+import React from 'react';
+
 //components
 import GoToTopButton from '../GoToTopButton/GoToTopButton';
 import BrandName from '../BrandName/BrandName';
@@ -13,11 +16,7 @@ import { socialmediaButtonsData, options } from '../../data/FooterData';
 import styles from './Footer.module.css';
 
 //Footer starts here
-export default function Footer({
-  brandName = '',
-  brandLogo = null,
-  extraClass = undefined,
-}) {
+function Footer({ brandName = '', brandLogo = null, extraClass = undefined }) {
   // jsx template
   return (
     <footer
@@ -57,3 +56,5 @@ export default function Footer({
     </footer>
   );
 }
+
+export default React.memo(Footer);

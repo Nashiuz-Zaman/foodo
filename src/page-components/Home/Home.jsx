@@ -1,3 +1,6 @@
+//react
+import { memo } from 'react';
+
 //component
 import HeroSection from '../../section-components/HeroSection/HeroSection';
 import HowItWorksSection from '../../section-components/HowItWorksSection/HowItWorksSection';
@@ -14,7 +17,7 @@ import styles from './Home.module.css';
 import ReviewSection from '../../section-components/ReviewSection/ReviewSection';
 
 //Home starts here
-export default function Home({ extraClass = undefined }) {
+function Home({ extraClass = undefined }) {
   // jsx template
   return (
     <div
@@ -42,7 +45,12 @@ export default function Home({ extraClass = undefined }) {
 
       <FoodItemsSection extraClass={['section-margin']} />
 
-      <ReviewSection extraClass={['section-margin']} />
+      <ReviewSection
+        sectionTitle={'Customer Reviews'}
+        extraClass={['section-margin']}
+      />
     </div>
   );
 }
+
+export default memo(Home);
