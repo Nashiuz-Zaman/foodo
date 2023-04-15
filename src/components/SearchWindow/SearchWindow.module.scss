@@ -3,11 +3,12 @@
 
 .search-window-main {
   @include fixed-layer;
-  @include bg($primaryLight);
+  @include bg($white);
   padding-top: 3.5rem;
   opacity: 0;
   transform: translateY(-100%);
   transition: $basic;
+  overflow-y: auto;
 }
 
 .search-active {

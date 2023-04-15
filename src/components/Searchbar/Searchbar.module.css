@@ -18,7 +18,6 @@
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    border-radius: 100rem;
     overflow: hidden;
     margin: 0 auto;
     display: -webkit-box;
@@ -35,7 +34,9 @@
         -ms-flex-align: center;
             align-items: center;
     gap: 1rem;
-    background-color: #fff; }
+    background-color: #e23d28;
+    border: 1px solid #e23d28;
+    border-radius: 100rem; }
     .searchbar-main__form__label__search-icon-container {
       padding-left: 1.25rem; }
       .searchbar-main__form__label__search-icon-container img {
@@ -43,9 +44,10 @@
     .searchbar-main__form__label__input {
       border: none;
       font-family: inherit;
-      color: #e23d28;
+      color: #fff;
       font-size: 1.5rem;
-      padding: 1rem 1rem 1rem 0; }
+      padding: 1rem 1rem 1rem 0;
+      background-color: transparent; }
       .searchbar-main__form__label__input:focus {
         border: none;
         outline: none; }
@@ -68,8 +70,8 @@
   .searchbar-main__close-button {
     font-size: 1.5rem;
     padding: 1rem 1.25rem;
-    color: #fff;
-    border: 1px solid #fff;
+    color: #e23d28;
+    border: 1px solid #e23d28;
     border-radius: 100rem; }
 
 /*# sourceMappingURL=Searchbar.module.css.map */

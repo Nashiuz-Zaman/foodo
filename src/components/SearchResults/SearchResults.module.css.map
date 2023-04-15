@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAGA,oBAAqB;EACnB,OAAO,EAAE,MAAM;EACf,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,uCAAuC;EAC9D,eAAe,EAAE,MAAM;EACvB,GAAG,EAAE,MAAM;EAEX,oCAAkB;IAChB,KAAK,ECVC,OAAO;IDWb,UAAU,EAAE,MAAM;IAClB,SAAS,EAAE,IAAI;IACf,aAAa,EAAE,MAAM;EAGvB,gDAA8B;IAC5B,aAAa,EAAE,CAAC",
+"sources": ["SearchResults.module.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "SearchResults.module.css"
 }

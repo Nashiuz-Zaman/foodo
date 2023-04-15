@@ -4,6 +4,10 @@ import { closeSearchWindow } from '../../features/searchWindow/searchWindowSlice
 
 //component
 import Searchbar from '../Searchbar/Searchbar';
+import SearchResults from '../SearchResults/SearchResults';
+
+//hooks
+import useResetSearchForm from '../../hooks/useResetSearchForm';
 
 //styles
 import styles from './SearchWindow.module.css';
@@ -15,6 +19,7 @@ export default function SearchWindow({
 }) {
   const { isOpen } = useSelector((state) => state.searchWindow);
   const dispatch = useDispatch();
+  useResetSearchForm();
 
   // jsx template
   const customStyles = {
@@ -34,6 +39,8 @@ export default function SearchWindow({
           dispatch(closeSearchWindow());
         }}
       />
+
+      <SearchResults />
     </div>
   );
 }

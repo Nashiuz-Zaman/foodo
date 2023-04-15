@@ -1,3 +1,10 @@
+//redux
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  setSearchTerm,
+  searchForFoodItems,
+} from '../../features/search/searchSlice';
+
 //component
 import SearchIcon from '../SearchIcon/SearchIcon';
 
@@ -5,11 +12,12 @@ import SearchIcon from '../SearchIcon/SearchIcon';
 import styles from './Searchbar.module.css';
 
 export default function Searchbar({
-  searchTerm = '',
-  setSearchTerm = '',
   extraClass = undefined,
   closeFunction = null,
 }) {
+  const { searchTerm } = useSelector((state) => state.search);
+  const dispatch = useDispatch();
+
   return (
     <div
       className={`${styles['searchbar-main']} ${
@@ -19,6 +27,7 @@ export default function Searchbar({
       <form className={styles['searchbar-main__form']}>
         <label className={styles['searchbar-main__form__label']}>
           <SearchIcon
+            primaryColor={false}
             extraClass={[
               styles['searchbar-main__form__label__search-icon-container'],
             ]}
@@ -26,8 +35,12 @@ export default function Searchbar({
           <input
             className={styles['searchbar-main__form__label__input']}
             type="text"
-            // value={searchTerm}
+            value={searchTerm}
             placeholder={'Search'}
+            onChange={(e) => {
+              dispatch(setSearchTerm(e.target.value));
+              dispatch(searchForFoodItems());
+            }}
           />
           <input type="submit" hidden />
         </label>

@@ -9,12 +9,13 @@
   &__form {
     &__label {
       width: max-content;
-      border-radius: 100rem;
       @include no-flow;
       margin: 0 auto;
       @include flex-row(flex-start, center);
       gap: 1rem;
-      @include bg($white);
+      @include bg($primary);
+      @include border-all-sides(1px, $primary);
+      border-radius: 100rem;
 
       &__search-icon-container {
         padding-left: 1.25rem;
@@ -26,11 +27,12 @@
       &__input {
         border: none;
         font-family: inherit;
-        color: $primary;
+        color: $white;
         font-size: 1.5rem;
         padding: 1rem 1rem 1rem 0;
         @include no-focus;
         @include placeholder-def;
+        @include bg(transparent);
       }
     }
   }
@@ -38,8 +40,8 @@
   &__close-button {
     font-size: 1.5rem;
     padding: 1rem 1.25rem;
-    color: $white;
-    @include border-all-sides(1px, $white);
+    color: $primary;
+    @include border-all-sides(1px, $primary);
     border-radius: 100rem;
   }
 }

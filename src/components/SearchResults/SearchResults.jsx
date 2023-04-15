@@ -1,3 +1,6 @@
+//redux
+import { useSelector } from 'react-redux';
+
 //components
 import FoodCard from '../FoodCard/FoodCard';
 
@@ -5,10 +8,9 @@ import FoodCard from '../FoodCard/FoodCard';
 import styles from './SearchResults.module.css';
 
 //SearchResults starts here
-export default function SearchResults({
-  results = [],
-  extraClass = undefined,
-}) {
+export default function SearchResults({ extraClass = undefined }) {
+  const { searchResults } = useSelector((state) => state.search);
+
   // jsx template
   return (
     <div
@@ -16,9 +18,22 @@ export default function SearchResults({
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      {results.map((single) => {
-        return <FoodCard />;
-      })}
+      {searchResults && searchResults.length === 0 && (
+        <p className={styles['search-results-main__result-summary']}>
+          Type to search
+        </p>
+      )}
+
+      {searchResults && searchResults.length > 0 && (
+        <>
+          <p className={styles['search-results-main__result-summary']}>
+            {searchResults.length} matches found
+          </p>
+          {searchResults.map((single) => {
+            return <FoodCard key={single.id} cardData={single} />;
+          })}
+        </>
+      )}
     </div>
   );
 }
