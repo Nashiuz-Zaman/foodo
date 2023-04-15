@@ -13,6 +13,9 @@ import MobileNavigationMenu from './components/MobileNavigationMenu/MobileNaviga
 //page components
 import Home from './page-components/Home/Home';
 
+//hooks
+import useNoScrollBackground from './hooks/useNoScrollBackground';
+
 //image source
 import brandLogo from './assets/food-transparent.png';
 
@@ -24,6 +27,7 @@ import { mobileNavigationOptions } from './data/NavigationMenuData';
 const brandName = 'foodo';
 
 function App() {
+  useNoScrollBackground();
   const { headerHeight } = useSelector((state) => state.header);
 
   // hamburger menu and mobile navigation menu active states are controlled by the same state inside the redux store which is extracted below
@@ -45,7 +49,7 @@ function App() {
         navigationActive={isNavigationOpen}
       />
 
-      <main>
+      <main style={{ overflow: 'hidden' }}>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

@@ -1,3 +1,4 @@
+//redux
 import { configureStore } from '@reduxjs/toolkit';
 
 // features

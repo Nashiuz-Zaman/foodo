@@ -44,6 +44,7 @@ export default function MobileHeader({
             if (appState.navigation.isOpen) {
               dispatch(toggleNavigation());
             }
+
             dispatch(openSearchWindow());
           }}
         />
