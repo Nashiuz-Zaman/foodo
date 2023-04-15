@@ -1,10 +1,11 @@
 <?php
 
-require __DIR__ . '/HandleJSONRequestResponse.php';
 
 class FoodItems
 {
   public $allFoodItems = null;
+  public $searchResults = null;
+  public $searchTerm = '';
 
   public function getAllFoodItems($databaseConnection)
   {
@@ -16,6 +17,27 @@ class FoodItems
       $this->allFoodItems = $resultSet->fetchAll(PDO::FETCH_ASSOC);
 
       HandleJSONRequestResponse::sendJSONResponse(['success' => true, 'data' => $this->allFoodItems]);
+    }
+  }
+
+  public function searchForFoodItem($databaseConnection)
+  {
+    $this->searchTerm = Security::checkForMaliciousData();
+
+    if ($this->searchTerm !== '') {
+      $sql = "SELECT * FROM food_items
+      WHERE name REGEXP :searchTerm";
+
+      $stmt = $databaseConnection->prepare($sql);
+      $stmt->bindValue(':searchTerm', $this->searchTerm, PDO::PARAM_STR);
+
+      if ($stmt->execute()) {
+        $this->searchResults = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      }
+
+      HandleJSONRequestResponse::sendJSONResponse(['success' => true, 'data' => $this->searchResults]);
+    } else {
+      HandleJSONRequestResponse::sendJSONResponse(['success' => true, 'data' => []]);
     }
   }
 }
