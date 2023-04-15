@@ -8,10 +8,10 @@ require __DIR__ . '/classes/Database.php';
 require __DIR__ . '/classes/FoodItems.php';
 
 $database = new Database();
-$databaseConnection = $database->getConn();
+$pdoConnection = $database->getConn();
 
 $foodItems = new FoodItems();
-$foodItems->getAllFoodItems($databaseConnection);
+$foodItems->getAllFoodItems($pdoConnection);
 
 // closing the database connection
-$databaseConnection = null;
+$pdoConnection = null;
