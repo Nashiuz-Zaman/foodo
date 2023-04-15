@@ -9,7 +9,7 @@ import styles from './SearchResults.module.css';
 
 //SearchResults starts here
 export default function SearchResults({ extraClass = undefined }) {
-  const { searchResults } = useSelector((state) => state.search);
+  const { searchResults, searchTerm } = useSelector((state) => state.search);
 
   // jsx template
   return (
@@ -18,9 +18,15 @@ export default function SearchResults({ extraClass = undefined }) {
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      {searchResults && searchResults.length === 0 && (
+      {searchTerm === '' && (
         <p className={styles['search-results-main__result-summary']}>
           Type to search
+        </p>
+      )}
+
+      {searchTerm !== '' && searchResults && searchResults.length === 0 && (
+        <p className={styles['search-results-main__result-summary']}>
+          No matches found
         </p>
       )}
 
