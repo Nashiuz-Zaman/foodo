@@ -5,12 +5,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 require __DIR__ . '/classes/Database.php';
 require __DIR__ . '/classes/Reviews.php';
-
-$database = new Database();
-$databaseConnection = $database->getConn();
+require __DIR__ . '/classes/HandleJSONRequestResponse.php';
 
 $reviews = new Reviews();
-$reviews->getAllReviews($databaseConnection);
-
-// closing the database connection
-$databaseConnection = null;
+$reviews->getAllReviews();

@@ -9,8 +9,5 @@ require __DIR__ . '/classes/Security.php';
 require __DIR__ . '/classes/Database.php';
 require __DIR__ . '/classes/FoodItems.php';
 
-$database = new Database();
-$pdoConn = $database->getConn();
-
 $foodItems = new FoodItems();
-$foodItems->searchForFoodItem($pdoConn);
+$foodItems->searchForFoodItem();
