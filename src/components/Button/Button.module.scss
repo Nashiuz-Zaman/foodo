@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.button-main {
+  width: max-content;
+  @include box-shadow-buttons();
+  @include bg($primary);
+
+  &__button {
+    @include button-reset();
+    color: $white;
+    font-size: 1.5rem;
+    padding: $buttonPadding;
+  }
+}
