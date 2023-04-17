@@ -1,0 +1,40 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.shopping-item-main {
+  &__item {
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr 1fr;
+    justify-items: center;
+
+    &__name,
+    &__amount,
+    &__price {
+      font-size: 1.35rem;
+    }
+
+    &__name {
+      width: 100%;
+      font-weight: 600;
+      color: $primary;
+    }
+
+    &__amount {
+      width: 100%;
+      text-align: center;
+      @include flex-row(space-between, center);
+      gap: 1rem;
+
+      [class*='button'] {
+        img {
+          height: 1.3rem;
+        }
+      }
+    }
+
+    &__price {
+      width: 100%;
+      text-align: right;
+    }
+  }
+}

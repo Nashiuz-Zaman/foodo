@@ -10,6 +10,7 @@ export default function ShoppingCartButton({
   buttonText = 'no text-provided',
   extraClass = undefined,
   primaryColor = true,
+  onClick = null,
 }) {
   // jsx template
   return (
@@ -19,6 +20,7 @@ export default function ShoppingCartButton({
       }`}
     >
       <button
+        onClick={onClick}
         className={styles['shopping-cart-button-main__button']}
         aria-label={'A button used to go to the shopping cart to checkout'}
       >

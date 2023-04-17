@@ -31,14 +31,32 @@
           -ms-flex-align: start;
               align-items: flex-start;
       gap: 0.55rem;
-      margin-bottom: 1rem; }
-      .food-card-main__item__info__name {
-        font-size: 1.35rem;
-        font-weight: 500; }
-      .food-card-main__item__info__price {
-        font-size: 1.65rem;
-        color: #e23d28;
-        font-weight: 600; }
+      margin-bottom: 1.8rem; }
+      .food-card-main__item__info__name-and-price {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
+        .food-card-main__item__info__name-and-price__name {
+          display: inline-block;
+          font-size: 1.35rem;
+          font-weight: 500; }
+        .food-card-main__item__info__name-and-price__price {
+          display: inline-block;
+          font-size: 1.65rem;
+          color: #e23d28;
+          font-weight: 600;
+          padding-right: 0.5rem; }
       .food-card-main__item__info__category {
         font-size: 1.2rem;
         color: #8e8e8e; }

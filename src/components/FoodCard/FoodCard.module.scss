@@ -23,17 +23,25 @@
     &__info {
       @include flex-col();
       gap: 0.55rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.8rem;
 
-      &__name {
-        font-size: 1.35rem;
-        font-weight: 500;
-      }
+      &__name-and-price {
+        width: 100%;
+        @include flex-row(space-between, flex-start);
 
-      &__price {
-        font-size: 1.65rem;
-        color: $primary;
-        font-weight: 600;
+        &__name {
+          display: inline-block;
+          font-size: 1.35rem;
+          font-weight: 500;
+        }
+
+        &__price {
+          display: inline-block;
+          font-size: 1.65rem;
+          color: $primary;
+          font-weight: 600;
+          padding-right: 0.5rem;
+        }
       }
 
       &__category {

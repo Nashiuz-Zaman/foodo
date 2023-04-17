@@ -9,6 +9,7 @@ import {
   openSearchWindow,
   closeSearchWindow,
 } from '../../features/searchWindow/searchWindowSlice';
+import { toggleCart } from '../../features/cart/cartSlice';
 
 //components
 import BrandName from '../BrandName/BrandName';
@@ -48,7 +49,12 @@ export default function MobileHeader({
             dispatch(openSearchWindow());
           }}
         />
-        <ShoppingCartButton />
+        <ShoppingCartButton
+          onClick={() => {
+            dispatch(toggleCart());
+          }}
+        />
+
         <HamburgerMenu
           navigationActive={isMenuIconActive}
           onClick={() => {

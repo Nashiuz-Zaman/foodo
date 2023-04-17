@@ -1,3 +1,7 @@
+//redux
+import { useDispatch } from 'react-redux';
+import { addItem } from '../../features/cart/cartSlice';
+
 //components
 import Button from '../Button/Button';
 
@@ -8,11 +12,9 @@ import ratingStar from './image/star-fill.svg';
 import styles from './FoodCard.module.css';
 
 //FoodCard starts here
-export default function FoodCard({
-  linkFor = 'samesite',
-  extraClass = undefined,
-  cardData = null,
-}) {
+export default function FoodCard({ extraClass = undefined, cardData = null }) {
+  const dispatch = useDispatch();
+
   // jsx template
   return (
     <div
@@ -33,13 +35,23 @@ export default function FoodCard({
 
         {/* text based information starts here */}
         <div className={styles['food-card-main__item__info']}>
-          <p className={styles['food-card-main__item__info__name']}>
-            {cardData.name}
-          </p>
+          <div className={styles['food-card-main__item__info__name-and-price']}>
+            <p
+              className={
+                styles['food-card-main__item__info__name-and-price__name']
+              }
+            >
+              {cardData.name}
+            </p>
 
-          <p className={styles['food-card-main__item__info__price']}>
-            ${cardData.price}
-          </p>
+            <p
+              className={
+                styles['food-card-main__item__info__name-and-price__price']
+              }
+            >
+              ${cardData.price}
+            </p>
+          </div>
 
           <p className={styles['food-card-main__item__info__category']}>
             Menu - {cardData.category}
@@ -100,6 +112,9 @@ export default function FoodCard({
           </div>
         </div>
         <Button
+          onClick={() => {
+            dispatch(addItem(cardData));
+          }}
           extraClass={[styles['food-card-main__item__button']]}
           buttonText="Add to cart"
         />

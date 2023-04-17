@@ -8,17 +8,20 @@ import styles from './MobileNavigationMenu.module.css';
 export default function MobileNavigationMenu({
   navigationOptions = null,
   navigationActive = false,
-  marginTop = null,
+  headerHeight = null,
   extraClass = undefined,
   onClick = null,
 }) {
   // jsx template
+
+  const customStyles = {
+    marginTop: `${headerHeight}px`,
+    height: `calc(100vh - ${headerHeight}px)`,
+  };
+
   return (
     <nav
-      style={{
-        marginTop: `${marginTop}px`,
-        height: `calc(100vh - ${marginTop}px)`,
-      }}
+      style={customStyles}
       className={`${styles['mobile-navigation-menu-main']} ${
         navigationActive ? styles['menu-active'] : 'not-active'
       } ${extraClass ? extraClass.join(' ') : 'no-extra-class'}`}

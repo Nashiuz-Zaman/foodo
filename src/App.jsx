@@ -9,6 +9,7 @@ import MobileHeader from './components/MobileHeader/MobileHeader';
 import Footer from './components/Footer/Footer';
 import SearchWindow from './components/SearchWindow/SearchWindow';
 import MobileNavigationMenu from './components/MobileNavigationMenu/MobileNavigationMenu';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 
 //page components
 import Home from './page-components/Home/Home';
@@ -44,10 +45,12 @@ function App() {
       <SearchWindow headerHeight={headerHeight} />
 
       <MobileNavigationMenu
-        marginTop={headerHeight}
+        headerHeight={headerHeight}
         navigationOptions={mobileNavigationOptions}
         navigationActive={isNavigationOpen}
       />
+
+      <ShoppingCart headerHeight={headerHeight} />
 
       <main style={{ overflow: 'hidden' }}>
         <Routes>

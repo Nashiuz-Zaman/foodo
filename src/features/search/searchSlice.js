@@ -44,7 +44,6 @@ const searchSlice = createSlice({
     builder.addCase(searchForFoodItems.fulfilled, (state, { payload }) => {
       state.isLoading = false;
       state.searchResults = payload.data;
-      console.log(state.searchResults);
     });
 
     builder.addCase(searchForFoodItems.rejected, (state) => {

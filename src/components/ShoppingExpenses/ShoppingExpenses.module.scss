@@ -1,0 +1,21 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.shopping-expenses-main {
+  @include flex-col;
+  gap: 1.5rem;
+
+  &__info {
+    width: 100%;
+    @include flex-row(space-between, center);
+    font-size: 1.3rem;
+
+    &--total {
+      font-weight: 600;
+    }
+  }
+
+  &__horizontal-line {
+    width: 100%;
+  }
+}

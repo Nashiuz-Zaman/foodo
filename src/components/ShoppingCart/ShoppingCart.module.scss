@@ -1,0 +1,78 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.shopping-cart-main {
+  @include fixed-layer;
+  @include bg($white);
+  transition: $basic;
+  padding: 2.5rem;
+  overflow: auto;
+
+  &__heading {
+    h3 {
+      color: $darkText;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+  }
+
+  &__items-headings {
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr 1fr;
+    justify-items: center;
+    margin-bottom: 2rem;
+
+    & > * {
+      width: 100%;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    & > :nth-child(2) {
+      text-align: center;
+    }
+
+    & > :nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  &__list-of-items {
+    margin-bottom: 2rem;
+
+    li {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    & > li:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__horizontal-line {
+    margin-bottom: 2rem;
+  }
+
+  &__shopping-expenses {
+    margin-bottom: 4rem;
+  }
+
+  &__order-button {
+    width: 100%;
+    @include flex-row-center;
+    border-radius: 100rem;
+  }
+}
+
+.not-active {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.active {
+  transform: translateY(0);
+  opacity: 1;
+}
