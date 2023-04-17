@@ -1,3 +1,6 @@
+//redux
+import { useSelector } from 'react-redux';
+
 //component
 import ShoppingCartIcon from '../ShoppingCartIcon/ShoppingCartIcon';
 
@@ -12,6 +15,8 @@ export default function ShoppingCartButton({
   primaryColor = true,
   onClick = null,
 }) {
+  const quantity = useSelector((state) => state.cart.quantity);
+
   // jsx template
   return (
     <div
@@ -27,6 +32,12 @@ export default function ShoppingCartButton({
         <ShoppingCartIcon primaryColor={primaryColor} />
         {text && buttonText}
       </button>
+      {/* only show when there is something in the cartitems array */}
+      {quantity > 0 && (
+        <p className={styles['shopping-cart-button-main__notification']}>
+          {quantity}
+        </p>
+      )}
     </div>
   );
 }

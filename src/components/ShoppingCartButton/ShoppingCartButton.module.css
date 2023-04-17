@@ -1,17 +1,42 @@
-.shopping-cart-button-main__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: _;
-      -ms-flex-pack: _;
-          justify-content: _;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem; }
+.shopping-cart-button-main {
+  position: relative; }
+  .shopping-cart-button-main__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem; }
+  .shopping-cart-button-main__notification {
+    position: absolute;
+    top: -1.25rem;
+    right: -0.65rem;
+    width: 2.3rem;
+    aspect-ratio: 1/1 !important;
+    background-color: #e23d28;
+    border-radius: 50%;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.2rem; }
 
 /*# sourceMappingURL=ShoppingCartButton.module.css.map */
