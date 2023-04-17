@@ -81,9 +81,27 @@ const cartSlice = createSlice({
       state.totalIncludingAllExpenses =
         state.totalPrice + state.totalDeliveryFee + state.tax;
     },
+    closeCart: (state) => {
+      state.isOpen = false;
+    },
+
+    resetAll: (state) => {
+      state.cartItems.splice(0);
+      state.quantity = 0;
+      state.totalPrice = 0;
+      state.totalDeliveryFee = 0;
+      state.tax = 0;
+      state.totalIncludingAllExpenses = 0;
+    },
   },
 });
 
 export default cartSlice.reducer;
-export const { addItem, summarizeCart, toggleCart, removeItem } =
-  cartSlice.actions;
+export const {
+  addItem,
+  summarizeCart,
+  toggleCart,
+  removeItem,
+  resetAll,
+  closeCart,
+} = cartSlice.actions;

@@ -9,9 +9,10 @@ const searchWindowSlice = createSlice({
   name: 'searchWindow',
   initialState: initialState,
   reducers: {
-    openSearchWindow: (state) => {
-      state.isOpen = true;
+    toggleSearchWindow: (state) => {
+      state.isOpen = !state.isOpen;
     },
+
     closeSearchWindow: (state) => {
       resetAll();
       state.isOpen = false;
@@ -20,5 +21,5 @@ const searchWindowSlice = createSlice({
 });
 
 export default searchWindowSlice.reducer;
-export const { openSearchWindow, closeSearchWindow } =
+export const { toggleSearchWindow, closeSearchWindow } =
   searchWindowSlice.actions;

@@ -19,6 +19,7 @@ import useNoScrollBackground from './hooks/useNoScrollBackground';
 
 //image source
 import brandLogo from './assets/food-transparent.png';
+import emptyCartLogo from './assets/empty-cart.png';
 
 //styles
 import './basic-styling/App.css';
@@ -50,7 +51,7 @@ function App() {
         navigationActive={isNavigationOpen}
       />
 
-      <ShoppingCart headerHeight={headerHeight} />
+      <ShoppingCart emptyCartLogo={emptyCartLogo} headerHeight={headerHeight} />
 
       <main style={{ overflow: 'hidden' }}>
         <Routes>

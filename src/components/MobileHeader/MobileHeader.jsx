@@ -4,12 +4,15 @@ import { useRef, useEffect } from 'react';
 //redux
 import { useDispatch, useSelector } from 'react-redux';
 import { setHeaderHeight } from '../../features/header/headerSlice';
-import { toggleNavigation } from '../../features/navigation/navigationSlice';
 import {
-  openSearchWindow,
+  toggleNavigation,
+  closeNavigation,
+} from '../../features/navigation/navigationSlice';
+import {
+  toggleSearchWindow,
   closeSearchWindow,
 } from '../../features/searchWindow/searchWindowSlice';
-import { toggleCart } from '../../features/cart/cartSlice';
+import { toggleCart, closeCart } from '../../features/cart/cartSlice';
 
 //components
 import BrandName from '../BrandName/BrandName';
@@ -42,15 +45,16 @@ export default function MobileHeader({
       <div className={styles['mobile-header-main__buttons']}>
         <SearchButton
           onClick={() => {
-            if (appState.navigation.isOpen) {
-              dispatch(toggleNavigation());
-            }
-
-            dispatch(openSearchWindow());
+            dispatch(closeNavigation());
+            dispatch(closeCart());
+            dispatch(toggleSearchWindow());
           }}
         />
+
         <ShoppingCartButton
           onClick={() => {
+            dispatch(closeNavigation());
+            dispatch(closeSearchWindow());
             dispatch(toggleCart());
           }}
         />
@@ -58,9 +62,8 @@ export default function MobileHeader({
         <HamburgerMenu
           navigationActive={isMenuIconActive}
           onClick={() => {
-            if (appState.searchWindow.isOpen) {
-              dispatch(closeSearchWindow());
-            }
+            dispatch(closeSearchWindow());
+            dispatch(closeCart());
             dispatch(toggleNavigation());
           }}
         />

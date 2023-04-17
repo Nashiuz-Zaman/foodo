@@ -12,12 +12,14 @@ export default function LinkButton({
   iconImageSource = undefined,
   goBackButton = false,
   rightCaret = false,
+  onClick = null,
 }) {
   return (
     <div
       className={`${styles['link-button-main']} ${
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
+      onClick={onClick}
     >
       <LinkElement
         text={buttonText}
