@@ -1,18 +1,18 @@
-@import '../../../scss/variables';
-@import '../../../scss/mixin';
+@import '../../scss/variables';
+@import '../../scss/mixins';
 
 .plus-button-main {
   width: max-content;
 
   &__button {
     @include button-reset();
-    @include flex-align-center();
+    @include flex-row(_, center);
     gap: 0.5rem;
     font-size: 2.5rem;
     color: $white;
 
     &__plus-icon {
-      @include bg-color(transparent);
+      @include bg(transparent);
 
       img {
         height: 2rem;
