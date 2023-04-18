@@ -39,9 +39,9 @@
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal; }
   .heading-description-button-textbox .button-group {
     display: -webkit-box;
     display: -ms-flexbox;

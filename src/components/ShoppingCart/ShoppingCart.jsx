@@ -24,7 +24,6 @@ import styles from './ShoppingCart.module.css';
 export default function ShoppingCart({
   headerHeight = null,
   emptyCartLogo = null,
-  cartItems = null,
   extraClass = undefined,
 }) {
   const dispatch = useDispatch();

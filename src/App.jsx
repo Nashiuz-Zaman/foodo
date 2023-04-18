@@ -1,8 +1,9 @@
 //react
 import { Routes, Route } from 'react-router-dom';
 
-//reducer
-import { useSelector } from 'react-redux';
+//redux
+import { useDispatch, useSelector } from 'react-redux';
+import { closeNavigation } from './features/navigation/navigationSlice';
 
 //components
 import MobileHeader from './components/MobileHeader/MobileHeader';
@@ -13,9 +14,11 @@ import ShoppingCart from './components/ShoppingCart/ShoppingCart';
 
 //page components
 import Home from './page-components/Home/Home';
+import Menu from './page-components/Menu/Menu';
 
 //hooks
 import useNoScrollBackground from './hooks/useNoScrollBackground';
+import useScrollToTop from './hooks/useScrollToTop';
 
 //image source
 import brandLogo from './assets/food-transparent.png';
@@ -30,7 +33,9 @@ const brandName = 'foodo';
 
 function App() {
   useNoScrollBackground();
+  useScrollToTop();
   const { headerHeight } = useSelector((state) => state.header);
+  const dispatch = useDispatch();
 
   // hamburger menu and mobile navigation menu active states are controlled by the same state inside the redux store which is extracted below
   const { isOpen: isNavigationOpen } = useSelector((state) => state.navigation);
@@ -49,13 +54,17 @@ function App() {
         headerHeight={headerHeight}
         navigationOptions={mobileNavigationOptions}
         navigationActive={isNavigationOpen}
+        onClick={() => {
+          dispatch(closeNavigation());
+        }}
       />
 
       <ShoppingCart emptyCartLogo={emptyCartLogo} headerHeight={headerHeight} />
 
-      <main style={{ overflow: 'hidden' }}>
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
         </Routes>
       </main>
 

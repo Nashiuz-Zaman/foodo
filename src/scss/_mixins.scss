@@ -125,28 +125,28 @@
 /////////////////////////////
 /////////////////////////////
 /////////////////////////////
-@mixin flex-row($justify: flex-start, $align: flex-start) {
+@mixin flex-row($justify: flex-start, $align: normal) {
   display: flex;
   flex-direction: row;
   justify-content: $justify;
   align-items: $align;
 }
 
-@mixin flex-row-rev($justify: flex-start, $align: flex-start) {
+@mixin flex-row-rev($justify: flex-start, $align: normal) {
   display: flex;
   flex-direction: row-reverse;
   justify-content: $justify;
   align-items: $align;
 }
 
-@mixin flex-col($justify: flex-start, $align: flex-start) {
+@mixin flex-col($justify: flex-start, $align: normal) {
   display: flex;
   flex-direction: column;
   justify-content: $justify;
   align-items: $align;
 }
 
-@mixin flex-col-rev($justify: flex-start, $align: flex-start) {
+@mixin flex-col-rev($justify: flex-start, $align: normal) {
   display: flex;
   flex-direction: column-reverse;
   justify-content: $justify;

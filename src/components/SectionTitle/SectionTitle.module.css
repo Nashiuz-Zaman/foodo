@@ -45,9 +45,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; }
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal; }
     .section-title-box__section-title {
       font-size: 3rem; } }
 @media (min-width: 48em) {
