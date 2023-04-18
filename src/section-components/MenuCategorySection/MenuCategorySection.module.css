@@ -1,0 +1,22 @@
+.menu-category-section-main {
+  padding: 0 2.5rem; }
+  .menu-category-section-main__section-title {
+    margin-bottom: 4rem; }
+  .menu-category-section-main__category-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    gap: 3rem; }
+
+/*# sourceMappingURL=MenuCategorySection.module.css.map */
