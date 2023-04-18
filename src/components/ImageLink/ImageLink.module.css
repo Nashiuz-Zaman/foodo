@@ -1,0 +1,20 @@
+.image-link-main__link:link, .image-link-main__link:visited {
+  display: block;
+  width: 100%; }
+.image-link-main__container {
+  width: 100% !important; }
+  .image-link-main__container__title {
+    margin-bottom: 1.5rem; }
+    .image-link-main__container__title h3 {
+      color: #e23d28;
+      font-size: 1.8rem;
+      text-align: left; }
+  .image-link-main__container__image {
+    background-position: 50% 50% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 1rem; }
+
+/*# sourceMappingURL=ImageLink.module.css.map */
