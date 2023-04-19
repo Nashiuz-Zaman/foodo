@@ -14,7 +14,7 @@
     right: -0.65rem;
     width: 2.3rem;
     @include squarebox;
-    @include bg($primary);
+    @include bg($primaryLight);
     border-radius: 50%;
     color: $white;
     @include flex-row-center;

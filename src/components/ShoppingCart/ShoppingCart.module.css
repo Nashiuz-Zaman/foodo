@@ -10,7 +10,8 @@
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
   padding: 2.5rem;
-  overflow: auto; }
+  overflow: auto;
+  z-index: 2; }
   .shopping-cart-main__empty-cart-image {
     display: -webkit-box;
     display: -ms-flexbox;

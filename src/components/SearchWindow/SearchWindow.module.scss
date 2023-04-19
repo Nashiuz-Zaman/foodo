@@ -3,6 +3,7 @@
 
 .search-window-main {
   @include fixed-layer;
+  z-index: 2;
   @include bg($white);
   padding-top: 3.5rem;
   opacity: 0;

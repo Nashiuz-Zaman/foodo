@@ -7,6 +7,7 @@
   transition: $basic;
   padding: 2.5rem;
   overflow: auto;
+  z-index: 2;
 
   &__empty-cart-image {
     @include flex-row-center;
