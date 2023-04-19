@@ -4,10 +4,11 @@
 .image-link-main__container {
   width: 100% !important; }
   .image-link-main__container__title {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1rem; }
     .image-link-main__container__title h3 {
       color: #e23d28;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      font-weight: 400;
       text-align: left; }
   .image-link-main__container__image {
     background-position: 50% 50% !important;
@@ -15,6 +16,8 @@
     background-repeat: no-repeat !important;
     width: 100%;
     aspect-ratio: 16/9;
-    border-radius: 1rem; }
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=ImageLink.module.css.map */

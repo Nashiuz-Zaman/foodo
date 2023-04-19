@@ -5,7 +5,7 @@
   width: 100%;
   color: $white;
   border-radius: 3rem;
-  @include no-flow();
+  @include no-flow;
   box-shadow: 0 0 1.5rem rgba($black, 0.15);
   border-radius: 2rem;
 
@@ -18,13 +18,13 @@
   }
 
   &__plain-description-main {
-    padding: 1.8rem 1.5rem;
+    padding: 2.5rem;
     color: inherit;
-    @include bg($primary);
 
+    @include bg($primary);
     p {
       font-weight: 400;
-      line-height: 1.5;
+      line-height: 1.6;
     }
   }
 }

@@ -13,11 +13,11 @@
     width: 100% !important;
 
     &__title {
-      margin-bottom: 1.5rem;
-
+      margin-bottom: 1rem;
       h3 {
         color: $primary;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        font-weight: 400;
         text-align: left;
       }
     }
@@ -26,6 +26,7 @@
       @include bg-cover-center;
       @include widescreen-size;
       border-radius: 1rem;
+      box-shadow: 0 0.2rem 0.6rem rgba(black, 0.2);
     }
   }
 }
