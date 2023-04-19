@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAGA,sBAAuB;EACrB,aAAa,EAAE,MAAM;EACrB,UAAU,EAAE,MAAM;EAElB,+BAAW;IACT,WAAW,EAAE,GAAG;IAChB,KAAK,ECRC,OAAO;IDSb,SAAS,EAAE,IAAI;;AE2UjB,wBAAgC;EFrU9B,+BAAW;IACT,SAAS,EAAE,MAAM",
-"sources": ["TertiaryHeading.module.scss","../../scss/_variables.scss","../../scss/_mixins.scss"],
+"mappings": "AAGA,sBAAuB;EC6HrB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,ED9HG,CAAC;EC+HnB,WAAW,ED/HU,MAAM;EAC3B,GAAG,EAAE,OAAO;EACZ,aAAa,EAAE,MAAM;EACrB,UAAU,EAAE,MAAM;EAElB,+BAAW;IACT,WAAW,EAAE,GAAG;IAChB,KAAK,EEVC,OAAO;IFWb,SAAS,EAAE,IAAI;IACf,cAAc,EAAE,UAAU;EAG5B,6BAAS;IACP,MAAM,EAAE,MAAM;;ACoUhB,wBAAgC;ED9T9B,+BAAW;IACT,SAAS,EAAE,MAAM",
+"sources": ["TertiaryHeading.module.scss","../../scss/_mixins.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "TertiaryHeading.module.css"
 }

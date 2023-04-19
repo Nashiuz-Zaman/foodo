@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAGA,2BAA4B;EAC1B,OAAO,EAAE,QAAQ;EAEjB,0CAAiB;IACf,aAAa,EAAE,IAAI;EAGrB,+CAAsB;IACpB,KAAK,EAAE,IAAI;ICmIb,OAAO,EAAE,IAAI;IACb,cAAc,EAAE,MAAM;IACtB,eAAe,EAHS,UAAU;IAIlC,WAAW,EAJiC,MAAM;IDhIhD,GAAG,EAAE,IAAI",
-"sources": ["MenuCategorySection.module.scss","../../scss/_mixins.scss"],
+"mappings": "AAGA,2BAA4B;EAC1B,OAAO,EAAE,QAAQ;EAEjB,0CAAiB;IACf,aAAa,EAAE,IAAI;EAGrB,+CAAsB;IACpB,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,IAAI;IACb,qBAAqB,EAAE,qCAAqC;IAC5D,UAAU,EAAE,MAAM;IAClB,OAAO,EAAE,IAAI",
+"sources": ["MenuCategorySection.module.scss"],
 "names": [],
 "file": "MenuCategorySection.module.css"
 }
