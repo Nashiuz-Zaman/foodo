@@ -1,6 +1,7 @@
 //image sources
 import pizzasImage from '../assets/pizzas.webp';
 import burgersImage from '../assets/burgers.webp';
+import steaksImage from '../assets/steaks.webp';
 import soupsImage from '../assets/soups.webp';
 import pizzaicon from '../assets/pizzaicon.webp';
 import burgericon from '../assets/burgericon.webp';
@@ -25,6 +26,14 @@ export const foodCategories = [
   },
   {
     id: 2,
+    imageSource: steaksImage,
+    title: 'steaks',
+    linkFor: 'hashed',
+    toUrl: 'menu#steaks',
+    icon: burgericon,
+  },
+  {
+    id: 3,
     imageSource: soupsImage,
     title: 'soups',
     linkFor: 'hashed',
