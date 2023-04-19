@@ -10,9 +10,11 @@ export default function BrandName({
   changeTheme = false,
   imageSource = null,
   alt = '',
+  onClick = null,
 }) {
   return (
     <h1
+      onClick={onClick}
       className={`${styles['brand-name-main']} ${
         changeTheme
           ? styles['brand-name-main--alternative']

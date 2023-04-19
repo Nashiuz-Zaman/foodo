@@ -40,7 +40,15 @@ export default function MobileHeader({
 
   return (
     <header ref={headerRef} className={styles['mobile-header-main']}>
-      <BrandName title={brandName} imageSource={brandLogo} />
+      <BrandName
+        onClick={() => {
+          dispatch(closeNavigation());
+          dispatch(closeCart());
+          dispatch(closeSearchWindow());
+        }}
+        title={brandName}
+        imageSource={brandLogo}
+      />
 
       <div className={styles['mobile-header-main__buttons']}>
         <SearchButton
