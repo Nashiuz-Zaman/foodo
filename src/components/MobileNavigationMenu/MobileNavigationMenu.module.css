@@ -2,15 +2,18 @@
   position: fixed;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   overflow-y: auto;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   opacity: 0;
-  -webkit-transition: opacity 0s ease-out 1.2s, -webkit-transform 0s ease-out 1.2s;
-  transition: opacity 0s ease-out 1.2s, -webkit-transform 0s ease-out 1.2s;
-  transition: transform 0s ease-out 1.2s, opacity 0s ease-out 1.2s;
-  transition: transform 0s ease-out 1.2s, opacity 0s ease-out 1.2s, -webkit-transform 0s ease-out 1.2s; }
+  background-color: rgba(226, 61, 40, 0.9);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  -webkit-transition: opacity 0.2s ease-out 0.4s, -webkit-transform 0.2s ease-out 0.4s;
+  transition: opacity 0.2s ease-out 0.4s, -webkit-transform 0.2s ease-out 0.4s;
+  transition: transform 0.2s ease-out 0.4s, opacity 0.2s ease-out 0.4s;
+  transition: transform 0.2s ease-out 0.4s, opacity 0.2s ease-out 0.4s, -webkit-transform 0.2s ease-out 0.4s; }
   .mobile-navigation-menu-main__options-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -24,14 +27,12 @@
             justify-content: _;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    gap: 2.5rem; }
     .mobile-navigation-menu-main__options-list > :first-child {
       padding-top: 4rem; }
-    .mobile-navigation-menu-main__options-list > :last-child {
-      padding-bottom: 4rem; }
     .mobile-navigation-menu-main__options-list li {
       width: 100%;
-      background-color: #e5513e;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -47,11 +48,10 @@
               align-items: center;
       -webkit-transform: translateX(-100%);
               transform: translateX(-100%);
-      opacity: 0;
-      padding: 2rem 0; }
+      opacity: 0; }
       .mobile-navigation-menu-main__options-list li a:link, .mobile-navigation-menu-main__options-list li a:visited {
         color: #fff;
-        font-size: 1.55rem; }
+        font-size: 1.75rem; }
 
 .menu-active {
   -webkit-transform: translateX(0);
