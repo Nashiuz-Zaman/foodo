@@ -1,0 +1,13 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.only-design-div {
+  padding: 0rem 0;
+  @include flex-row(center, center);
+
+  &__core {
+    width: 50%;
+    height: 0.1rem;
+    background-color: $lightestGray;
+  }
+}
