@@ -21,7 +21,7 @@ import useNoScrollBackground from './hooks/useNoScrollBackground';
 import useScrollToTop from './hooks/useScrollToTop';
 
 //image source
-import brandLogo from './assets/food-transparent.png';
+import brandLogo from './assets/brandlogo.webp';
 import emptyCartLogo from './assets/empty-cart.png';
 
 //styles

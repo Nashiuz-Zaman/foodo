@@ -5,12 +5,14 @@
   padding: 0 2.5rem;
 
   &__section-title {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   &__category-container {
     width: 100%;
-    @include flex-col;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 2rem;
   }
 }

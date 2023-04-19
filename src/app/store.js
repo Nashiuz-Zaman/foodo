@@ -7,6 +7,7 @@ import headerReducer from '../features/header/headerSlice';
 import navigationReducer from '../features/navigation/navigationSlice';
 import searchReducer from '../features/search/searchSlice';
 import cartReducer from '../features/cart/cartSlice';
+import foodItemsReducer from '../features/foodItems/foodItemsSlice';
 
 export const store = configureStore({
   reducer: {
@@ -15,5 +16,6 @@ export const store = configureStore({
     navigation: navigationReducer,
     search: searchReducer,
     cart: cartReducer,
+    foodItems: foodItemsReducer,
   },
 });

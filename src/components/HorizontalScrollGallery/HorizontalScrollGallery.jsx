@@ -6,12 +6,12 @@ import FoodCard from '../FoodCard/FoodCard';
 //styles
 import styles from './HorizontalScrollGallery.module.css';
 
-export default function HorizontalScrollGallery({ imageSourceArray = [] }) {
+export default function HorizontalScrollGallery({ dataArray = [] }) {
   return (
     <section className={styles['horizontal-scroll-gallery']}>
       <div className={styles['horizontal-scroll-gallery__scroller']}>
-        {imageSourceArray &&
-          imageSourceArray.map((single) => {
+        {dataArray &&
+          dataArray.map((single) => {
             return <FoodCard key={single.id} cardData={single} />;
           })}
       </div>

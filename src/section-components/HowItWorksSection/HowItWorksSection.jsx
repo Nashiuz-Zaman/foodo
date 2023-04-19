@@ -1,6 +1,5 @@
 //component
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
-import PlainDescription from '../../components/PlainDescription/PlainDescription';
 import ImageDescriptionButton from '../../components/ImageDescriptionButton/ImageDescriptionButton';
 import TertiaryHeading from '../../components/TertiaryHeading/TertiaryHeading';
 import LinkButton from '../../components/LinkButton/LinkButton';
@@ -12,7 +11,6 @@ import styles from './HowItWorksSection.module.css';
 export default function HowItWorksSection({
   sectionId = '',
   sectionTitle = 'no title provided',
-  description = 'no description provided',
   extraClass = undefined,
   howItWorksDataArray = null,
 }) {
@@ -49,7 +47,15 @@ export default function HowItWorksSection({
                 >
                   {single.id + 1}
                 </p>
-                <TertiaryHeading heading={single.heading} />
+
+                <TertiaryHeading
+                  extraClass={[
+                    styles[
+                      'how-it-works-section-main__how-it-works-list__item-heading'
+                    ],
+                  ]}
+                  heading={single.heading}
+                />
                 <ImageDescriptionButton
                   imageSource={single.imageSource}
                   heading={single.heading}

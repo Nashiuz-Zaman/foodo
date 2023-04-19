@@ -2,6 +2,8 @@
 @import '../../scss/mixins';
 
 .tertiary-heading-main {
+  @include flex-row(_, center);
+  gap: 0.75rem;
   margin-bottom: 2.5rem;
   text-align: center;
 
@@ -9,6 +11,11 @@
     font-weight: 600;
     color: $primary;
     font-size: 2rem;
+    text-transform: capitalize;
+  }
+
+  &__image {
+    height: 2.2rem;
   }
 }
 

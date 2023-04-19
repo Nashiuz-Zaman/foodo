@@ -2,7 +2,7 @@
   height: 100%;
   padding: 0 2.5rem; }
   .how-it-works-section-main__section-title {
-    margin-bottom: 4rem; }
+    margin-bottom: 5rem; }
   .how-it-works-section-main__how-it-works-list {
     list-style-type: none;
     display: -webkit-box;
@@ -44,6 +44,20 @@
       margin: 0 auto;
       margin-bottom: 2rem !important;
       border: #e23d28 solid 2px; }
+    .how-it-works-section-main__how-it-works-list__item-heading {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: _;
+          -ms-flex-align: _;
+              align-items: _; }
   .how-it-works-section-main__order-button {
     margin: 0 auto !important; }
 

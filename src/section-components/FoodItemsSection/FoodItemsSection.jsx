@@ -45,7 +45,7 @@ export default function FoodItemsSection({ extraClass = undefined }) {
               extraClass={[styles['food-items-section-main__gallery-heading']]}
               heading={"Today's Top Picks"}
             />
-            <HorizontalScrollGallery imageSourceArray={topPicks} />
+            <HorizontalScrollGallery dataArray={topPicks} />
           </div>
 
           <div className={styles['food-items-section-main__delicious-dishes']}>
@@ -53,7 +53,7 @@ export default function FoodItemsSection({ extraClass = undefined }) {
               extraClass={[styles['food-items-section-main__gallery-heading']]}
               heading={'Delicious Dishes'}
             />
-            <HorizontalScrollGallery imageSourceArray={shuffledData} />
+            <HorizontalScrollGallery dataArray={shuffledData} />
           </div>
         </>
       )}

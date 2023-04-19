@@ -6,17 +6,8 @@
   padding: 0 2.5rem;
 
   &__section-title {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
   }
-
-  // &__top-plain-description {
-  //   text-align: center;
-  //   margin-bottom: 3.5rem;
-
-  //   p {
-  //     font-size: 1.8rem;
-  //   }
-  // }
 
   &__how-it-works-list {
     list-style-type: none;
@@ -37,6 +28,10 @@
       margin: 0 auto;
       margin-bottom: 2rem !important;
       @include border-all-sides($primary, 2px);
+    }
+
+    &__item-heading {
+      @include flex-row(center, _);
     }
   }
 
