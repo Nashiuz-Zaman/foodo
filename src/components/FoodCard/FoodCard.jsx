@@ -54,7 +54,7 @@ export default function FoodCard({ extraClass = undefined, cardData = null }) {
           </div>
 
           <p className={styles['food-card-main__item__info__category']}>
-            Menu - {cardData.category}
+            $$ - {cardData.category}
           </p>
 
           <div className={styles['food-card-main__item__info__bottom-info']}>
