@@ -60,6 +60,7 @@ export default function HowItWorksSection({
                   imageSource={single.imageSource}
                   heading={single.heading}
                   description={single.description}
+                  reverseStyle={single.reverseStyle}
                 />
               </li>
             );

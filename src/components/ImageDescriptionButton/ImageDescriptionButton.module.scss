@@ -4,27 +4,52 @@
 .image-description-button-main {
   width: 100%;
   color: $white;
-  border-radius: 3rem;
   @include no-flow;
-  box-shadow: 0 0 1.5rem rgba($black, 0.15);
-  border-radius: 2rem;
 
   &__image-main {
-    width: 100%;
+    position: relative;
+    width: 70%;
+    @include squarebox;
+    margin-right: auto;
+    border-radius: 50%;
+    @include no-flow;
+    margin-bottom: -5.25rem;
+    box-shadow: 0 10px 20px rgba($black, 0.2);
+    z-index: 1;
 
     img {
-      @include same-size();
+      object-fit: cover;
+      @include same-size;
     }
   }
 
   &__plain-description-main {
-    padding: 2.5rem;
+    width: 70%;
+    @include squarebox;
+    @include flex-row-center;
+    padding: 3.5rem;
+    padding-right: 2.5rem;
     color: inherit;
-
+    border-radius: 50%;
     @include bg($primary);
+    margin-left: auto;
+
     p {
       font-weight: 400;
-      line-height: 1.6;
+      line-height: 1.5;
+      font-size: 1.4rem;
     }
+  }
+}
+
+.reverse-image-description-button-main {
+  [class*='image-main'] {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  [class*='plain-description-main'] {
+    margin-left: 0;
+    margin-right: auto;
   }
 }

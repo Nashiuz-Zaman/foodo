@@ -11,12 +11,15 @@ export default function ImageDescriptionButton({
   altText = '',
   extraClass = undefined,
   button = undefined,
+  reverseStyle = false,
 }) {
   return (
     <div
       className={`${styles['image-description-button-main']} ${
-        extraClass ? extraClass.join(' ') : 'no-extra-class'
-      }`}
+        reverseStyle
+          ? styles['reverse-image-description-button-main']
+          : 'no-reverse-style'
+      } ${extraClass ? extraClass.join(' ') : 'no-extra-class'}`}
     >
       <ImageElement
         extraClass={[styles['image-description-button-main__image-main']]}

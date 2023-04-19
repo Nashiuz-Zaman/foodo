@@ -6,7 +6,7 @@
   padding: 0 2.5rem;
 
   &__section-title {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   &__how-it-works-list {
@@ -19,19 +19,19 @@
       font-size: 4.25rem;
       font-weight: 600;
       text-align: center;
-      width: 7rem;
+      width: 6.5rem;
       @include squarebox();
       border-radius: 50%;
-      @include flex-row(center, center);
-      // @include bg($primary);
+      @include flex-row-center;
       color: $primary;
       margin: 0 auto;
-      margin-bottom: 2rem !important;
-      @include border-all-sides($primary, 2px);
+      margin-bottom: 2.5rem;
+      border: 2px solid $primary;
     }
 
     &__item-heading {
       @include flex-row(center, _);
+      margin-bottom: 3.5rem;
     }
   }
 
