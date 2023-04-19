@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIE,4CAAW;EACT,MAAM,EAAE,kBAAkB;EAE1B,+CAAG;IACD,UAAU,EAAE,IAAI;IAChB,KAAK,ECRD,OAAO;IDSX,SAAS,EAAE,MAAM;IACjB,WAAW,EAAE,GAAG",
+"sources": ["CardsCollectionWithHeading.module.scss","../../scss/_variables.scss"],
+"names": [],
+"file": "CardsCollectionWithHeading.module.css"
+}

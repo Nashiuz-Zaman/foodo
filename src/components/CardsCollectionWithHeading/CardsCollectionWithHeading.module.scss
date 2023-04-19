@@ -1,0 +1,15 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.cards-collection-with-heading-main {
+  &__heading {
+    margin: 0 0 1.25rem 2.5rem;
+
+    h3 {
+      text-align: left;
+      color: $primary;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+  }
+}
