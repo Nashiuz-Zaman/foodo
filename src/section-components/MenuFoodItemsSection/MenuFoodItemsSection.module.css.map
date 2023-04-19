@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,6BAA8B;EC2I5B,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAHS,UAAU;EAIlC,WAAW,EAJiC,MAAM;EDxIlD,GAAG,EAAE,MAAM",
+"sources": ["MenuFoodItemsSection.module.scss","../../scss/_mixins.scss"],
+"names": [],
+"file": "MenuFoodItemsSection.module.css"
+}

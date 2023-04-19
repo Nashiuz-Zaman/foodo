@@ -1,0 +1,7 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.menu-food-items-section-main {
+  @include flex-col;
+  gap: 4.5rem;
+}
