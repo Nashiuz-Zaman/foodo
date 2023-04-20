@@ -25,7 +25,7 @@ export default function Menu({ extraClass = undefined }) {
   const allFoodItems = useSelector((state) => state.foodItems.allFoodItems);
   useEffect(() => {
     dispatch(getAllFoodItems());
-  }, []);
+  }, [dispatch]);
 
   // jsx template
   return (
@@ -48,7 +48,7 @@ export default function Menu({ extraClass = undefined }) {
         sectionId={'menu'}
         sectionTitle={'Menu'}
         categoryData={foodCategories}
-        extraClass={['section-margin', 'scroll-offset']}
+        extraClass={['scroll-offset']}
       />
 
       <MenuFoodItemsSection

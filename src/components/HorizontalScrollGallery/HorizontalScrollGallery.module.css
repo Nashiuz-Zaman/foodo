@@ -20,5 +20,7 @@
             scroll-snap-type: x mandatory;
     scroll-padding-inline: 2.5rem;
     overscroll-behavior-inline: contain; }
+    .horizontal-scroll-gallery__scroller__gallery-item {
+      margin-bottom: 2.25rem; }
 
 /*# sourceMappingURL=HorizontalScrollGallery.module.css.map */

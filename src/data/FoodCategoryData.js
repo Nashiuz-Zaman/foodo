@@ -6,6 +6,7 @@ import soupsImage from '../assets/soups.webp';
 import pizzaicon from '../assets/pizzaicon.webp';
 import burgericon from '../assets/burgericon.webp';
 import soupicon from '../assets/soupicon.webp';
+import steakicon from '../assets/steakicon.webp';
 
 export const foodCategories = [
   {
@@ -30,7 +31,7 @@ export const foodCategories = [
     title: 'steaks',
     linkFor: 'hashed',
     toUrl: 'menu#steaks',
-    icon: burgericon,
+    icon: steakicon,
   },
   {
     id: 3,

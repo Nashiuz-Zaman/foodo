@@ -12,7 +12,15 @@ export default function HorizontalScrollGallery({ dataArray = [] }) {
       <div className={styles['horizontal-scroll-gallery__scroller']}>
         {dataArray &&
           dataArray.map((single) => {
-            return <FoodCard key={single.id} cardData={single} />;
+            return (
+              <FoodCard
+                extraClass={[
+                  styles['horizontal-scroll-gallery__scroller__gallery-item'],
+                ]}
+                key={single.id}
+                cardData={single}
+              />
+            );
           })}
       </div>
     </section>

@@ -28,5 +28,9 @@
     scroll-snap-type: x mandatory;
     scroll-padding-inline: 2.5rem;
     overscroll-behavior-inline: contain;
+
+    &__gallery-item {
+      margin-bottom: 2.25rem;
+    }
   }
 }

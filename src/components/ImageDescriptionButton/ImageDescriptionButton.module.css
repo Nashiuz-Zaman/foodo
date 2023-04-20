@@ -4,22 +4,24 @@
   overflow: hidden; }
   .image-description-button-main__image-main {
     position: relative;
-    width: 70%;
+    width: 23.5rem;
     aspect-ratio: 1/1 !important;
-    margin-right: auto;
+    margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: -5.25rem;
-    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1; }
+    margin-bottom: -3rem;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem); }
     .image-description-button-main__image-main img {
       -o-object-fit: cover;
          object-fit: cover;
       width: 100%;
       height: 100%; }
   .image-description-button-main__plain-description-main {
-    width: 70%;
+    width: 23rem;
     aspect-ratio: 1/1 !important;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,17 +41,20 @@
     color: inherit;
     border-radius: 50%;
     background-color: #e23d28;
-    margin-left: auto; }
+    margin: 0 auto;
+    position: relative;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem); }
     .image-description-button-main__plain-description-main p {
       font-weight: 400;
       line-height: 1.5;
       font-size: 1.4rem; }
 
-.reverse-image-description-button-main [class*='image-main'] {
-  margin-left: auto;
-  margin-right: 0; }
-.reverse-image-description-button-main [class*='plain-description-main'] {
-  margin-left: 0;
-  margin-right: auto; }
+.reverse-image-description-button-main > [class*='image-main'] {
+  -webkit-transform: translateX(3rem);
+          transform: translateX(3rem); }
+.reverse-image-description-button-main > [class*='plain-description-main'] {
+  -webkit-transform: translateX(-3rem);
+          transform: translateX(-3rem); }
 
 /*# sourceMappingURL=ImageDescriptionButton.module.css.map */

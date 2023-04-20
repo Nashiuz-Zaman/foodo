@@ -2,7 +2,7 @@
 import { useRef, useEffect } from 'react';
 
 //redux
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setHeaderHeight } from '../../features/header/headerSlice';
 import {
   toggleNavigation,
@@ -30,7 +30,6 @@ export default function MobileHeader({
 }) {
   const headerRef = useRef(null);
   const dispatch = useDispatch();
-  const appState = useSelector((state) => state);
 
   useEffect(() => {
     if (headerRef) {

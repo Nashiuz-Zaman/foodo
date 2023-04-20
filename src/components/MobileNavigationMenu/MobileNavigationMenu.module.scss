@@ -15,11 +15,16 @@
 
   &__options-list {
     @include flex-col(_, center);
-    gap: 2.5rem;
 
     // increase padding top, top of the menu looks nice
     & > :first-child {
       padding-top: 4rem;
+    }
+
+    li:last-child {
+      &::before {
+        content: none;
+      }
     }
 
     li {
@@ -27,6 +32,11 @@
       @include flex-row-center;
       transform: translateX(-100%);
       opacity: 0;
+      padding: 2rem 0;
+
+      &::before {
+        @include pseudo-underline(3rem, 1px, $white);
+      }
 
       a {
         @include link-normal {

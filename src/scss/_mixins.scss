@@ -270,6 +270,14 @@
   border: $width solid $color;
 }
 
+@mixin ovalbr {
+  border-radius: 1000rem;
+}
+
+@mixin border {
+  border: 1px solid $primary;
+}
+
 @mixin border-radius(
   $top-left: 0,
   $top-right: 0,

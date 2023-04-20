@@ -1,9 +1,5 @@
-//react
-import React from 'react';
-
 //component
 import CardsCollectionWithHeading from '../../components/CardsCollectionWithHeading/CardsCollectionWithHeading';
-import OnlyDesignDiv from '../../components/OnlyDesignDiv/OnlyDesignDiv';
 
 //styles
 import styles from './MenuFoodItemsSection.module.css';
@@ -25,17 +21,15 @@ export default function MenuFoodItemsSection({
     >
       {categories.map((category, i, arr) => {
         return (
-          <React.Fragment key={category.id}>
-            <CardsCollectionWithHeading
-              divId={category.title}
-              imageSource={category.icon}
-              heading={category.title}
-              dataArray={allItems.filter((item) => {
-                return item.category === category.title;
-              })}
-            />
-            {i < arr.length - 1 && <OnlyDesignDiv />}
-          </React.Fragment>
+          <CardsCollectionWithHeading
+            key={category.id}
+            divId={category.title}
+            imageSource={category.icon}
+            heading={category.title}
+            dataArray={allItems.filter((item) => {
+              return item.category === category.title;
+            })}
+          />
         );
       })}
     </section>
