@@ -16,6 +16,6 @@
 
   &__buttons {
     @include flex-row(_, center);
-    gap: 1rem;
+    gap: 1.15rem;
   }
 }
