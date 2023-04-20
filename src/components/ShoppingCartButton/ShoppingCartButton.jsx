@@ -20,12 +20,12 @@ export default function ShoppingCartButton({
   // jsx template
   return (
     <div
+      onClick={onClick}
       className={`${styles['shopping-cart-button-main']} ${
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
       <button
-        onClick={onClick}
         className={styles['shopping-cart-button-main__button']}
         aria-label={'A button used to go to the shopping cart to checkout'}
       >
