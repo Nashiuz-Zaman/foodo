@@ -11,7 +11,7 @@
   transition: all 0.2s ease-out;
   padding: 2.5rem;
   overflow: auto;
-  z-index: 2; }
+  z-index: 3; }
   .shopping-cart-main__empty-cart-image {
     display: -webkit-box;
     display: -ms-flexbox;

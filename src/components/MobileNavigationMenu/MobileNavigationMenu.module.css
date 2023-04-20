@@ -2,7 +2,7 @@
   position: fixed;
   left: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   overflow-y: auto;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
