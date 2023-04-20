@@ -36,8 +36,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 3.5rem;
-    padding-right: 2.5rem;
+    padding: 2.5rem;
+    padding-right: 1.5rem;
     color: inherit;
     border-radius: 50%;
     background-color: #e23d28;
@@ -48,7 +48,7 @@
     .image-description-button-main__plain-description-main p {
       font-weight: 400;
       line-height: 1.5;
-      font-size: 1.4rem; }
+      font-size: 1.35rem; }
 
 .reverse-image-description-button-main > [class*='image-main'] {
   -webkit-transform: translateX(3rem);

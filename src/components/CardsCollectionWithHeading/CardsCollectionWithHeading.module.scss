@@ -3,21 +3,9 @@
 
 .cards-collection-with-heading-main {
   &__heading {
-    margin: 0 0 1.75rem 2.5rem;
+    margin: 0 0 0.75rem 2.5rem;
     width: fit-content;
-    padding: 2rem 0rem;
     position: relative;
-
-    &::before {
-      @include pseudo-reset;
-      width: 60%;
-      height: 8px;
-      @include primary-gradient;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      @include border-radius(_, 1000rem, _, 1000rem);
-    }
 
     h3 {
       text-align: left;

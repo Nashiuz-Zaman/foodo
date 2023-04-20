@@ -16,7 +16,6 @@
     background-repeat: no-repeat !important;
     width: 100%;
     aspect-ratio: 16/9;
-    border-radius: 1rem;
     -webkit-box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
             box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2); }
 

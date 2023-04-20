@@ -10,7 +10,7 @@
   transform: translateX(-100%);
   opacity: 0;
   @include bg-trans($primary);
-  @include bg-blur(3px);
+  @include bg-blur(6px);
   transition: transform 0.2s ease-out 0.4s, opacity 0.2s ease-out 0.4s; // so that when closing the menu the main containing div has 2s of delay, otherwise the sequential animations can't be seen
 
   &__options-list {

@@ -1,3 +1,6 @@
+//react
+import React from 'react';
+
 //component
 import ImageLink from '../../components/ImageLink/ImageLink';
 import SectionTitle from '../../components/SectionTitle/SectionTitle';
@@ -6,15 +9,19 @@ import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import styles from './MenuCategorySection.module.css';
 
 //MenuCategorySection starts here
-export default function MenuCategorySection({
-  sectionId = '',
-  sectionTitle = '',
-  categoryData = undefined,
-  extraClass = undefined,
-}) {
+function MenuCategorySection(
+  {
+    sectionId = '',
+    sectionTitle = '',
+    categoryData = undefined,
+    extraClass = undefined,
+  },
+  ref
+) {
   // jsx template
   return (
     <section
+      ref={ref}
       id={sectionId}
       className={`${styles['menu-category-section-main']} ${
         extraClass ? extraClass.join(' ') : 'no-extra-class'
@@ -34,3 +41,5 @@ export default function MenuCategorySection({
     </section>
   );
 }
+
+export default React.forwardRef(MenuCategorySection);
