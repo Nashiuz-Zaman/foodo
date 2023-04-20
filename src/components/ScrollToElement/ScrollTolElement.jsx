@@ -12,13 +12,14 @@ export default function ScrollToElement({
   buttonText = '',
   elementRef = null,
   extraClass = undefined,
+  visible = false,
 }) {
   // jsx template
   return (
     <div
       className={`${styles['scroll-to-element-main']} ${
-        extraClass ? extraClass.join(' ') : 'no-extra-class'
-      }`}
+        visible && styles['visible']
+      } ${extraClass ? extraClass.join(' ') : 'no-extra-class'}`}
     >
       <button
         className={styles['scroll-to-element-main__button']}

@@ -10,6 +10,9 @@ import HeroSection from '../../section-components/HeroSection/HeroSection';
 import MenuCategorySection from '../../section-components/MenuCategorySection/MenuCategorySection';
 import MenuFoodItemsSection from '../../section-components/MenuFoodItemsSection/MenuFoodItemsSection';
 
+//hooks
+import useDetectMenu from '../../hooks/useDetectMenu';
+
 //image source
 import HeroImage from '../../assets/menu-page-hero.webp';
 
@@ -29,6 +32,8 @@ export default function Menu({ extraClass = undefined }) {
   }, [dispatch]);
   // create ref for menu category section
   const menuRef = useRef();
+  // show the scroll to element button conditionally
+  const { passedMenu } = useDetectMenu(menuRef);
 
   // jsx template
   return (
@@ -61,7 +66,11 @@ export default function Menu({ extraClass = undefined }) {
         extraClass={['section-margin']}
       />
 
-      <ScrollToElement buttonText={'Menu'} elementRef={menuRef.current} />
+      <ScrollToElement
+        buttonText={'Menu'}
+        elementRef={menuRef.current}
+        visible={passedMenu ? true : false}
+      />
     </div>
   );
 }
