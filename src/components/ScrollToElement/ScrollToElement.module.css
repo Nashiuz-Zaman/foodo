@@ -1,0 +1,64 @@
+.scroll-to-element-main {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem; }
+  .scroll-to-element-main__button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: _;
+        -ms-flex-pack: _;
+            justify-content: _;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.5rem;
+    border-radius: 100rem;
+    -webkit-box-shadow: 0 0 20px rgba(27, 27, 27, 0.3);
+            box-shadow: 0 0 20px rgba(27, 27, 27, 0.3);
+    background-color: #e23d28;
+    color: #fff;
+    padding: 0.5rem 0.5rem 0.5rem 1rem; }
+    .scroll-to-element-main__button:focus {
+      outline-color: #e23d28 !important; }
+    .scroll-to-element-main__button__icon-image {
+      background-color: #e23d28;
+      border-radius: 50%;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      width: 3.5rem;
+      height: 3.5rem;
+      padding: 0.5rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      border: 1px solid #fff; }
+      .scroll-to-element-main__button__icon-image img {
+        -webkit-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%);
+                filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(245deg) brightness(101%) contrast(103%); }
+
+/*# sourceMappingURL=ScrollToElement.module.css.map */

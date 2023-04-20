@@ -1,5 +1,5 @@
 //react
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 //redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -18,6 +18,7 @@ import { foodCategories } from '../../data/FoodCategoryData';
 
 //styles
 import styles from './Menu.module.css';
+import ScrollToElement from '../../components/ScrollToElement/ScrollTolElement';
 
 //Menu starts here
 export default function Menu({ extraClass = undefined }) {
@@ -26,6 +27,8 @@ export default function Menu({ extraClass = undefined }) {
   useEffect(() => {
     dispatch(getAllFoodItems());
   }, [dispatch]);
+  // create ref for menu category section
+  const menuRef = useRef();
 
   // jsx template
   return (
@@ -49,6 +52,7 @@ export default function Menu({ extraClass = undefined }) {
         sectionTitle={'Menu'}
         categoryData={foodCategories}
         extraClass={['scroll-offset']}
+        ref={menuRef}
       />
 
       <MenuFoodItemsSection
@@ -56,6 +60,8 @@ export default function Menu({ extraClass = undefined }) {
         categories={foodCategories}
         extraClass={['section-margin']}
       />
+
+      <ScrollToElement buttonText={'Menu'} elementRef={menuRef.current} />
     </div>
   );
 }
