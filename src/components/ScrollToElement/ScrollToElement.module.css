@@ -7,7 +7,7 @@
           transform: translateY(200%);
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  z-index: 3; }
+  z-index: 2; }
   .scroll-to-element-main__button {
     -webkit-appearance: none;
        -moz-appearance: none;
