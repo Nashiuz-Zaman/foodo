@@ -26,12 +26,6 @@ export default function HowItWorksSection({
         title={sectionTitle}
         extraClass={[styles['how-it-works-section-main__section-title']]}
       />
-      {/* <PlainDescription
-        description={description}
-        extraClass={[
-          styles['how-it-works-section-main__top-plain-description'],
-        ]}
-      /> */}
 
       <ol className={styles['how-it-works-section-main__how-it-works-list']}>
         {howItWorksDataArray &&
@@ -69,7 +63,7 @@ export default function HowItWorksSection({
 
       <LinkButton
         extraClass={[styles['how-it-works-section-main__order-button']]}
-        buttonText={'Order food now'}
+        buttonText={'Order Now'}
         toUrl="menu"
         linkFor={'samesite'}
         rightCaret={true}

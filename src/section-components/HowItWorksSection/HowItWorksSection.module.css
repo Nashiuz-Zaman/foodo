@@ -60,6 +60,8 @@
               align-items: _;
       margin-bottom: 3.5rem; }
   .how-it-works-section-main__order-button {
-    margin: 0 auto !important; }
+    margin: 0 auto !important;
+    background-image: -webkit-gradient(linear, left top, right top, from(#e23d28), to(#d4311d));
+    background-image: linear-gradient(to right, #e23d28, #d4311d); }
 
 /*# sourceMappingURL=HowItWorksSection.module.css.map */
