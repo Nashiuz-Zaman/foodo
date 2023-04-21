@@ -47,12 +47,16 @@
     }
 
     &__button {
-      @include bg(transparent);
       box-shadow: none;
 
       button {
         color: $primary;
+        @include bg(transparent);
         padding: 0;
+
+        @include link-alt {
+          @include bg(transparent);
+        }
       }
     }
   }

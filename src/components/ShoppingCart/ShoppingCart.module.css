@@ -73,12 +73,14 @@
         font-weight: 400;
         text-align: left; }
     .shopping-cart-main__heading-and-button-container__button {
-      background-color: transparent;
       -webkit-box-shadow: none;
               box-shadow: none; }
       .shopping-cart-main__heading-and-button-container__button button {
         color: #e23d28;
+        background-color: transparent;
         padding: 0; }
+        .shopping-cart-main__heading-and-button-container__button button:hover, .shopping-cart-main__heading-and-button-container__button button:active {
+          background-color: transparent; }
   .shopping-cart-main__items-headings {
     display: grid;
     grid-template-columns: 2.5fr 0.5fr 1fr;
