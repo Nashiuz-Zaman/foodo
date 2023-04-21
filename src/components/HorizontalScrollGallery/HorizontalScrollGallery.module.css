@@ -21,6 +21,20 @@
     scroll-padding-inline: 2.5rem;
     overscroll-behavior-inline: contain; }
     .horizontal-scroll-gallery__scroller__gallery-item {
-      margin-bottom: 2.25rem; }
+      margin-bottom: 2.25rem;
+      height: auto; }
+
+@media (min-width: 31em) {
+  .horizontal-scroll-gallery__scroller {
+    grid-auto-columns: 70%; } }
+@media (min-width: 37em) {
+  .horizontal-scroll-gallery__scroller {
+    grid-auto-columns: 55%; } }
+@media (min-width: 45em) {
+  .horizontal-scroll-gallery__scroller {
+    grid-auto-columns: 31rem; } }
+@media (min-width: 62em) {
+  .horizontal-scroll-gallery__scroller {
+    grid-auto-columns: 30rem; } }
 
 /*# sourceMappingURL=HorizontalScrollGallery.module.css.map */

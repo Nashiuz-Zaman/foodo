@@ -31,6 +31,39 @@
 
     &__gallery-item {
       margin-bottom: 2.25rem;
+      height: auto;
+    }
+  }
+}
+
+@include mediaMin(31em) {
+  .horizontal-scroll-gallery {
+    &__scroller {
+      grid-auto-columns: 70%;
+    }
+  }
+}
+
+@include mediaMin(37em) {
+  .horizontal-scroll-gallery {
+    &__scroller {
+      grid-auto-columns: 55%;
+    }
+  }
+}
+
+@include mediaMin(45em) {
+  .horizontal-scroll-gallery {
+    &__scroller {
+      grid-auto-columns: 31rem;
+    }
+  }
+}
+
+@include mediaMin(62em) {
+  .horizontal-scroll-gallery {
+    &__scroller {
+      grid-auto-columns: 30rem;
     }
   }
 }
