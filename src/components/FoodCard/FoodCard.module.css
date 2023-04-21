@@ -11,7 +11,7 @@
     .food-card-main__item__img {
       width: 100%;
       aspect-ratio: 16/10;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.25rem;
       background-position: 50% 50% !important;
       background-size: cover !important;
       background-repeat: no-repeat !important; }
@@ -30,7 +30,7 @@
           -ms-flex-align: normal;
               align-items: normal;
       gap: 0.55rem;
-      margin-bottom: 1.8rem; }
+      margin-bottom: 1.25rem; }
       .food-card-main__item__info__name-and-price {
         width: 100%;
         display: -webkit-box;
@@ -46,19 +46,20 @@
         -webkit-box-align: start;
             -ms-flex-align: start;
                 align-items: flex-start; }
+        .food-card-main__item__info__name-and-price__name, .food-card-main__item__info__name-and-price__price {
+          display: inline-block; }
         .food-card-main__item__info__name-and-price__name {
-          display: inline-block;
           font-size: 1.35rem;
           font-weight: 500; }
         .food-card-main__item__info__name-and-price__price {
-          display: inline-block;
           font-size: 1.65rem;
           color: #e23d28;
           font-weight: 600;
           padding-right: 0.5rem; }
       .food-card-main__item__info__category {
         font-size: 1.2rem;
-        color: #8e8e8e; }
+        color: #8e8e8e;
+        text-transform: capitalize; }
       .food-card-main__item__info__bottom-info {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -102,8 +103,6 @@
     .food-card-main__item__button {
       width: 100% !important;
       border-radius: 1000rem;
-      background-image: -webkit-gradient(linear, left top, right top, from(#e23d28), to(#d4311d));
-      background-image: linear-gradient(to right, #e23d28, #d4311d);
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -117,5 +116,28 @@
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      .food-card-main__item__button button {
+        text-transform: capitalize; }
+
+@media (min-width: 31em) {
+  .food-card-main__item {
+    padding: 1rem; }
+    .food-card-main__item__info {
+      gap: 0.65rem; }
+      .food-card-main__item__info__name-and-price__name {
+        font-size: 1.5rem; }
+      .food-card-main__item__info__name-and-price__price {
+        font-size: 1.9rem; }
+      .food-card-main__item__info__category {
+        font-size: 1.35rem; }
+      .food-card-main__item__info__bottom-info > p {
+        font-size: 1.3rem;
+        font-weight: 500; }
+      .food-card-main__item__info__bottom-info__rating-container {
+        gap: 0.3rem; }
+        .food-card-main__item__info__bottom-info__rating-container__rating-star {
+          height: 1.3rem; }
+    .food-card-main__item__button button {
+      font-size: 1.65rem; } }
 
 /*# sourceMappingURL=FoodCard.module.css.map */

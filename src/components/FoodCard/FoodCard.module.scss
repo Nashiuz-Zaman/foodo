@@ -15,27 +15,30 @@
     &__img {
       width: 100%;
       aspect-ratio: 16/10;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.25rem;
       @include bg-cover-center();
     }
 
     &__info {
       @include flex-col();
       gap: 0.55rem;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.25rem;
 
       &__name-and-price {
         width: 100%;
         @include flex-row(space-between, flex-start);
 
-        &__name {
+        &__name,
+        &__price {
           display: inline-block;
+        }
+
+        &__name {
           font-size: 1.35rem;
           font-weight: 500;
         }
 
         &__price {
-          display: inline-block;
           font-size: 1.65rem;
           color: $primary;
           font-weight: 600;
@@ -46,6 +49,7 @@
       &__category {
         font-size: 1.2rem;
         color: $lightText;
+        text-transform: capitalize;
       }
 
       &__bottom-info {
@@ -77,8 +81,58 @@
     &__button {
       width: 100% !important;
       @include ovalbr;
-      @include primary-gradient;
       @include flex-row-center;
+
+      button {
+        text-transform: capitalize;
+      }
+    }
+  }
+}
+
+@include mediaMin(31em) {
+  .food-card-main {
+    &__item {
+      padding: 1rem;
+
+      &__info {
+        gap: 0.65rem;
+
+        &__name-and-price {
+          &__name {
+            font-size: 1.5rem;
+          }
+
+          &__price {
+            font-size: 1.9rem;
+          }
+        }
+
+        &__category {
+          font-size: 1.35rem;
+        }
+
+        &__bottom-info {
+          & > p {
+            font-size: 1.3rem;
+            font-weight: 500;
+          }
+
+          &__rating-container {
+            gap: 0.3rem;
+
+            &__rating-star {
+              height: 1.3rem;
+            }
+          }
+        }
+      }
+
+      &__button {
+        button {
+          font-size: 1.65rem;
+        }
+      }
     }
   }
 }
