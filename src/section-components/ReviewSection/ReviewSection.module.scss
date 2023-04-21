@@ -2,6 +2,8 @@
 @import '../../scss/mixins';
 
 .review-section-main {
+  padding: 0 2.5rem;
+
   &__section-title {
     margin-bottom: 6rem;
     text-align: center;
@@ -10,9 +12,52 @@
 
   &__all-reviews {
     list-style-type: none;
-    @include flex-col();
-    gap: 6rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 5rem;
     position: relative;
-    padding: 2.5rem;
+  }
+}
+
+@include mediaMin(45em) {
+  .review-section-main {
+    padding: 0 2.5rem;
+
+    &__all-reviews {
+      max-width: 75rem;
+      column-gap: 2rem;
+    }
+  }
+}
+
+@include mediaMin(48em) {
+  .review-section-main {
+    &__all-reviews {
+      column-gap: 4rem;
+    }
+  }
+}
+
+@include mediaMin(62em) {
+  .review-section-main {
+    &__all-reviews {
+      max-width: 85rem;
+      column-gap: 7rem;
+    }
+  }
+}
+
+@include mediaMin(75em) {
+  .review-section-main {
+    &__section-title {
+      margin-bottom: 8rem !important;
+    }
+
+    &__all-reviews {
+      max-width: 95rem;
+      column-gap: 12rem;
+    }
   }
 }
