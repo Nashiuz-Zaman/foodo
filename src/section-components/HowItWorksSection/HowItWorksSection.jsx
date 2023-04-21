@@ -29,7 +29,7 @@ export default function HowItWorksSection({
 
       <ol className={styles['how-it-works-section-main__how-it-works-list']}>
         {howItWorksDataArray &&
-          howItWorksDataArray.map((single) => {
+          howItWorksDataArray.map((single, i) => {
             return (
               <li key={single.id}>
                 <p
@@ -51,10 +51,18 @@ export default function HowItWorksSection({
                   heading={single.heading}
                 />
                 <ImageDescriptionButton
+                  extraClass={[
+                    styles[
+                      'how-it-works-section-main__how-it-works-list__item-image-description-button-main'
+                    ],
+                    (i + 1) % 2 === 0 &&
+                      styles[
+                        'how-it-works-section-main__how-it-works-list__item-image-description-button-main--reverse'
+                      ],
+                  ]}
                   imageSource={single.imageSource}
                   heading={single.heading}
                   description={single.description}
-                  reverseStyle={single.reverseStyle}
                 />
               </li>
             );

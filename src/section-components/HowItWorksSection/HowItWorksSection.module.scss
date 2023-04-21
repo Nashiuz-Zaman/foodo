@@ -33,10 +33,40 @@
       @include flex-row(center, _);
       margin-bottom: 3.5rem;
     }
+
+    &__item-image-description-button-main--reverse {
+      & > [class*='image-main'] {
+        transform: translateX(3rem);
+      }
+
+      & > [class*='plain-description-main'] {
+        transform: translateX(-3rem);
+      }
+    }
   }
 
   &__order-button {
     margin: 0 auto !important ;
-    @include primary-gradient;
+  }
+}
+
+@include mediaMin(62em) {
+  .how-it-works-section-main {
+    &__how-it-works-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-bottom: 8rem;
+
+      &__item-image-description-button-main--reverse {
+        & > [class*='image-main'] {
+          transform: translateX(-3rem);
+        }
+
+        & > [class*='plain-description-main'] {
+          transform: translateX(3rem);
+        }
+      }
+    }
   }
 }
