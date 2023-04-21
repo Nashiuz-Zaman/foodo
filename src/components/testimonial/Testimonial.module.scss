@@ -3,14 +3,14 @@
 
 .testimonial {
   @include flex-row();
-  gap: 2.5rem;
+  gap: 1.25rem;
 
   &__img {
     flex-basis: 38%;
     aspect-ratio: 16/28;
     @include bg-cover-center();
     flex-shrink: 0 !important;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
   }
 
   &__text-container {
@@ -21,7 +21,7 @@
       font-weight: 500;
       color: $primary;
       padding-right: 1rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.7rem;
     }
 
     &__rating {
@@ -30,7 +30,7 @@
 
     &__full-review-and-reviewer-name {
       @include bg($primary);
-      border-radius: 1.5rem;
+      border-radius: 1rem;
       color: $white;
       padding: 1rem;
       padding-bottom: 1.5rem;
@@ -67,60 +67,45 @@
   }
 }
 
-// @media (min-width: 37em) {
-//   .testimonial {
-//     width: 28rem;
-//     @include flex-col(_, center);
+@include mediaMin(62em) {
+  .testimonial {
+    &__text-container {
+      &__full-review-and-reviewer-name {
+        padding: 1.5rem;
+        padding-top: 1.2rem;
 
-//     margin: 0;
-//     background-color: $primary;
-//     transform: translateY(5rem);
-//     opacity: 0;
+        &__full-review {
+          font-size: 1.3rem;
+        }
 
-//     &__img {
-//       width: 17.5rem;
-//       height: 17.5rem;
-//       border-radius: 50%;
-//       flex-basis: unset;
-//       aspect-ratio: unset;
-//       background-size: cover !important;
-//       border: 0.6rem solid $white;
-//       background-position: 50% 0% !important;
-//       transform: translateY(-3rem);
-//       margin-bottom: -3rem;
-//     }
+        &__reviewer-name {
+          font-size: 1.4rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
 
-//     &__text-container {
-//       padding: 2.5rem;
-//       flex-grow: 1;
-//       @include flex-col(_, stretch);
-//       color: $white;
+@include mediaMin(75em) {
+  .testimonial {
+    gap: 2rem;
+    &__text-container {
+      &__one-liner {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+      }
 
-//       &__one-liner {
-//         padding: 0;
-//         font-size: 2.15rem;
-//         line-height: 1.2;
-//         color: inherit;
-//         margin: 0;
-//         margin-bottom: 2rem;
-//         text-align: center !important;
-//       }
+      &__rating {
+        img {
+          height: 1.75rem;
+        }
+      }
 
-//       &__details {
-//         font-size: 1.5rem;
-//         color: inherit;
-//         padding: 0;
-//         margin-bottom: 4rem;
-//       }
-
-//       &__person-name {
-//         padding: 0;
-//         margin-top: auto;
-//         font-size: 1.5rem;
-//         color: inherit;
-//         font-weight: 500;
-//         align-self: flex-end !important;
-//       }
-//     }
-//   }
-// }
+      &__full-review-and-reviewer-name {
+        padding: 1.75rem;
+        padding-top: 1.4rem;
+      }
+    }
+  }
+}
