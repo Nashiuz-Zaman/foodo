@@ -4,19 +4,31 @@
 .link-button-main {
   display: block;
   width: max-content;
-  transition: $basic;
   @include box-shadow-buttons();
   border-radius: 100rem;
-  @include bg($primary);
-  padding: $buttonPadding;
+  @include no-flow;
 
   a {
     @include link-normal {
+      @include same-size;
+      padding: $buttonPadding;
+      @include bg($primary);
       color: $white;
+      transition: $basic;
     }
 
     &:active {
       @include bg($primaryLight);
+    }
+  }
+}
+
+@include mediaMin(64em) {
+  .link-button-main {
+    a {
+      @include link-alt {
+        @include bg($primaryLight);
+      }
     }
   }
 }

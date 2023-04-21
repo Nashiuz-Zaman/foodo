@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAGA,iBAAkB;EAChB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,WAAW;EAClB,UAAU,ECuCJ,iBAAiB;ECwNvB,UAAU,EAAE,gCAA+B;EF7P3C,aAAa,EAAE,MAAM;EEiMrB,gBAAgB,EDxMR,OAAO;EDSf,OAAO,EC6BO,MAAM;ECoSpB,qDACU;IF9TN,KAAK,ECSH,IAAI;EDNR,0BAAS;IEwLX,gBAAgB,EDvMH,OAAqB",
-"sources": ["LinkButton.module.scss","../../scss/_variables.scss","../../scss/_mixins.scss"],
+"mappings": "AAGA,iBAAkB;EAChB,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,WAAW;ECgQlB,UAAU,EAAE,gCAA+B;ED9P3C,aAAa,EAAE,MAAM;ECiGrB,QAAQ,EAAE,MAAM;EAmOhB,qDACU;IAnTV,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI;IDbR,OAAO,EE0BG,MAAM;IDkKpB,gBAAgB,ECxMR,OAAO;IFcX,KAAK,EEQH,IAAI;IFPN,UAAU,EE6BR,iBAAiB;EF1BrB,0BAAS;ICsLX,gBAAgB,ECvMH,OAAqB;;AD2VlC,wBAAgC;EAXhC,qDACS;IA1IT,gBAAgB,ECvMH,OAAqB",
+"sources": ["LinkButton.module.scss","../../scss/_mixins.scss","../../scss/_variables.scss"],
 "names": [],
 "file": "LinkButton.module.css"
 }
