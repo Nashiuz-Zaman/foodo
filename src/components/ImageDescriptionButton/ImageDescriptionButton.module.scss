@@ -44,13 +44,3 @@
     }
   }
 }
-
-.reverse-image-description-button-main {
-  & > [class*='image-main'] {
-    transform: translateX(3rem);
-  }
-
-  & > [class*='plain-description-main'] {
-    transform: translateX(-3rem);
-  }
-}
