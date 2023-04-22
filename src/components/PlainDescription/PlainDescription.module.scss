@@ -13,12 +13,3 @@
     font-weight: 500;
   }
 }
-
-@media (min-width: 64em) {
-  .plain-description-main {
-    &__description {
-      font-size: 1.6rem !important;
-      line-height: 1.45 !important;
-    }
-  }
-}
