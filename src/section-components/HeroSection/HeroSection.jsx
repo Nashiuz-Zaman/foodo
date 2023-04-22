@@ -1,7 +1,5 @@
 //components
-import Showcase from '../../components/Showcase/Showcase';
-import LinkButton from '../../components/LinkButton/LinkButton';
-import HeadingDescriptionButton from '../../components/HeadingDescriptionButton/HeadingDescriptionButton';
+import Hero from '../../components/Hero/Hero';
 
 //styles
 import styles from './HeroSection.module.css';
@@ -12,7 +10,7 @@ export default function HeroSection({
   shortIntroduction,
   heading,
   buttonText,
-  linkFor = 'samesite',
+  linkFor,
   toUrl = '',
   extraClass = undefined,
 }) {
@@ -23,29 +21,13 @@ export default function HeroSection({
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      <Showcase
-        extraClass={[styles['hero-section-main__hero-image']]}
+      <Hero
         imageSource={imageSource}
-      />
-      <HeadingDescriptionButton
         shortIntroduction={shortIntroduction}
         heading={heading}
-        button={
-          <LinkButton
-            buttonText={buttonText}
-            linkFor={linkFor}
-            toUrl={toUrl}
-            rightCaret={true}
-            extraClass={[
-              styles[
-                'hero-section-main__heading-description-button-main__link-button-main'
-              ],
-            ]}
-          />
-        }
-        extraClass={[
-          styles['hero-section-main__heading-description-button-main'],
-        ]}
+        buttonText={buttonText}
+        linkFor={linkFor}
+        toUrl={toUrl}
       />
     </section>
   );

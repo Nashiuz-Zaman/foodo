@@ -1,0 +1,33 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.hero-main {
+  position: relative;
+
+  &__hero-image {
+    height: 65rem;
+    border-bottom-right-radius: 5rem;
+    @include no-flow();
+  }
+
+  &__heading-description-button-main {
+    position: absolute;
+    top: 47.5%;
+    left: 0;
+    @include bg-trans($black, 0.65);
+    @include bg-blur(2px);
+    border-top-right-radius: 100rem;
+    border-bottom-right-radius: 100rem;
+    width: 65%;
+    padding: 2.5rem;
+
+    [class*='__heading'] {
+      color: $white;
+      margin-bottom: 1.5rem;
+    }
+
+    [class*='short-introduction'] {
+      color: $primaryLight;
+    }
+  }
+}
