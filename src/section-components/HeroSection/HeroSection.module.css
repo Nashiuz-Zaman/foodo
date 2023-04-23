@@ -1,24 +1,7 @@
 .hero-section-main {
-  position: relative; }
-  .hero-section-main__hero-image {
-    height: 65rem;
-    border-bottom-right-radius: 5rem;
-    overflow: hidden; }
-  .hero-section-main__heading-description-button-main {
-    position: absolute;
-    top: 47.5%;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.65);
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
-    border-top-right-radius: 100rem;
-    border-bottom-right-radius: 100rem;
-    width: 65%;
-    padding: 2.5rem; }
-    .hero-section-main__heading-description-button-main [class*='__heading'] {
-      color: #fff;
-      margin-bottom: 1.5rem; }
-    .hero-section-main__heading-description-button-main [class*='short-introduction'] {
-      color: #e5513e; }
+  position: relative;
+  height: 65rem;
+  border-bottom-right-radius: 5rem;
+  overflow: hidden; }
 
 /*# sourceMappingURL=HeroSection.module.css.map */
