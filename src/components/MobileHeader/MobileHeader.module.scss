@@ -19,3 +19,9 @@
     gap: 1.15rem;
   }
 }
+
+@include mediaMin(48em) {
+  .mobile-header-main {
+    @include bg-trans($white, 0.8);
+  }
+}

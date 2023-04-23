@@ -40,4 +40,8 @@
             align-items: center;
     gap: 1.15rem; }
 
+@media (min-width: 48em) {
+  .mobile-header-main {
+    background-color: rgba(255, 255, 255, 0.8); } }
+
 /*# sourceMappingURL=MobileHeader.module.css.map */
