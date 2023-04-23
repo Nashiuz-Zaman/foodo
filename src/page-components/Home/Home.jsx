@@ -5,19 +5,27 @@ import { memo } from 'react';
 import HeroSection from '../../section-components/HeroSection/HeroSection';
 import HowItWorksSection from '../../section-components/HowItWorksSection/HowItWorksSection';
 import FoodItemsSection from '../../section-components/FoodItemsSection/FoodItemsSection';
+import ReviewSection from '../../section-components/ReviewSection/ReviewSection';
+import WideHeroSection from '../../section-components/WideHeroSection/WideHeroSection';
+
+//hook
+import useMediaQueryMatcher from '../../hooks/useMediaQueryMatcher';
 
 //image source
 import heroImage from '../../assets/hero.webp';
+import wideHeroWholeBackground from '../../assets/wide-hero-whole-background.webp';
 
 // data
 import { howItWorksData } from '../../data/HowItWorksData';
+import { heroImagesArray } from '../../data/HeroData';
 
 //styles
 import styles from './Home.module.css';
-import ReviewSection from '../../section-components/ReviewSection/ReviewSection';
 
 //Home starts here
 function Home({ extraClass = undefined }) {
+  const { mediaQueryState } = useMediaQueryMatcher();
+
   // jsx template
   return (
     <div
@@ -25,15 +33,30 @@ function Home({ extraClass = undefined }) {
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      <HeroSection
-        imageSource={heroImage}
-        shortIntroduction={'Welcome'}
-        heading={'Delicious food right at your doorstep.'}
-        buttonText={'How it works'}
-        toUrl="#howItWorks"
-        linkFor="hashed"
-        extraClass={['section-margin']}
-      />
+      {mediaQueryState.isSmallScreen && (
+        <HeroSection
+          imageSource={heroImage}
+          shortIntroduction={'Welcome'}
+          heading={'Delicious food right at your doorstep.'}
+          buttonText={'How it works'}
+          toUrl="#howItWorks"
+          linkFor="hashed"
+          extraClass={['section-margin']}
+        />
+      )}
+
+      {mediaQueryState.isLargeScreen && (
+        <WideHeroSection
+          shortIntroduction={'Welcome'}
+          heading={'Delicious food right at your doorstep.'}
+          buttonText={'How it works'}
+          toUrl="#howItWorks"
+          linkFor="hashed"
+          images={heroImagesArray}
+          wholeHeroBackgroundImage={wideHeroWholeBackground}
+          extraClass={['section-margin']}
+        />
+      )}
 
       <HowItWorksSection
         sectionId={'howItWorks'}
