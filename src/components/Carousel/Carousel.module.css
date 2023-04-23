@@ -1,0 +1,21 @@
+.carousel-main {
+  position: relative;
+  aspect-ratio: 16/9; }
+  .carousel-main__slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out; }
+    .carousel-main__slide [class*='hero-image'] {
+      background-position: 50% 0% !important; }
+    .carousel-main__slide--visible {
+      opacity: 1;
+      visibility: visible; }
+    .carousel-main__slide--hidden {
+      opacity: 0;
+      visibility: collapse; }
+
+/*# sourceMappingURL=Carousel.module.css.map */

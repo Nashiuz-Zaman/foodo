@@ -1,0 +1,29 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.carousel-main {
+  position: relative;
+  aspect-ratio: 16/9;
+
+  &__slide {
+    @include same-size;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-out;
+
+    [class*='hero-image'] {
+      background-position: 50% 0% !important;
+    }
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &--hidden {
+      opacity: 0;
+      visibility: collapse;
+    }
+  }
+}
