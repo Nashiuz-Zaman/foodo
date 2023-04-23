@@ -17,7 +17,6 @@ import {
 export default function useMediaQueryMatcher() {
   const dispatch = useDispatch();
   const mediaQueryState = useSelector((state) => state.mediaQuery);
-  console.log(mediaQueryState);
 
   const customSizeDetector = (size) => {
     const matches = window.matchMedia(size).matches;
