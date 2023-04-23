@@ -1,9 +1,10 @@
 .hero-main {
-  position: relative; }
+  position: relative;
+  width: 100%;
+  height: 100%; }
   .hero-main__hero-image {
-    height: 65rem;
-    border-bottom-right-radius: 5rem;
-    overflow: hidden; }
+    width: 100%;
+    height: 100%; }
   .hero-main__heading-description-button-main {
     position: absolute;
     top: 47.5%;

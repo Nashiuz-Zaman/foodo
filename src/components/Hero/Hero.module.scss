@@ -3,11 +3,10 @@
 
 .hero-main {
   position: relative;
+  @include same-size;
 
   &__hero-image {
-    height: 65rem;
-    border-bottom-right-radius: 5rem;
-    @include no-flow();
+    @include same-size;
   }
 
   &__heading-description-button-main {
