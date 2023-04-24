@@ -30,8 +30,10 @@ export default function Menu({ extraClass = undefined }) {
   useEffect(() => {
     dispatch(getAllFoodItems());
   }, [dispatch]);
+
   // create ref for menu category section
   const menuRef = useRef();
+
   // show the scroll to element button conditionally
   const { passedMenu } = useDetectMenu(menuRef);
 
