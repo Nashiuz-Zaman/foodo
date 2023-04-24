@@ -47,6 +47,7 @@ export default function MobileHeader({
         }}
         title={brandName}
         imageSource={brandLogo}
+        extraClass={[styles['mobile-header-main__brand-name-main']]}
       />
 
       <div className={styles['mobile-header-main__buttons']}>

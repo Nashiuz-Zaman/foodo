@@ -37,7 +37,7 @@ export default function MobileNavigationMenu({
             >
               <LinkElement
                 onClick={onClick}
-                toUrl={single.link}
+                toUrl={single.toUrl}
                 linkFor={single.linkFor}
                 text={single.text}
               />
