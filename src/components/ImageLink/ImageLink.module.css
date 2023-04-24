@@ -3,9 +3,9 @@
   width: 100%; }
 .image-link-main__container {
   width: 100% !important; }
-  .image-link-main__container__title {
+  .image-link-main__container__heading {
     margin-bottom: 1rem; }
-    .image-link-main__container__title h3 {
+    .image-link-main__container__heading h3 {
       color: #e23d28;
       font-size: 1.5rem;
       font-weight: 500;

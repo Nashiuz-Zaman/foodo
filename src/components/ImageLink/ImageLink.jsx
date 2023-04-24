@@ -26,7 +26,7 @@ export default function ImageLink({
       >
         <div className={styles['image-link-main__container']}>
           <TertiaryHeading
-            extraClass={[styles['image-link-main__container__title']]}
+            extraClass={[styles['image-link-main__container__heading']]}
             heading={dataObject.title}
           />
 
