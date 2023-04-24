@@ -1,0 +1,42 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.desktop-navigation-main {
+  &__list-of-links {
+    ul {
+      @include flex-row(center, center);
+      gap: 2.5rem;
+
+      a {
+        @include link-normal {
+          font-size: 1.5rem;
+          transition: $basic;
+          text-transform: capitalize;
+          color: $primary;
+          padding: 3rem 0;
+          position: relative;
+
+          &::before {
+            @include pseudo-reset;
+            position: absolute;
+            width: 60%;
+            height: 2px;
+            @include bg($primary);
+            left: 50%;
+            bottom: 1.5rem;
+            transform-origin: center;
+            transform: translateX(-50%) scale(0, 1);
+            transition: $basic;
+          }
+        }
+
+        @include link-alt {
+          color: $primaryDark;
+          &::before {
+            transform: translateX(-50%) scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+}

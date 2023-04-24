@@ -1,0 +1,45 @@
+.desktop-navigation-main__list-of-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.5rem; }
+  .desktop-navigation-main__list-of-links ul a:link, .desktop-navigation-main__list-of-links ul a:visited {
+    font-size: 1.5rem;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    text-transform: capitalize;
+    color: #e23d28;
+    padding: 3rem 0;
+    position: relative; }
+    .desktop-navigation-main__list-of-links ul a:link::before, .desktop-navigation-main__list-of-links ul a:visited::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 60%;
+      height: 2px;
+      background-color: #e23d28;
+      left: 50%;
+      bottom: 1.5rem;
+      -webkit-transform-origin: center;
+              transform-origin: center;
+      -webkit-transform: translateX(-50%) scale(0, 1);
+              transform: translateX(-50%) scale(0, 1);
+      -webkit-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out; }
+  .desktop-navigation-main__list-of-links ul a:hover, .desktop-navigation-main__list-of-links ul a:active {
+    color: #d4311d; }
+    .desktop-navigation-main__list-of-links ul a:hover::before, .desktop-navigation-main__list-of-links ul a:active::before {
+      -webkit-transform: translateX(-50%) scale(1, 1);
+              transform: translateX(-50%) scale(1, 1); }
+
+/*# sourceMappingURL=DesktopNavigation.module.css.map */
