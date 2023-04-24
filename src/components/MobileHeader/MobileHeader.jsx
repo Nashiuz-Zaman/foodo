@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 
 //redux
 import { useDispatch } from 'react-redux';
-import { setHeaderHeight } from '../../features/header/headerSlice';
+import { setMobileHeaderHeight } from '../../features/mobileHeader/mobileHeaderSlice';
 import {
   toggleNavigation,
   closeNavigation,
@@ -28,18 +28,18 @@ export default function MobileHeader({
   brandLogo = null,
   isMenuIconActive = false,
 }) {
-  const headerRef = useRef(null);
+  const mobileHeaderRef = useRef(null);
   const dispatch = useDispatch();
 
   // setting the header height state by calculating the mobile header's scroll height
   useEffect(() => {
-    if (headerRef) {
-      dispatch(setHeaderHeight(headerRef.current.scrollHeight));
+    if (mobileHeaderRef) {
+      dispatch(setMobileHeaderHeight(mobileHeaderRef.current.scrollHeight));
     }
-  }, [headerRef, dispatch]);
+  }, [mobileHeaderRef, dispatch]);
 
   return (
-    <header ref={headerRef} className={styles['mobile-header-main']}>
+    <header ref={mobileHeaderRef} className={styles['mobile-header-main']}>
       <BrandName
         onClick={() => {
           dispatch(closeNavigation());
