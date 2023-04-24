@@ -7,76 +7,43 @@ export const mobileNavigationOptions = [
   {
     id: 1,
     text: 'Menu',
-    link: 'menu',
+    toUrl: 'menu',
     linkFor: 'samesite',
   },
   {
     id: 2,
     text: 'About Us',
-    link: 'about-foodo',
+    toUrl: 'about-foodo',
     linkFor: 'samesite',
   },
   {
     id: 3,
     text: 'Locations',
-    link: 'locations',
+    toUrl: 'locations',
     linkFor: 'samesite',
   },
   {
     id: 4,
-    text: 'Reservations',
-    link: 'reservations',
+    text: 'Events',
+    toUrl: 'events',
     linkFor: 'samesite',
   },
   {
     id: 5,
-    text: 'Events',
-    link: 'events',
+    text: 'Gift Cards',
+    toUrl: 'giftcards-coupons',
     linkFor: 'samesite',
   },
   {
     id: 6,
-    text: 'Gift Cards',
-    link: 'giftcards-coupons',
-    linkFor: 'samesite',
-  },
-  {
-    id: 7,
     text: 'Blog',
-    link: 'blog',
+    toUrl: 'blog',
     linkFor: 'samesite',
-  },
-];
-
-export const desktopNavigationOptions = [
-  {
-    text: 'About me',
-    id: 0,
-    toUrl: '#about-me',
-    linkFor: 'hashed',
-  },
-  {
-    text: 'My Skills',
-    id: 1,
-    toUrl: '#my-skills',
-    linkFor: 'hashed',
-  },
-  {
-    text: 'Projects',
-    id: 2,
-    toUrl: 'projects',
-    linkFor: 'samesite',
-  },
-  {
-    text: 'Why Choose Me',
-    id: 3,
-    toUrl: '#why-choose-me',
-    linkFor: 'hashed',
   },
 ];
 
 export const ctaButtonData = {
-  buttonText: "Let's Connect",
-  toUrl: 'contact',
+  buttonText: 'Order Now',
+  toUrl: 'menu',
   linkFor: 'samesite',
 };
