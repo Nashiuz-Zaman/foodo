@@ -6,20 +6,7 @@ export default function useCarousel(
   timeDifference = 2000
 ) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [mouseInside, setMouseInside] = useState(false);
   const timerRef = useRef(null);
-
-  const goToSlide = (slideNumber) => {
-    setCurrentSlide(slideNumber);
-  };
-
-  const handleMouseEnter = () => {
-    setMouseInside(true);
-  };
-
-  const handleMouseLeave = () => {
-    setMouseInside(false);
-  };
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
@@ -32,19 +19,7 @@ export default function useCarousel(
     };
   }, [dataArrayLength, timeDifference]);
 
-  useEffect(() => {
-    if (mouseInside) {
-      if (timerRef.current) {
-        clearInterval(timerRef.current);
-        timerRef.current = null;
-      }
-    }
-  }, []);
-
   return {
-    handleMouseEnter,
-    handleMouseLeave,
-    goToSlide,
     currentSlide,
   };
 }
