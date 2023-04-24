@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,kBAAmB;EACjB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK;EACb,0BAA0B,EAAE,IAAI;ECkGhC,QAAQ,EAAE,MAAM",
+"mappings": "AAGA,kBAAmB;EACjB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,KAAK;EACb,0BAA0B,EAAE,IAAI;EC2GhC,QAAQ,EAAE,MAAM",
 "sources": ["HeroSection.module.scss","../../scss/_mixins.scss"],
 "names": [],
 "file": "HeroSection.module.css"
