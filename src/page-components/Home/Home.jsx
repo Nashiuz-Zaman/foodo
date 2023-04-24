@@ -13,11 +13,13 @@ import useMediaQueryMatcher from '../../hooks/useMediaQueryMatcher';
 
 //image source
 import heroImage from '../../assets/hero.webp';
-import wideHeroWholeBackground from '../../assets/wide-hero-whole-background.webp';
 
 // data
 import { howItWorksData } from '../../data/HowItWorksData';
-import { heroImagesArray } from '../../data/HeroData';
+import {
+  homeHeroImagesArray,
+  homeHeroLargeBackground,
+} from '../../data/HeroData';
 
 //styles
 import styles from './Home.module.css';
@@ -52,8 +54,8 @@ function Home({ extraClass = undefined }) {
           buttonText={'How it works'}
           toUrl="#howItWorks"
           linkFor="hashed"
-          images={heroImagesArray}
-          wholeHeroBackgroundImage={wideHeroWholeBackground}
+          images={homeHeroImagesArray}
+          wholeHeroBackgroundImage={homeHeroLargeBackground}
           extraClass={['section-margin']}
         />
       )}
@@ -76,4 +78,4 @@ function Home({ extraClass = undefined }) {
   );
 }
 
-export default memo(Home);
+export default Home;
