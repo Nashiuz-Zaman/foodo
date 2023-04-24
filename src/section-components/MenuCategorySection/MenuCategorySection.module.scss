@@ -17,3 +17,25 @@
     row-gap: 2rem;
   }
 }
+
+@include mediaMin(62em) {
+  .menu-category-section-main {
+    margin-bottom: 10rem;
+
+    &__category-container {
+      width: 80%;
+      margin: 0 auto;
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+
+      &__image-link-main {
+        [class*='heading'] {
+          h3 {
+            width: 100%;
+            text-align: center;
+            font-size: 1.65rem;
+          }
+        }
+      }
+    }
+  }
+}

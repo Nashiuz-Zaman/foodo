@@ -35,7 +35,17 @@ function MenuCategorySection(
       <div className={styles['menu-category-section-main__category-container']}>
         {categoryData &&
           categoryData.map((single) => {
-            return <ImageLink key={single.id} dataObject={single} />;
+            return (
+              <ImageLink
+                key={single.id}
+                dataObject={single}
+                extraClass={[
+                  styles[
+                    'menu-category-section-main__category-container__image-link-main'
+                  ],
+                ]}
+              />
+            );
           })}
       </div>
     </section>
