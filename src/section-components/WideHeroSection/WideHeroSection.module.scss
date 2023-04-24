@@ -3,7 +3,7 @@
 
 @keyframes upperCircle {
   0% {
-    transform: scale(1.1) translate(50%, -50%);
+    transform: scale(1) translate(50%, -50%);
   }
 
   50% {
@@ -11,7 +11,7 @@
   }
 
   100% {
-    transform: scale(1.1) translate(50%, -50%);
+    transform: scale(1) translate(50%, -50%);
   }
 }
 
@@ -21,7 +21,7 @@
   }
 
   50% {
-    transform: scale(1.1) translate(-50%, 50%);
+    transform: scale(1) translate(-50%, 50%);
   }
 
   100% {
@@ -36,6 +36,7 @@
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   border-bottom-right-radius: 5rem;
+  @include no-flow;
   position: relative;
 
   &__whole-background {
@@ -84,7 +85,7 @@
         border-radius: 50%;
         top: 0;
         right: 0;
-        animation: upperCircle 2s linear infinite backwards;
+        animation: upperCircle 5s ease-in-out infinite backwards;
       }
 
       &::after {
@@ -98,7 +99,7 @@
         left: 0;
         transform: translate(-50%, 50%);
         z-index: -1;
-        animation: lowerCircle 2s linear infinite backwards;
+        animation: lowerCircle 5s ease-in-out infinite backwards;
       }
     }
   }

@@ -9,22 +9,30 @@ import { getAllFoodItems } from '../../features/foodItems/foodItemsSlice';
 import HeroSection from '../../section-components/HeroSection/HeroSection';
 import MenuCategorySection from '../../section-components/MenuCategorySection/MenuCategorySection';
 import MenuFoodItemsSection from '../../section-components/MenuFoodItemsSection/MenuFoodItemsSection';
+import WideHeroSection from '../../section-components/WideHeroSection/WideHeroSection';
 
 //hooks
 import useDetectMenu from '../../hooks/useDetectMenu';
+import useMediaQueryMatcher from '../../hooks/useMediaQueryMatcher';
 
 //image source
 import HeroImage from '../../assets/menu-page-hero.webp';
 
 //data
 import { foodCategories } from '../../data/FoodCategoryData';
+import {
+  menuHeroImagesArray,
+  menuHeroLargeBackground,
+} from '../../data/HeroData';
 
 //styles
 import styles from './Menu.module.css';
 import ScrollToElement from '../../components/ScrollToElement/ScrollTolElement';
 
 //Menu starts here
-export default function Menu({ extraClass = undefined }) {
+function Menu({ extraClass = undefined }) {
+  const { mediaQueryState } = useMediaQueryMatcher();
+
   const dispatch = useDispatch();
   const allFoodItems = useSelector((state) => state.foodItems.allFoodItems);
   useEffect(() => {
@@ -44,15 +52,30 @@ export default function Menu({ extraClass = undefined }) {
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      <HeroSection
-        imageSource={HeroImage}
-        shortIntroduction={'Welcome'}
-        heading={'Explore Our Creations: The Perfect Meal Awaits'}
-        buttonText={'View Menu'}
-        toUrl="menu#menu"
-        linkFor="hashed"
-        extraClass={['section-margin']}
-      />
+      {mediaQueryState.isSmallScreen && (
+        <HeroSection
+          imageSource={HeroImage}
+          shortIntroduction={'Welcome'}
+          heading={'Explore Our Creations: The Perfect Meal Awaits'}
+          buttonText={'View Menu'}
+          toUrl="menu#menu"
+          linkFor="hashed"
+          extraClass={['section-margin']}
+        />
+      )}
+
+      {mediaQueryState.isLargeScreen && (
+        <WideHeroSection
+          shortIntroduction={'Welcome'}
+          heading={'Explore Our Creations: The Perfect Meal Awaits'}
+          buttonText={'View Menu'}
+          toUrl="menu#menu"
+          linkFor="hashed"
+          images={menuHeroImagesArray}
+          wholeHeroBackgroundImage={menuHeroLargeBackground}
+          extraClass={['section-margin']}
+        />
+      )}
 
       <MenuCategorySection
         sectionId={'menu'}
@@ -76,3 +99,5 @@ export default function Menu({ extraClass = undefined }) {
     </div>
   );
 }
+
+export default Menu;

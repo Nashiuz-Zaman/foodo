@@ -45,6 +45,7 @@
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   border-bottom-right-radius: 5rem;
+  overflow: hidden;
   position: relative; }
   .wide-hero-section-main__whole-background {
     position: absolute;
