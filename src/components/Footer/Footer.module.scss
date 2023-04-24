@@ -27,6 +27,14 @@
       padding-bottom: 2rem;
       margin-bottom: 3rem;
 
+      [class*='social-media-links-main__image-buttons__buttons'] {
+        & > [class*='link-button'] {
+          @include link-alt {
+            @include bg(transparent);
+          }
+        }
+      }
+
       &::after {
         @include pseudo-underline(80%, 0.1rem, $white);
       }
@@ -39,6 +47,46 @@
     &__link-group-main {
       & > ul[class*='list'] {
         align-items: center;
+      }
+    }
+  }
+}
+
+@include mediaMin(65em) {
+  .footer-main {
+    &__top-part {
+      &__brand-name-main {
+        img {
+          height: 3.25rem;
+        }
+      }
+
+      &__social-media-links-main {
+        padding-bottom: 0;
+
+        [class*='social-media-links-main__image-buttons__buttons'] {
+          gap: 3rem;
+        }
+
+        &::after {
+          content: none;
+        }
+      }
+
+      &__app-store-links-main {
+        @include flex-row-center;
+        gap: 2rem;
+      }
+    }
+
+    &__bottom-part {
+      margin-bottom: 5rem;
+
+      &__link-group-main {
+        & > ul[class*='list'] {
+          @include flex-row-center;
+          gap: 2.5rem;
+        }
       }
     }
   }

@@ -27,6 +27,8 @@
       position: relative;
       padding-bottom: 2rem;
       margin-bottom: 3rem; }
+      .footer-main__top-part__social-media-links-main [class*='social-media-links-main__image-buttons__buttons'] > [class*='link-button']:hover, .footer-main__top-part__social-media-links-main [class*='social-media-links-main__image-buttons__buttons'] > [class*='link-button']:active {
+        background-color: transparent; }
       .footer-main__top-part__social-media-links-main::after {
         content: '';
         display: block;
@@ -45,5 +47,47 @@
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+
+@media (min-width: 65em) {
+  .footer-main__top-part__brand-name-main img {
+    height: 3.25rem; }
+  .footer-main__top-part__social-media-links-main {
+    padding-bottom: 0; }
+    .footer-main__top-part__social-media-links-main [class*='social-media-links-main__image-buttons__buttons'] {
+      gap: 3rem; }
+    .footer-main__top-part__social-media-links-main::after {
+      content: none; }
+  .footer-main__top-part__app-store-links-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem; }
+  .footer-main__bottom-part {
+    margin-bottom: 5rem; }
+    .footer-main__bottom-part__link-group-main > ul[class*='list'] {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 2.5rem; } }
 
 /*# sourceMappingURL=Footer.module.css.map */
