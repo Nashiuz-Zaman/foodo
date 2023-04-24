@@ -16,6 +16,7 @@ import DesktopHeader from './components/DesktopHeader/DesktopHeader';
 //page components
 import Home from './page-components/Home/Home';
 import Menu from './page-components/Menu/Menu';
+import NoContent from './page-components/NoContent/NoContent';
 
 //hooks
 import useNoScrollBackground from './hooks/useNoScrollBackground';
@@ -82,6 +83,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="*" element={<NoContent />} />
         </Routes>
       </main>
 
