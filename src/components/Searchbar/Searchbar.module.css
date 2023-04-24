@@ -74,4 +74,14 @@
     border: 1px solid #e23d28;
     border-radius: 100rem; }
 
+@media (min-width: 45em) {
+  .searchbar-main__form__label {
+    width: 30rem; } }
+@media (min-width: 53em) {
+  .searchbar-main__form__label {
+    width: 35rem; } }
+@media (min-width: 62em) {
+  .searchbar-main__form__label {
+    width: 45rem; } }
+
 /*# sourceMappingURL=Searchbar.module.css.map */

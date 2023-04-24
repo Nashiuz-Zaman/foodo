@@ -45,3 +45,33 @@
     border-radius: 100rem;
   }
 }
+
+@include mediaMin(45em) {
+  .searchbar-main {
+    &__form {
+      &__label {
+        width: 30rem;
+      }
+    }
+  }
+}
+
+@include mediaMin(53em) {
+  .searchbar-main {
+    &__form {
+      &__label {
+        width: 35rem;
+      }
+    }
+  }
+}
+
+@include mediaMin(62em) {
+  .searchbar-main {
+    &__form {
+      &__label {
+        width: 45rem;
+      }
+    }
+  }
+}
