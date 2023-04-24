@@ -28,7 +28,12 @@
 
   &__empty-cart-button {
     width: 100%;
-    @include flex-row-center;
+
+    a {
+      @include link-normal {
+        @include flex-row-center;
+      }
+    }
   }
 
   &__heading-and-button-container {
@@ -107,6 +112,27 @@
     width: 100%;
     @include flex-row-center;
     border-radius: 100rem;
+  }
+}
+
+@include mediaMin(45em) {
+  .shopping-cart-main {
+    @include fixed-layer(70%, 0, 30%);
+    z-index: 3;
+  }
+}
+
+@include mediaMin(53em) {
+  .shopping-cart-main {
+    @include fixed-layer(50%, 0, 50%);
+    z-index: 3;
+  }
+}
+
+@include mediaMin(75em) {
+  .shopping-cart-main {
+    @include fixed-layer(40%, 0, 60%);
+    z-index: 3;
   }
 }
 

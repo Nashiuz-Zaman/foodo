@@ -36,20 +36,21 @@
     text-align: center;
     margin-bottom: 5rem; }
   .shopping-cart-main__empty-cart-button {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    width: 100%; }
+    .shopping-cart-main__empty-cart-button a:link, .shopping-cart-main__empty-cart-button a:visited {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
   .shopping-cart-main__heading-and-button-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -122,6 +123,36 @@
             align-items: center;
     border-radius: 100rem; }
 
+@media (min-width: 45em) {
+  .shopping-cart-main {
+    position: fixed;
+    width: 70%;
+    top: 0;
+    left: 30%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 1;
+    z-index: 3; } }
+@media (min-width: 53em) {
+  .shopping-cart-main {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 1;
+    z-index: 3; } }
+@media (min-width: 75em) {
+  .shopping-cart-main {
+    position: fixed;
+    width: 40%;
+    top: 0;
+    left: 60%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    z-index: 1;
+    z-index: 3; } }
 .not-active {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
