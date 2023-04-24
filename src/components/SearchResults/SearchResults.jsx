@@ -35,9 +35,11 @@ export default function SearchResults({ extraClass = undefined }) {
           <p className={styles['search-results-main__result-summary']}>
             {searchResults.length} matches found
           </p>
-          {searchResults.map((single) => {
-            return <FoodCard key={single.id} cardData={single} />;
-          })}
+          <div className={styles['search-results-main__result-container']}>
+            {searchResults.map((single) => {
+              return <FoodCard key={single.id} cardData={single} />;
+            })}
+          </div>
         </>
       )}
     </div>

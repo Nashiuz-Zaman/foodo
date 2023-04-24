@@ -3,10 +3,6 @@
 
 .search-results-main {
   padding: 2.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(28rem, 28rem));
-  justify-content: center;
-  gap: 2.5rem;
 
   &__result-summary {
     color: $primary;
@@ -15,7 +11,14 @@
     margin-bottom: 2.5rem;
   }
 
-  & > [class*='food-card-main'] {
-    margin-bottom: 0;
+  &__result-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 28rem));
+    justify-content: center;
+    gap: 2.5rem;
+
+    & > [class*='food-card-main'] {
+      margin-bottom: 0;
+    }
   }
 }

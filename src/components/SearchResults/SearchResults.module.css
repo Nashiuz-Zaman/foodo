@@ -1,17 +1,18 @@
 .search-results-main {
-  padding: 2.5rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(28rem, 28rem));
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 2.5rem; }
+  padding: 2.5rem; }
   .search-results-main__result-summary {
     color: #e23d28;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 2.5rem; }
-  .search-results-main > [class*='food-card-main'] {
-    margin-bottom: 0; }
+  .search-results-main__result-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 28rem));
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 2.5rem; }
+    .search-results-main__result-container > [class*='food-card-main'] {
+      margin-bottom: 0; }
 
 /*# sourceMappingURL=SearchResults.module.css.map */
