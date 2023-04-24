@@ -1,9 +1,9 @@
 //image source
-import introheroImage from '../assets/introhero.webp';
-import pizzaheroImage from '../assets/pizzahero.webp';
-import steakheroImage from '../assets/steakhero.webp';
-import burgerheroImage from '../assets/burgerhero.webp';
-import soupheroImage from '../assets/souphero.webp';
+import introheroImage from '../assets/heroImages/womanhero.webp';
+import pizzaheroImage from '../assets/heroImages/pizzahero.webp';
+import steakheroImage from '../assets/heroImages/steakhero.webp';
+import burgerheroImage from '../assets/heroImages/burgerhero.webp';
+import soupheroImage from '../assets/heroImages/souphero.webp';
 
 export const heroImagesArray = [
   {
