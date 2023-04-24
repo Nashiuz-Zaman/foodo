@@ -19,14 +19,8 @@
     font-weight: 400;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
-    text-transform: lowercase; }
+    text-transform: capitalize; }
   .brand-name-main__image {
     height: 2.2rem; }
-
-@media (min-width: 60em) {
-  .brand-name-main__link:link, .brand-name-main__link:visited {
-    color: #1b1b1b;
-    font-size: 2.2rem;
-    font-weight: 500; } }
 
 /*# sourceMappingURL=BrandName.module.css.map */
