@@ -31,6 +31,7 @@ export default function MobileHeader({
   const headerRef = useRef(null);
   const dispatch = useDispatch();
 
+  // setting the header height state by calculating the mobile header's scroll height
   useEffect(() => {
     if (headerRef) {
       dispatch(setHeaderHeight(headerRef.current.scrollHeight));
