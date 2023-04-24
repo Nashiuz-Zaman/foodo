@@ -52,9 +52,9 @@
     @include flex-row-center;
     position: relative;
     z-index: 1;
+    padding-left: 2.5rem;
 
     &__heading-description-button-main {
-      padding: 3.5rem;
       & > [class*='short-introduction'] {
         color: $primary !important;
       }
@@ -71,8 +71,7 @@
       z-index: 1;
 
       [class*='img'] {
-        border-top-left-radius: 5rem;
-        border-bottom-right-radius: 5rem;
+        @include border-radius(5rem, 0.5rem, 5rem, 0.5rem);
         box-shadow: 0 1.5rem 3rem rgba($black, 0.25);
       }
 
@@ -100,6 +99,102 @@
         transform: translate(-50%, 50%);
         z-index: -1;
         animation: lowerCircle 5s ease-in-out infinite backwards;
+      }
+    }
+  }
+}
+
+@include mediaMin(62em) {
+  .wide-hero-section-main {
+    height: 60rem;
+    &__text-container {
+      &__heading-description-button-main {
+        transform: translateY(2.5rem);
+
+        & > [class*='short-introduction'] {
+          font-size: 2rem;
+          margin-bottom: 1.2rem;
+        }
+
+        & > [class*='__heading'] {
+          font-size: 3rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    &__carousel-container {
+      &__carousel {
+        width: 42.5rem;
+        transform: translateY(2.5rem);
+      }
+    }
+  }
+}
+
+@include mediaMin(65em) {
+  .wide-hero-section-main {
+    &__text-container {
+      padding-left: 10rem;
+      &__heading-description-button-main {
+        transform: translate(0);
+
+        & > [class*='short-introduction'] {
+          font-size: 2.5rem;
+        }
+
+        & > [class*='__heading'] {
+          font-size: 4rem;
+        }
+
+        & > [class*='link-button'] {
+          a {
+            @include link-normal {
+              font-size: 1.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__carousel-container {
+      &__carousel {
+        width: 46rem;
+        transform: translate(0);
+      }
+    }
+  }
+}
+
+@include mediaMin(81em) {
+  .wide-hero-section-main {
+    &__text-container {
+      padding-left: 10rem;
+      &__heading-description-button-main {
+        transform: translate(0);
+
+        & > [class*='short-introduction'] {
+          font-size: 2.5rem;
+        }
+
+        & > [class*='__heading'] {
+          font-size: 4rem;
+        }
+
+        & > [class*='link-button'] {
+          a {
+            @include link-normal {
+              font-size: 1.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__carousel-container {
+      &__carousel {
+        width: 50rem;
+        transform: translate(0);
       }
     }
   }
