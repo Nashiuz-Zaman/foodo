@@ -9,6 +9,7 @@ import searchReducer from '../features/search/searchSlice';
 import cartReducer from '../features/cart/cartSlice';
 import foodItemsReducer from '../features/foodItems/foodItemsSlice';
 import mediaQueryReducer from '../features/mediaQuery/mediaQuerySlice';
+import desktopHeaderReducer from '../features/desktopHeader/desktopHeaderSlice';
 
 export const store = configureStore({
   reducer: {
@@ -19,5 +20,6 @@ export const store = configureStore({
     cart: cartReducer,
     foodItems: foodItemsReducer,
     mediaQuery: mediaQueryReducer,
+    desktopHeader: desktopHeaderReducer,
   },
 });
