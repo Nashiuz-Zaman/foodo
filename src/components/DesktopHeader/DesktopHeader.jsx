@@ -1,3 +1,10 @@
+//react
+import { useRef, useEffect } from 'react';
+
+//redux
+import { useDispatch } from 'react-redux';
+import { setDesktopHeaderHeight } from '../../features/desktopHeader/desktopHeaderSlice';
+
 //component
 import BrandName from '../BrandName/BrandName';
 import DesktopNavigation from '../DesktopNavigation/DesktopNavigation';
@@ -16,9 +23,20 @@ export default function DesktopHeader({
   ctaButtonData = null,
   extraClass = undefined,
 }) {
+  const desktopHeaderRef = useRef(null);
+  const dispatch = useDispatch();
+
+  // setting the header height state by calculating the desktop header's scroll height
+  useEffect(() => {
+    if (desktopHeaderRef) {
+      dispatch(setDesktopHeaderHeight(desktopHeaderRef.current.scrollHeight));
+    }
+  }, [desktopHeaderRef, dispatch]);
+
   // jsx template
   return (
     <header
+      ref={desktopHeaderRef}
       className={`${styles['desktop-header-main']} ${
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
