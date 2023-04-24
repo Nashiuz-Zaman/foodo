@@ -1,6 +1,3 @@
-//react
-import { memo } from 'react';
-
 //component
 import HeroSection from '../../section-components/HeroSection/HeroSection';
 import HowItWorksSection from '../../section-components/HowItWorksSection/HowItWorksSection';
