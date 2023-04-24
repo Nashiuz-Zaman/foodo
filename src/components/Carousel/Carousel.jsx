@@ -10,7 +10,6 @@ import styles from './Carousel.module.css';
 //Carousel starts here
 export default function Carousel({ images = [], extraClass = undefined }) {
   const { currentSlide } = useCarousel(images.length, 4000);
-  console.log(currentSlide);
 
   // jsx template
   return (

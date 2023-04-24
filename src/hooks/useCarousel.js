@@ -9,8 +9,6 @@ export default function useCarousel(
   const [mouseInside, setMouseInside] = useState(false);
   const timerRef = useRef(null);
 
-  console.log(currentSlide);
-
   const goToSlide = (slideNumber) => {
     setCurrentSlide(slideNumber);
   };
