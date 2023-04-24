@@ -40,8 +40,14 @@ const brandName = 'foodo';
 function App() {
   useNoScrollBackground();
   useScrollToTop();
+
+  // To detect screen sizes
   const { mediaQueryState } = useMediaQueryMatcher();
-  const { headerHeight } = useSelector((state) => state.header);
+
+  // Extracting header heights used to correctly position the windows such as search window, shopping cart and mobile navigation menu windows
+  const { mobileHeaderHeight } = useSelector((state) => state.mobileHeader);
+  const { desktopHeaderHeight } = useSelector((state) => state.desktopHeader);
+
   const dispatch = useDispatch();
 
   // hamburger menu and mobile navigation menu active states are controlled by the same state inside the redux store which is extracted below
@@ -66,10 +72,14 @@ function App() {
         />
       )}
 
-      <SearchWindow headerHeight={headerHeight} />
+      <SearchWindow
+        headerHeight={
+          mediaQueryState.isComputer ? desktopHeaderHeight : mobileHeaderHeight
+        }
+      />
 
       <MobileNavigationMenu
-        headerHeight={headerHeight}
+        headerHeight={mobileHeaderHeight}
         navigationOptions={mobileNavigationOptions}
         navigationActive={isNavigationOpen}
         onClick={() => {
@@ -77,7 +87,12 @@ function App() {
         }}
       />
 
-      <ShoppingCart emptyCartLogo={emptyCartLogo} headerHeight={headerHeight} />
+      <ShoppingCart
+        emptyCartLogo={emptyCartLogo}
+        headerHeight={
+          mediaQueryState.isComputer ? desktopHeaderHeight : mobileHeaderHeight
+        }
+      />
 
       <main>
         <Routes>
