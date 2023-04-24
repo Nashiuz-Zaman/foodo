@@ -8,8 +8,8 @@ const headerSlice = createSlice({
   name: 'header',
   initialState: initialState,
   reducers: {
-    setHeaderHeight: (state, action) => {
-      state.headerHeight = action.payload;
+    setHeaderHeight: (state, { payload }) => {
+      state.headerHeight = payload;
     },
   },
 });
