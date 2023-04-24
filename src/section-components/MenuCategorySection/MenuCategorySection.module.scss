@@ -20,12 +20,15 @@
 
 @include mediaMin(62em) {
   .menu-category-section-main {
-    margin-bottom: 10rem;
+    margin-bottom: 7.5rem;
+
+    &__section-title {
+      margin-bottom: 4rem;
+    }
 
     &__category-container {
       width: 80%;
       margin: 0 auto;
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
 
       &__image-link-main {
         [class*='heading'] {
@@ -36,6 +39,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@include mediaMin(75em) {
+  .menu-category-section-main {
+    &__category-container {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     }
   }
 }
