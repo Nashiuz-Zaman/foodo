@@ -5,13 +5,13 @@
   grid-template-columns: 1fr 2fr 1fr;
   -ms-flex-line-pack: center;
       align-content: center;
-  z-index: 4;
+  z-index: 5;
   position: -webkit-sticky;
   position: sticky;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

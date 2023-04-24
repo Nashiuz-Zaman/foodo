@@ -4,6 +4,11 @@ import { useRef, useEffect } from 'react';
 //redux
 import { useDispatch } from 'react-redux';
 import { setDesktopHeaderHeight } from '../../features/desktopHeader/desktopHeaderSlice';
+import {
+  toggleSearchWindow,
+  closeSearchWindow,
+} from '../../features/searchWindow/searchWindowSlice';
+import { toggleCart, closeCart } from '../../features/cart/cartSlice';
 
 //component
 import BrandName from '../BrandName/BrandName';
@@ -41,11 +46,28 @@ export default function DesktopHeader({
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      <BrandName title={brandName} imageSource={brandLogo} />
+      <BrandName
+        title={brandName}
+        imageSource={brandLogo}
+        onClick={() => {
+          dispatch(closeCart());
+          dispatch(closeSearchWindow());
+        }}
+      />
       <DesktopNavigation navigationOptionsArray={navigationOptions} />
       <div className={styles['desktop-header-main__side-buttons']}>
-        <SearchButton />
-        <ShoppingCartButton />
+        <SearchButton
+          onClick={() => {
+            dispatch(closeCart());
+            dispatch(toggleSearchWindow());
+          }}
+        />
+        <ShoppingCartButton
+          onClick={() => {
+            dispatch(closeSearchWindow());
+            dispatch(toggleCart());
+          }}
+        />
         <LinkButton
           buttonText={ctaButtonData.buttonText}
           toUrl={ctaButtonData.toUrl}

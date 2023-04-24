@@ -7,12 +7,12 @@
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   align-content: center;
-  z-index: 4;
+  z-index: 5;
   position: sticky;
   width: 100%;
   top: 0;
   left: 0;
-  @include bg-trans($white, 0.8);
+  @include bg-trans($white, 0.95);
   @include bg-blur(3px);
   box-shadow: 0 2px 10px rgba($black, 0.1);
 
