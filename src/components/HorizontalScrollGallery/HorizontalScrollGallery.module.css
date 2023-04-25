@@ -32,9 +32,6 @@
     grid-auto-columns: 55%; } }
 @media (min-width: 45em) {
   .horizontal-scroll-gallery__scroller {
-    grid-auto-columns: 31rem; } }
-@media (min-width: 62em) {
-  .horizontal-scroll-gallery__scroller {
-    grid-auto-columns: 30rem; } }
+    grid-auto-columns: 26.5rem; } }
 
 /*# sourceMappingURL=HorizontalScrollGallery.module.css.map */

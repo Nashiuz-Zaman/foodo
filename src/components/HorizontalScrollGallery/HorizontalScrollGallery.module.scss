@@ -55,15 +55,7 @@
 @include mediaMin(45em) {
   .horizontal-scroll-gallery {
     &__scroller {
-      grid-auto-columns: 31rem;
-    }
-  }
-}
-
-@include mediaMin(62em) {
-  .horizontal-scroll-gallery {
-    &__scroller {
-      grid-auto-columns: 30rem;
+      grid-auto-columns: 26.5rem;
     }
   }
 }
