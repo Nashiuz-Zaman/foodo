@@ -52,7 +52,7 @@
           font-size: 1.35rem;
           font-weight: 500; }
         .food-card-main__item__info__name-and-price__price {
-          font-size: 1.65rem;
+          font-size: 1.55rem;
           color: #e23d28;
           font-weight: 600;
           padding-right: 0.5rem; }
@@ -123,21 +123,12 @@
   .food-card-main__item {
     padding: 1rem; }
     .food-card-main__item__info {
-      gap: 0.65rem; }
+      gap: 0.7rem; }
       .food-card-main__item__info__name-and-price__name {
-        font-size: 1.5rem; }
-      .food-card-main__item__info__name-and-price__price {
-        font-size: 1.9rem; }
-      .food-card-main__item__info__category {
-        font-size: 1.35rem; }
+        font-size: 1.4rem; }
       .food-card-main__item__info__bottom-info > p {
-        font-size: 1.3rem;
         font-weight: 500; }
-      .food-card-main__item__info__bottom-info__rating-container {
-        gap: 0.3rem; }
-        .food-card-main__item__info__bottom-info__rating-container__rating-star {
-          height: 1.3rem; }
-    .food-card-main__item__button button {
-      font-size: 1.65rem; } }
+      .food-card-main__item__info__bottom-info__rating-container__rating-star {
+        height: 1.2rem; } }
 
 /*# sourceMappingURL=FoodCard.module.css.map */

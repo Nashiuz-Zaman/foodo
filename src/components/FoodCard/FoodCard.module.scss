@@ -39,7 +39,7 @@
         }
 
         &__price {
-          font-size: 1.65rem;
+          font-size: 1.55rem;
           color: $primary;
           font-weight: 600;
           padding-right: 0.5rem;
@@ -96,41 +96,24 @@
       padding: 1rem;
 
       &__info {
-        gap: 0.65rem;
+        gap: 0.7rem;
 
         &__name-and-price {
           &__name {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
           }
-
-          &__price {
-            font-size: 1.9rem;
-          }
-        }
-
-        &__category {
-          font-size: 1.35rem;
         }
 
         &__bottom-info {
           & > p {
-            font-size: 1.3rem;
             font-weight: 500;
           }
 
           &__rating-container {
-            gap: 0.3rem;
-
             &__rating-star {
-              height: 1.3rem;
+              height: 1.2rem;
             }
           }
-        }
-      }
-
-      &__button {
-        button {
-          font-size: 1.65rem;
         }
       }
     }
