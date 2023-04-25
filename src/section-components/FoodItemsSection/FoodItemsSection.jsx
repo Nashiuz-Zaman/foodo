@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
 import HorizontalScrollGallery from '../../components/HorizontalScrollGallery/HorizontalScrollGallery';
 import TertiaryHeading from '../../components/TertiaryHeading/TertiaryHeading';
+import LargeFoodCard from '../../components/LargeFoodCard/LargeFoodCard';
 
 // hooks
 import useFetchFoodItems from '../../hooks/useFetchFoodItems';
@@ -42,10 +43,18 @@ export default function FoodItemsSection({ extraClass = undefined }) {
         <>
           <div className={styles['food-items-section-main__top-picks']}>
             <TertiaryHeading
-              extraClass={[styles['food-items-section-main__gallery-heading']]}
+              extraClass={[
+                styles['food-items-section-main__top-picks__heading'],
+              ]}
               heading={"Today's Top Picks"}
             />
-            <HorizontalScrollGallery dataArray={topPicks} />
+            <div
+              className={styles['food-items-section-main__top-picks__items']}
+            >
+              {topPicks.map((single) => {
+                return <LargeFoodCard key={single.id} cardData={single} />;
+              })}
+            </div>
           </div>
 
           <div className={styles['food-items-section-main__delicious-dishes']}>
