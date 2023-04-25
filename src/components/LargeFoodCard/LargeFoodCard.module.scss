@@ -1,0 +1,85 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.large-food-card-main {
+  width: 100%;
+  height: auto;
+
+  &__item {
+    border-radius: 3rem;
+
+    &__img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      margin-bottom: 1.25rem;
+      @include bg-cover-center();
+      border-bottom-right-radius: 3rem;
+      border-top-left-radius: 3rem;
+      border-top-right-radius: 3rem;
+      box-shadow: 0 0 1rem rgba($black, 0.2);
+    }
+
+    &__info {
+      @include flex-col();
+      gap: 2rem;
+      margin-bottom: 1.75rem;
+
+      &__name-and-price {
+        width: 100%;
+        @include flex-col;
+        gap: 0.75rem;
+
+        &__name,
+        &__price {
+          display: inline-block;
+        }
+
+        &__name {
+          font-size: 1.8rem;
+          font-weight: 500;
+        }
+
+        &__price {
+          font-size: 1.8rem;
+          color: $primary;
+          font-weight: 600;
+        }
+      }
+
+      &__bottom-info {
+        @include flex-col();
+        gap: 1rem;
+
+        & > p {
+          font-size: 1.35rem;
+          font-weight: 500;
+        }
+
+        &__rating-container {
+          @include flex-row(_, center);
+          gap: 0.2rem;
+
+          &__rating-star {
+            height: 1.5rem;
+            filter: $filterGold !important;
+          }
+
+          &__rating-count {
+            color: $lightText;
+          }
+        }
+      }
+    }
+
+    &__button {
+      width: 100%;
+      margin: 0 auto;
+      @include ovalbr;
+      @include flex-row-center;
+
+      button {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

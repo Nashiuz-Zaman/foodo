@@ -1,0 +1,118 @@
+.large-food-card-main {
+  width: 100%;
+  height: auto; }
+  .large-food-card-main__item {
+    border-radius: 3rem; }
+    .large-food-card-main__item__img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      margin-bottom: 1.25rem;
+      background-position: 50% 50% !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      border-bottom-right-radius: 3rem;
+      border-top-left-radius: 3rem;
+      border-top-right-radius: 3rem;
+      -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+              box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
+    .large-food-card-main__item__info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: normal;
+          -ms-flex-align: normal;
+              align-items: normal;
+      gap: 2rem;
+      margin-bottom: 1.75rem; }
+      .large-food-card-main__item__info__name-and-price {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: normal;
+            -ms-flex-align: normal;
+                align-items: normal;
+        gap: 0.75rem; }
+        .large-food-card-main__item__info__name-and-price__name, .large-food-card-main__item__info__name-and-price__price {
+          display: inline-block; }
+        .large-food-card-main__item__info__name-and-price__name {
+          font-size: 1.8rem;
+          font-weight: 500; }
+        .large-food-card-main__item__info__name-and-price__price {
+          font-size: 1.8rem;
+          color: #e23d28;
+          font-weight: 600; }
+      .large-food-card-main__item__info__bottom-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: normal;
+            -ms-flex-align: normal;
+                align-items: normal;
+        gap: 1rem; }
+        .large-food-card-main__item__info__bottom-info > p {
+          font-size: 1.35rem;
+          font-weight: 500; }
+        .large-food-card-main__item__info__bottom-info__rating-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row;
+          -webkit-box-pack: _;
+              -ms-flex-pack: _;
+                  justify-content: _;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          gap: 0.2rem; }
+          .large-food-card-main__item__info__bottom-info__rating-container__rating-star {
+            height: 1.5rem;
+            -webkit-filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%) !important;
+                    filter: invert(92%) sepia(19%) saturate(5933%) hue-rotate(359deg) brightness(100%) contrast(106%) !important; }
+          .large-food-card-main__item__info__bottom-info__rating-container__rating-count {
+            color: #8e8e8e; }
+    .large-food-card-main__item__button {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 1000rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .large-food-card-main__item__button button {
+        text-transform: capitalize; }
+
+/*# sourceMappingURL=LargeFoodCard.module.css.map */
