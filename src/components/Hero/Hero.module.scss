@@ -20,13 +20,53 @@
     width: 65%;
     padding: 2.5rem;
 
+    [class*='short-introduction'] {
+      color: $primaryLight;
+    }
+
     [class*='__heading'] {
       color: $white;
       margin-bottom: 1.5rem;
     }
+  }
+}
 
-    [class*='short-introduction'] {
-      color: $primaryLight;
+@include mediaMin(31em) {
+  .hero-main {
+    &__heading-description-button-main {
+      width: 52.5%;
+    }
+  }
+}
+
+@include mediaMin(37em) {
+  .hero-main {
+    &__heading-description-button-main {
+      width: 47%;
+
+      [class*='short-introduction'] {
+        font-size: 2.1rem;
+      }
+
+      [class*='__heading'] {
+        font-size: 2.75rem;
+      }
+    }
+  }
+}
+
+@include mediaMin(45em) {
+  .hero-main {
+    &__heading-description-button-main {
+      width: 47%;
+
+      [class*='short-introduction'] {
+        font-size: 2.5rem;
+      }
+
+      [class*='__heading'] {
+        font-size: 3.5rem;
+      }
     }
   }
 }

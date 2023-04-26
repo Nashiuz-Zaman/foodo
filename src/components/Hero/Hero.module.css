@@ -16,10 +16,28 @@
     border-bottom-right-radius: 100rem;
     width: 65%;
     padding: 2.5rem; }
+    .hero-main__heading-description-button-main [class*='short-introduction'] {
+      color: #e5513e; }
     .hero-main__heading-description-button-main [class*='__heading'] {
       color: #fff;
       margin-bottom: 1.5rem; }
+
+@media (min-width: 31em) {
+  .hero-main__heading-description-button-main {
+    width: 52.5%; } }
+@media (min-width: 37em) {
+  .hero-main__heading-description-button-main {
+    width: 47%; }
     .hero-main__heading-description-button-main [class*='short-introduction'] {
-      color: #e5513e; }
+      font-size: 2.1rem; }
+    .hero-main__heading-description-button-main [class*='__heading'] {
+      font-size: 2.75rem; } }
+@media (min-width: 45em) {
+  .hero-main__heading-description-button-main {
+    width: 47%; }
+    .hero-main__heading-description-button-main [class*='short-introduction'] {
+      font-size: 2.5rem; }
+    .hero-main__heading-description-button-main [class*='__heading'] {
+      font-size: 3.5rem; } }
 
 /*# sourceMappingURL=Hero.module.css.map */
