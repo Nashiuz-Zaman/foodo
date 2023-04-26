@@ -1,0 +1,72 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.location-section-main {
+  padding: 0 2.5rem;
+
+  &__section-title {
+    margin-bottom: 4rem;
+    @include flex-row-center;
+
+    h3 {
+      font-weight: 400;
+    }
+  }
+
+  &__locations {
+    @include flex-row-center;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    &__location {
+      flex-basis: 45%;
+
+      [class*='__heading'] {
+        @include flex-row-center;
+
+        h3 {
+          color: $darkText;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@include mediaMin(45em) {
+  .location-section-main {
+    &__section-title {
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+
+    &__locations {
+      @include flex-row-center;
+
+      &__location {
+        flex-basis: 30%;
+      }
+    }
+  }
+}
+
+@include mediaMin(62em) {
+  .location-section-main {
+    margin-inline: 7.5rem;
+  }
+}
+
+@include mediaMin(75em) {
+  .location-section-main {
+    &__locations {
+      @include flex-row-center;
+
+      &__location {
+        h3 {
+          font-size: 1.65rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.promotion-section-main {
+  position: relative; }
+  .promotion-section-main__promotion-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 3rem; }
+    .promotion-section-main__promotion-heading h3 {
+      font-weight: 600;
+      font-size: 2rem; }
+  .promotion-section-main__promotion-image {
+    aspect-ratio: 16/20; }
+  .promotion-section-main__promotion-message {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: 2.5rem;
+    background-color: rgba(226, 61, 40, 0.9);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    padding: 1.75rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 80%;
+    border-radius: 2rem; }
+    .promotion-section-main__promotion-message p {
+      color: #fff;
+      font-weight: 600 !important;
+      font-size: 1.65rem; }
+
+@media (min-width: 31em) {
+  .promotion-section-main {
+    position: relative; }
+    .promotion-section-main__promotion-image {
+      aspect-ratio: 16/14; }
+    .promotion-section-main__promotion-message {
+      width: 70%; }
+      .promotion-section-main__promotion-message p {
+        font-size: 1.75rem; }
+        .promotion-section-main__promotion-message p [class*='primary-highlight'] {
+          font-weight: 700; } }
+@media (min-width: 37em) {
+  .promotion-section-main__promotion-image {
+    aspect-ratio: 16/12; }
+  .promotion-section-main__promotion-message {
+    right: 0;
+    left: unset;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+    .promotion-section-main__promotion-message p {
+      font-size: 1.75rem; }
+      .promotion-section-main__promotion-message p [class*='primary-highlight'] {
+        font-weight: 700; } }
+@media (min-width: 45em) {
+  .promotion-section-main__promotion-heading h3 {
+    font-size: 2.5rem; }
+  .promotion-section-main__promotion-image {
+    aspect-ratio: 16/10; } }
+@media (min-width: 48em) {
+  .promotion-section-main__promotion-message {
+    width: 40%; } }
+@media (min-width: 53em) {
+  .promotion-section-main {
+    margin-inline: 10rem; }
+    .promotion-section-main__promotion-message {
+      width: 55%;
+      border-radius: 2rem;
+      bottom: -2.5rem;
+      right: -2.5rem;
+      padding: 2.5rem; }
+      .promotion-section-main__promotion-message p {
+        font-size: 1.75rem; }
+        .promotion-section-main__promotion-message p [class*='primary-highlight'] {
+          color: #fff; } }
+@media (min-width: 62em) {
+  .promotion-section-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: normal;
+        -ms-flex-align: normal;
+            align-items: normal;
+    width: 100%;
+    padding: 0;
+    margin: 0; }
+    .promotion-section-main__promotion-heading {
+      -ms-flex-preferred-size: 40%;
+          flex-basis: 40%;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#e23d28), to(#d4311d));
+      background-image: linear-gradient(to bottom, #e23d28, #d4311d);
+      margin: 0; }
+      .promotion-section-main__promotion-heading h3 {
+        width: 50%;
+        color: #fff;
+        text-align: left;
+        font-size: 4rem;
+        line-height: 1.05; }
+    .promotion-section-main__promotion-image {
+      -ms-flex-preferred-size: 60%;
+          flex-basis: 60%; }
+    .promotion-section-main__promotion-message {
+      width: 25%;
+      right: 0;
+      bottom: 2.5rem;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; } }
+@media (min-width: 75em) {
+  .promotion-section-main__promotion-heading h3 {
+    text-align: left;
+    font-size: 5.5rem; } }
+
+/*# sourceMappingURL=PromotionSection.module.css.map */
