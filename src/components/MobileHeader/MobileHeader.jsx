@@ -31,6 +31,8 @@ export default function MobileHeader({
   const mobileHeaderRef = useRef(null);
   const dispatch = useDispatch();
 
+  // useSelector((state) => console.log(state.cart.isOpen));
+
   // setting the header height state by calculating the mobile header's scroll height
   useEffect(() => {
     if (mobileHeaderRef) {
