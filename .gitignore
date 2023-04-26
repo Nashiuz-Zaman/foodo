@@ -13,6 +13,7 @@
 /src/assets
 /.prettierrc
 /index.html
+/server/classes/Database.php
 
 # misc
 .DS_Store
