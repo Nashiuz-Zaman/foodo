@@ -4,6 +4,8 @@ import HowItWorksSection from '../../section-components/HowItWorksSection/HowItW
 import FoodItemsSection from '../../section-components/FoodItemsSection/FoodItemsSection';
 import ReviewSection from '../../section-components/ReviewSection/ReviewSection';
 import WideHeroSection from '../../section-components/WideHeroSection/WideHeroSection';
+import LocationSection from '../../section-components/LocationSection/LocationSection';
+import PromotionSection from '../../section-components/PromotionSection/PromotionSection';
 
 //hook
 import useMediaQueryMatcher from '../../hooks/useMediaQueryMatcher';
@@ -17,6 +19,12 @@ import {
   homeHeroImagesArray,
   homeHeroLargeBackground,
 } from '../../data/HeroData';
+import { citiesData } from '../../data/CityData';
+import {
+  promotionImage,
+  promotionHeading,
+  promotionMessage,
+} from '../../data/PromotionInformation';
 
 //styles
 import styles from './Home.module.css';
@@ -65,7 +73,20 @@ function Home({ extraClass = undefined }) {
         extraClass={['section-margin', 'scroll-offset']}
       />
 
+      <LocationSection
+        heading={'Find us in all of these 6 cities'}
+        locationsData={citiesData}
+        extraClass={['section-margin']}
+      />
+
       <FoodItemsSection extraClass={['section-margin']} />
+
+      <PromotionSection
+        heading={promotionHeading}
+        imageSource={promotionImage}
+        message={promotionMessage}
+        extraClass={['section-margin']}
+      />
 
       <ReviewSection
         sectionTitle={'Customer Reviews'}
