@@ -1,6 +1,13 @@
 .section-margin {
   margin-bottom: 10rem !important; }
 
+@media (min-width: 48em) {
+  .section-margin {
+    margin-bottom: 20rem !important; } }
+.primary-highlight {
+  color: #e23d28;
+  text-transform: uppercase; }
+
 .scroll-offset {
   scroll-margin-top: 10rem; }
 

@@ -5,6 +5,17 @@
   margin-bottom: 10rem !important;
 }
 
+@include mediaMin(48em) {
+  .section-margin {
+    margin-bottom: 20rem !important;
+  }
+}
+
+.primary-highlight {
+  color: $primary;
+  text-transform: uppercase;
+}
+
 .scroll-offset {
   scroll-margin-top: 10rem;
 }
