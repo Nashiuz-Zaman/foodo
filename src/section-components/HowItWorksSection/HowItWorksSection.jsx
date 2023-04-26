@@ -31,7 +31,12 @@ export default function HowItWorksSection({
         {howItWorksDataArray &&
           howItWorksDataArray.map((single, i) => {
             return (
-              <li key={single.id}>
+              <li
+                key={single.id}
+                className={
+                  styles['how-it-works-section-main__how-it-works-list__item']
+                }
+              >
                 <p
                   className={
                     styles[

@@ -8,18 +8,23 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: normal;
-        -ms-flex-align: normal;
-            align-items: normal;
-    gap: 6rem;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 5rem;
     margin-bottom: 6rem; }
+    .how-it-works-section-main__how-it-works-list__item {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
     .how-it-works-section-main__how-it-works-list__item-number {
       font-size: 4.25rem;
       font-weight: 600;
@@ -68,17 +73,24 @@
   .how-it-works-section-main__order-button {
     margin: 0 auto !important; }
 
-@media (min-width: 62em) {
+@media (min-width: 45em) {
   .how-it-works-section-main__how-it-works-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 0;
-    margin-bottom: 8rem; }
+    row-gap: 5rem; }
+    .how-it-works-section-main__how-it-works-list__item {
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%; }
     .how-it-works-section-main__how-it-works-list__item-image-description-button-main--reverse > [class*='image-main'] {
       -webkit-transform: translateX(-3rem);
               transform: translateX(-3rem); }
     .how-it-works-section-main__how-it-works-list__item-image-description-button-main--reverse > [class*='plain-description-main'] {
       -webkit-transform: translateX(3rem);
               transform: translateX(3rem); } }
+@media (min-width: 62em) {
+  .how-it-works-section-main__section-title {
+    margin-bottom: 5rem !important; }
+  .how-it-works-section-main__how-it-works-list__item {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%; } }
 
 /*# sourceMappingURL=HowItWorksSection.module.css.map */
