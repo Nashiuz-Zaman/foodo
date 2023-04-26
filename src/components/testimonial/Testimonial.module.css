@@ -22,7 +22,7 @@
     background-repeat: no-repeat !important;
     -ms-flex-negative: 0 !important;
         flex-shrink: 0 !important;
-    border-radius: 1rem; }
+    border-radius: 3rem; }
   .testimonial__text-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,14 +40,14 @@
     .testimonial__text-container__one-liner {
       font-size: 1.9rem;
       font-weight: 500;
-      color: #e23d28;
+      color: #1b1b1b;
       padding-right: 1rem;
       margin-bottom: 0.7rem; }
     .testimonial__text-container__rating {
       margin-bottom: 2rem; }
     .testimonial__text-container__full-review-and-reviewer-name {
       background-color: #e23d28;
-      border-radius: 1rem;
+      border-radius: 3rem;
       color: #fff;
       padding: 1rem;
       padding-bottom: 1.5rem; }

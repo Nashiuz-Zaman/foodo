@@ -10,7 +10,7 @@
     aspect-ratio: 16/28;
     @include bg-cover-center();
     flex-shrink: 0 !important;
-    border-radius: 1rem;
+    border-radius: 3rem;
   }
 
   &__text-container {
@@ -19,7 +19,7 @@
     &__one-liner {
       font-size: 1.9rem;
       font-weight: 500;
-      color: $primary;
+      color: $darkText;
       padding-right: 1rem;
       margin-bottom: 0.7rem;
     }
@@ -30,7 +30,7 @@
 
     &__full-review-and-reviewer-name {
       @include bg($primary);
-      border-radius: 1rem;
+      border-radius: 3rem;
       color: $white;
       padding: 1rem;
       padding-bottom: 1.5rem;
