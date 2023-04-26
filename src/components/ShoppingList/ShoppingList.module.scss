@@ -1,0 +1,38 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.shopping-list-main {
+  &__headings {
+    display: grid;
+    grid-template-columns: 2.5fr 0.5fr 1fr;
+    justify-items: center;
+    margin-bottom: 2rem;
+
+    & > * {
+      width: 100%;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    & > :nth-child(2) {
+      text-align: center;
+    }
+
+    & > :nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  &__list {
+    margin-bottom: 2rem;
+
+    li {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    & > li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

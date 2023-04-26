@@ -8,6 +8,7 @@ const initialState = {
   totalDeliveryFee: 0,
   tax: 0,
   isOpen: false,
+  orderPlaced: false,
   totalIncludingAllExpenses: 0,
 };
 
@@ -17,6 +18,10 @@ const cartSlice = createSlice({
   reducers: {
     toggleCart: (state) => {
       state.isOpen = !state.isOpen;
+    },
+    // place order
+    placeOrder: (state) => {
+      state.orderPlaced = true;
     },
 
     //  add items to the cart
@@ -87,6 +92,7 @@ const cartSlice = createSlice({
 
     resetAll: (state) => {
       state.cartItems.splice(0);
+      state.orderPlaced = false;
       state.quantity = 0;
       state.totalPrice = 0;
       state.totalDeliveryFee = 0;
@@ -104,4 +110,5 @@ export const {
   removeItem,
   resetAll,
   closeCart,
+  placeOrder,
 } = cartSlice.actions;

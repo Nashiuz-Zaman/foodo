@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIE,+BAAQ;EACN,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,eAAe;EACtC,aAAa,EAAE,MAAM;EAErB,sHAES;IACP,SAAS,EAAE,OAAO;EAGpB,qCAAQ;IACN,KAAK,EAAE,IAAI;IACX,WAAW,EAAE,GAAG;IAChB,KAAK,ECjBD,OAAO;EDoBb,uCAAU;IACR,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,MAAM;EAGpB,sCAAS;IACP,KAAK,EAAE,IAAI;IACX,UAAU,EAAE,KAAK",
+"sources": ["ShoppingItemFinal.module.scss","../../scss/_variables.scss"],
+"names": [],
+"file": "ShoppingItemFinal.module.css"
+}

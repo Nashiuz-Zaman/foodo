@@ -1,0 +1,17 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.success-icon-container {
+  width: 5rem;
+  padding: 0.8rem;
+  @include squarebox;
+  border-radius: 50%;
+  @include no-flow;
+  @include bg($primary);
+  @include flex-row-center;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}

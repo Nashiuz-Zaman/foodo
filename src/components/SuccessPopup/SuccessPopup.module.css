@@ -1,0 +1,33 @@
+.success-popup-main__checkbox {
+  margin-bottom: 2.5rem;
+  margin-inline: auto; }
+.success-popup-main__heading {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.2; }
+.success-popup-main__message {
+  color: inherit;
+  font-size: 1.45rem;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
+  text-align: left; }
+.success-popup-main__order-details-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem; }
+.success-popup-main__horizontal-line {
+  margin-bottom: 2rem; }
+.success-popup-main__shopping-expenses {
+  margin-bottom: 4rem; }
+.success-popup-main__button {
+  width: 100%;
+  border-radius: 100rem; }
+  .success-popup-main__button button {
+    font-size: 1.55rem;
+    padding: 1.7rem;
+    margin: 0 auto; }
+
+/*# sourceMappingURL=SuccessPopup.module.css.map */

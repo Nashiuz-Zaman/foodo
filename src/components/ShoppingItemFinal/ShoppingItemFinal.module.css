@@ -1,0 +1,18 @@
+.shopping-item-final-main__item {
+  display: grid;
+  grid-template-columns: 2.5fr 0.5fr 1fr;
+  justify-items: center; }
+  .shopping-item-final-main__item__name, .shopping-item-final-main__item__amount, .shopping-item-final-main__item__price {
+    font-size: 1.35rem; }
+  .shopping-item-final-main__item__name {
+    width: 100%;
+    font-weight: 600;
+    color: #e23d28; }
+  .shopping-item-final-main__item__amount {
+    width: 100%;
+    text-align: center; }
+  .shopping-item-final-main__item__price {
+    width: 100%;
+    text-align: right; }
+
+/*# sourceMappingURL=ShoppingItemFinal.module.css.map */

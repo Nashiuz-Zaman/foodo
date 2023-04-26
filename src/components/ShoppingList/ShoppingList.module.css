@@ -1,0 +1,22 @@
+.shopping-list-main__headings {
+  display: grid;
+  grid-template-columns: 2.5fr 0.5fr 1fr;
+  justify-items: center;
+  margin-bottom: 2rem; }
+  .shopping-list-main__headings > * {
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 600; }
+  .shopping-list-main__headings > :nth-child(2) {
+    text-align: center; }
+  .shopping-list-main__headings > :nth-child(3) {
+    text-align: right; }
+.shopping-list-main__list {
+  margin-bottom: 2rem; }
+  .shopping-list-main__list li {
+    display: block;
+    margin-bottom: 1.5rem; }
+  .shopping-list-main__list > li:last-child {
+    margin-bottom: 0; }
+
+/*# sourceMappingURL=ShoppingList.module.css.map */

@@ -7,15 +7,17 @@ import {
   summarizeCart,
   resetAll,
   closeCart,
+  placeOrder,
 } from '../../features/cart/cartSlice';
 
 //component
 import TertiaryHeading from '../TertiaryHeading/TertiaryHeading';
-import ShoppingItem from '../ShoppingItem/ShoppingItem';
+import ShoppingList from '../ShoppingList/ShoppingList';
 import ShoppingExpenses from '../ShoppingExpenses/ShoppingExpenses';
 import Button from '../Button/Button';
 import ImageElement from '../ImageElement/ImageElement';
 import LinkButton from '../LinkButton/LinkButton';
+import SuccessPopup from '../SuccessPopup/SuccessPopup';
 
 //styles
 import styles from './ShoppingCart.module.css';
@@ -42,36 +44,41 @@ export default function ShoppingCart({
   // jsx template
   return (
     <div
+      id="shopping-cart"
       style={customStyles}
       className={`${styles['shopping-cart-main']} ${
         cartState.isOpen ? styles['active'] : styles['not-active']
       } ${extraClass ? extraClass.join(' ') : 'no-extra-class'}`}
     >
-      <div
-        className={styles['shopping-cart-main__heading-and-button-container']}
-      >
-        <TertiaryHeading
-          extraClass={[
-            styles['shopping-cart-main__heading-and-button-container__heading'],
-          ]}
-          heading="Your Cart"
-        />
-
-        {/* clear cart  */}
-        {cartState.cartItems.length > 0 && (
-          <Button
-            onClick={() => {
-              dispatch(resetAll());
-            }}
-            buttonText={'Clear Cart'}
+      {!cartState.orderPlaced && (
+        <div
+          className={styles['shopping-cart-main__heading-and-button-container']}
+        >
+          <TertiaryHeading
             extraClass={[
               styles[
-                'shopping-cart-main__heading-and-button-container__button'
+                'shopping-cart-main__heading-and-button-container__heading'
               ],
             ]}
+            heading="Your Cart"
           />
-        )}
-      </div>
+
+          {/* clear cart  */}
+          {cartState.cartItems.length > 0 && (
+            <Button
+              onClick={() => {
+                dispatch(resetAll());
+              }}
+              buttonText={'Clear Cart'}
+              extraClass={[
+                styles[
+                  'shopping-cart-main__heading-and-button-container__button'
+                ],
+              ]}
+            />
+          )}
+        </div>
+      )}
 
       {cartState.cartItems.length === 0 && (
         <div>
@@ -95,29 +102,27 @@ export default function ShoppingCart({
         </div>
       )}
 
-      {cartState.cartItems.length > 0 && (
-        <div>
-          <div className={styles['shopping-cart-main__items-headings']}>
-            <p>Item</p>
-            <p>Qty</p>
-            <p>Price ($)</p>
-          </div>
+      {cartState.orderPlaced && (
+        <SuccessPopup
+          heading={'Order Placed'}
+          message={
+            'Thank you for placing your order with Foodo. As soon as your order is prepared, our delivery service will be on their way to you. Your order details are provided below.'
+          }
+          buttonText={'Close'}
+          purchasedItems={cartState.cartItems}
+          total={cartState.totalIncludingAllExpenses}
+          subTotal={cartState.totalPrice}
+          tax={cartState.tax}
+          deliveryFee={cartState.totalDeliveryFee}
+          onClick={() => {
+            dispatch(resetAll());
+          }}
+        />
+      )}
 
-          <ul className={styles['shopping-cart-main__list-of-items']}>
-            {cartState.cartItems.map((single) => {
-              return (
-                <li key={single.id}>
-                  <ShoppingItem
-                    itemObject={single}
-                    id={single.id}
-                    name={single.name}
-                    price={single.price}
-                    amount={single.amount}
-                  />
-                </li>
-              );
-            })}
-          </ul>
+      {cartState.cartItems.length > 0 && !cartState.orderPlaced && (
+        <div>
+          <ShoppingList selectedItems={cartState.cartItems} />
 
           <hr className={styles['shopping-cart-main__horizontal-line']} />
 
@@ -130,6 +135,9 @@ export default function ShoppingCart({
           />
 
           <Button
+            onClick={() => {
+              dispatch(placeOrder());
+            }}
             extraClass={[styles['shopping-cart-main__order-button']]}
             buttonText={'Place Order - Delivery'}
           />
