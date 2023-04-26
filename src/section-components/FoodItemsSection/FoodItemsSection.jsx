@@ -1,14 +1,17 @@
 //react
 import { useEffect, useState } from 'react';
 
+//redux
+import { useSelector, useDispatch } from 'react-redux';
+import { getAllFoodItems } from '../../features/foodItems/foodItemsSlice';
+
 //components
 import LoadingSpinner from '../../components/LoadingSpinner/LoadingSpinner';
-import HorizontalScrollGallery from '../../components/HorizontalScrollGallery/HorizontalScrollGallery';
+
 import TertiaryHeading from '../../components/TertiaryHeading/TertiaryHeading';
 import LargeFoodCard from '../../components/LargeFoodCard/LargeFoodCard';
 
 // hooks
-import useFetchFoodItems from '../../hooks/useFetchFoodItems';
 import useExtractRandomFromArr from '../../hooks/useExtractRandomFromArr';
 import useShuffleArr from '../../hooks/useShuffleArr';
 
@@ -17,18 +20,25 @@ import styles from './FoodItemsSection.module.css';
 
 //FoodItemsSection starts here
 export default function FoodItemsSection({ extraClass = undefined }) {
-  const { data, error, isPending } = useFetchFoodItems();
-  const [shuffledData, setShuffledData] = useState(null);
+  const dispatch = useDispatch();
+
+  const { allFoodItems, isPending, errorMessage } = useSelector(
+    (state) => state.foodItems
+  );
+
   const [topPicks, setTopPicks] = useState(null);
   const { extractRandomFromArr } = useExtractRandomFromArr();
   const { shuffleArr } = useShuffleArr();
 
   useEffect(() => {
-    if (data) {
-      setShuffledData(shuffleArr(data));
-      setTopPicks(extractRandomFromArr(data, 4));
+    dispatch(getAllFoodItems());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (allFoodItems) {
+      setTopPicks(extractRandomFromArr(shuffleArr(allFoodItems), 4));
     }
-  }, [data, extractRandomFromArr, shuffleArr]);
+  }, [allFoodItems, extractRandomFromArr, shuffleArr]);
 
   // jsx template
   return (
@@ -38,33 +48,21 @@ export default function FoodItemsSection({ extraClass = undefined }) {
       }`}
     >
       {isPending && <LoadingSpinner isPending={isPending ? true : false} />}
-      {error && <p className={'data-not-load-error-message'}>{error}</p>}
-      {shuffledData && topPicks && (
-        <>
-          <div className={styles['food-items-section-main__top-picks']}>
-            <TertiaryHeading
-              extraClass={[
-                styles['food-items-section-main__top-picks__heading'],
-              ]}
-              heading={"Today's Top Picks"}
-            />
-            <div
-              className={styles['food-items-section-main__top-picks__items']}
-            >
-              {topPicks.map((single) => {
-                return <LargeFoodCard key={single.id} cardData={single} />;
-              })}
-            </div>
+      {errorMessage && (
+        <p className={'data-not-load-error-message'}>{errorMessage}</p>
+      )}
+      {topPicks && (
+        <div className={styles['food-items-section-main__top-picks']}>
+          <TertiaryHeading
+            extraClass={[styles['food-items-section-main__top-picks__heading']]}
+            heading={"Today's Top Picks"}
+          />
+          <div className={styles['food-items-section-main__top-picks__items']}>
+            {topPicks.map((single) => {
+              return <LargeFoodCard key={single.id} cardData={single} />;
+            })}
           </div>
-
-          <div className={styles['food-items-section-main__delicious-dishes']}>
-            <TertiaryHeading
-              extraClass={[styles['food-items-section-main__gallery-heading']]}
-              heading={'Delicious Dishes'}
-            />
-            <HorizontalScrollGallery dataArray={shuffledData} />
-          </div>
-        </>
+        </div>
       )}
     </section>
   );

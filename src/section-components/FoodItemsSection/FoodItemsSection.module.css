@@ -26,7 +26,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-.food-items-section-main__gallery-heading {
+.food-items-section-main__all-dishes__heading {
   margin: 0;
   text-align: left !important;
   padding: 0 2.5rem;
@@ -42,27 +42,27 @@
             column-gap: 4rem; } }
 @media (min-width: 48em) {
   .food-items-section-main__top-picks {
-    margin-inline: 6rem; }
-    .food-items-section-main__top-picks__items {
-      -webkit-column-gap: 6rem;
-              column-gap: 6rem; } }
-@media (min-width: 48em) {
-  .food-items-section-main__top-picks {
-    margin: 0 8rem 8rem; }
+    margin: 0 8rem 10rem; }
     .food-items-section-main__top-picks__heading {
-      margin-bottom: 5rem !important; }
+      margin-bottom: 4rem !important; }
       .food-items-section-main__top-picks__heading h3 {
         font-size: 3rem; }
     .food-items-section-main__top-picks__items {
       -webkit-column-gap: 6rem;
-              column-gap: 6rem; } }
-@media (min-width: 48em) {
-  .food-items-section-main__top-picks__items {
-    grid-template-columns: repeat(2, 35rem);
-    gap: 7rem; } }
+              column-gap: 6rem; }
+  .food-items-section-main__all-dishes__heading h3 {
+    font-size: 3rem; } }
+@media (min-width: 62em) {
+  .food-items-section-main__top-picks {
+    margin: 0 2.5rem 10rem; }
+    .food-items-section-main__top-picks__items {
+      grid-template-columns: repeat(4, 1fr);
+      -webkit-column-gap: 2rem;
+              column-gap: 2rem;
+      row-gap: 0; } }
 @media (min-width: 65em) {
   .food-items-section-main__top-picks {
-    margin: 0 2.5rem 7rem; }
+    margin: 0 2.5rem 10rem; }
     .food-items-section-main__top-picks__items {
       grid-template-columns: repeat(4, 1fr);
       -webkit-column-gap: 2.5rem;
@@ -70,11 +70,9 @@
       row-gap: 0; } }
 @media (min-width: 75em) {
   .food-items-section-main__top-picks {
-    margin: 0 7rem 7rem; }
+    margin: 0 7rem 10rem; }
     .food-items-section-main__top-picks__items {
-      grid-template-columns: repeat(4, 1fr);
       -webkit-column-gap: 5rem;
-              column-gap: 5rem;
-      row-gap: 0; } }
+              column-gap: 5rem; } }
 
 /*# sourceMappingURL=FoodItemsSection.module.css.map */
