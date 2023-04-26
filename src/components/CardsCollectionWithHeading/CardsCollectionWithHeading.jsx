@@ -1,6 +1,10 @@
 //components
 import TertiaryHeading from '../TertiaryHeading/TertiaryHeading';
 import HorizontalScrollGallery from '../HorizontalScrollGallery/HorizontalScrollGallery';
+import LargeFoodCard from '../LargeFoodCard/LargeFoodCard';
+
+//hooks
+import usemMediaQueryMatcher from '../../hooks/useMediaQueryMatcher';
 
 //styles
 import styles from './CardsCollectionWithHeading.module.css';
@@ -13,6 +17,11 @@ export default function CardsCollectionWithHeading({
   extraClass = undefined,
   imageSource,
 }) {
+  const { customSizeDetector } = usemMediaQueryMatcher();
+
+  const breakpoint = '(min-width: 62em)';
+  const breakpointReached = customSizeDetector(breakpoint);
+
   // jsx template
   return (
     <div
@@ -26,7 +35,19 @@ export default function CardsCollectionWithHeading({
         heading={heading}
         extraClass={[styles['cards-collection-with-heading-main__heading']]}
       />
-      <HorizontalScrollGallery dataArray={dataArray} />
+
+      {!breakpointReached && <HorizontalScrollGallery dataArray={dataArray} />}
+      {breakpointReached && (
+        <div
+          className={
+            styles['cards-collection-with-heading-main__cards-collection']
+          }
+        >
+          {dataArray.map((single) => {
+            return <LargeFoodCard key={single.id} cardData={single} />;
+          })}
+        </div>
+      )}
     </div>
   );
 }
