@@ -14,6 +14,7 @@
 /.prettierrc
 /index.html
 /server/classes/Database.php
+/src/data/ApiInformation.js
 
 # misc
 .DS_Store
