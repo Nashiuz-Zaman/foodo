@@ -9,7 +9,7 @@
 
       a {
         @include link-normal {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           transition: $basic;
           text-transform: capitalize;
           color: $primary;
@@ -34,6 +34,20 @@
           color: $primaryDark;
           &::before {
             transform: translateX(-50%) scale(1, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mediaMin(75em) {
+  .desktop-navigation-main {
+    &__list-of-links {
+      ul {
+        a {
+          @include link-normal {
+            font-size: 1.5rem;
           }
         }
       }

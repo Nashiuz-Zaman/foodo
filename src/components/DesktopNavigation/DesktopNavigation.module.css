@@ -14,7 +14,7 @@
           align-items: center;
   gap: 2.5rem; }
   .desktop-navigation-main__list-of-links ul a:link, .desktop-navigation-main__list-of-links ul a:visited {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
     text-transform: capitalize;
@@ -41,5 +41,9 @@
     .desktop-navigation-main__list-of-links ul a:hover::before, .desktop-navigation-main__list-of-links ul a:active::before {
       -webkit-transform: translateX(-50%) scale(1, 1);
               transform: translateX(-50%) scale(1, 1); }
+
+@media (min-width: 75em) {
+  .desktop-navigation-main__list-of-links ul a:link, .desktop-navigation-main__list-of-links ul a:visited {
+    font-size: 1.5rem; } }
 
 /*# sourceMappingURL=DesktopNavigation.module.css.map */
