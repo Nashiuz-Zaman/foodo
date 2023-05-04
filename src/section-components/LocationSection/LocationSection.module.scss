@@ -21,12 +21,18 @@
     &__location {
       flex-basis: 45%;
 
-      [class*='__heading'] {
-        @include flex-row-center;
+      & > [class*='link'] {
+        & > [class*='container'] {
+          @include flex-col-rev;
 
-        h3 {
-          color: $darkText;
-          font-weight: 400;
+          [class*='__heading'] {
+            margin-bottom: 0;
+            h3 {
+              font-weight: 500;
+
+              margin-top: 1.55rem;
+            }
+          }
         }
       }
     }
@@ -46,6 +52,10 @@
 
       &__location {
         flex-basis: 30%;
+
+        h3 {
+          font-size: 1.6rem;
+        }
       }
     }
   }
