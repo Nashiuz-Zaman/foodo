@@ -50,10 +50,10 @@
         .large-food-card-main__item__info__name-and-price__name, .large-food-card-main__item__info__name-and-price__price {
           display: inline-block; }
         .large-food-card-main__item__info__name-and-price__name {
-          font-size: 1.7rem;
-          font-weight: 500; }
+          font-size: 1.6rem;
+          font-weight: 600; }
         .large-food-card-main__item__info__name-and-price__price {
-          font-size: 1.7rem;
+          font-size: 1.8rem;
           color: #e23d28;
           font-weight: 600; }
       .large-food-card-main__item__info__bottom-info {
