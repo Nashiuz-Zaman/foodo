@@ -132,9 +132,14 @@
 
 @include mediaMin(62em) {
   .promotion-section-main {
-    @include flex-row;
-    width: 100%;
+    @include flex-row();
+    width: 95%;
+
     @include no-padding-margin;
+    margin-left: auto;
+    border-top-left-radius: 7.5rem;
+    border-bottom-left-radius: 7.5rem;
+    @include no-flow;
 
     &__promotion-heading {
       flex-basis: 40%;
@@ -155,11 +160,13 @@
     }
 
     &__promotion-message {
-      width: 25%;
-      right: 0;
+      width: 30%;
+      right: 2.5rem;
       bottom: 2.5rem;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+
+      p {
+        font-size: 1.4rem;
+      }
     }
   }
 }
@@ -170,6 +177,23 @@
       h3 {
         text-align: left;
         font-size: 5.5rem;
+      }
+    }
+
+    &__promotion-message {
+      width: 25%;
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@include mediaMin(81em) {
+  .promotion-section-main {
+    &__promotion-message {
+      p {
+        font-size: 1.75rem;
       }
     }
   }

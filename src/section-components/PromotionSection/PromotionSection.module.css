@@ -102,9 +102,13 @@
     -webkit-box-align: normal;
         -ms-flex-align: normal;
             align-items: normal;
-    width: 100%;
+    width: 95%;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    margin-left: auto;
+    border-top-left-radius: 7.5rem;
+    border-bottom-left-radius: 7.5rem;
+    overflow: hidden; }
     .promotion-section-main__promotion-heading {
       -ms-flex-preferred-size: 40%;
           flex-basis: 40%;
@@ -121,14 +125,21 @@
       -ms-flex-preferred-size: 60%;
           flex-basis: 60%; }
     .promotion-section-main__promotion-message {
-      width: 25%;
-      right: 0;
-      bottom: 2.5rem;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0; } }
+      width: 30%;
+      right: 2.5rem;
+      bottom: 2.5rem; }
+      .promotion-section-main__promotion-message p {
+        font-size: 1.4rem; } }
 @media (min-width: 75em) {
   .promotion-section-main__promotion-heading h3 {
     text-align: left;
-    font-size: 5.5rem; } }
+    font-size: 5.5rem; }
+  .promotion-section-main__promotion-message {
+    width: 25%; }
+    .promotion-section-main__promotion-message p {
+      font-size: 1.6rem; } }
+@media (min-width: 81em) {
+  .promotion-section-main__promotion-message p {
+    font-size: 1.75rem; } }
 
 /*# sourceMappingURL=PromotionSection.module.css.map */
