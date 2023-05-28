@@ -1,6 +1,7 @@
 .large-food-card-main {
   width: 100%;
-  height: auto; }
+  height: auto;
+  scroll-snap-align: start; }
   .large-food-card-main__item {
     border-radius: 3rem; }
     .large-food-card-main__item__img {

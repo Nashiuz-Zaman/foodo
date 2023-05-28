@@ -1,44 +1,36 @@
 //image sources
-import pizzasImage from '../assets/pizzas.webp';
-import burgersImage from '../assets/burgers.webp';
-import steaksImage from '../assets/steaks.webp';
-import soupsImage from '../assets/soups.webp';
-import pizzaicon from '../assets/pizzaicon.webp';
-import burgericon from '../assets/burgericon.webp';
-import soupicon from '../assets/soupicon.webp';
-import steakicon from '../assets/steakicon.webp';
+import pizzaMenuTitleImage from '../assets/menuTitleImages/pizzamenu.webp';
+import burgerMenuTitleImage from '../assets/menuTitleImages/burgermenu.webp';
+import steakMenuTitleImage from '../assets/menuTitleImages/steakmenu.webp';
+import soupMenuTitleImage from '../assets/menuTitleImages/soupmenu.webp';
 
 export const foodCategories = [
   {
     id: 0,
-    imageSource: pizzasImage,
     title: 'pizzas',
     linkFor: 'hashed',
     toUrl: 'menu#pizzas',
-    icon: pizzaicon,
+    imageSource: pizzaMenuTitleImage,
   },
   {
     id: 1,
-    imageSource: burgersImage,
     title: 'burgers',
     linkFor: 'hashed',
     toUrl: 'menu#burgers',
-    icon: burgericon,
+    imageSource: burgerMenuTitleImage,
   },
   {
     id: 2,
-    imageSource: steaksImage,
     title: 'steaks',
     linkFor: 'hashed',
     toUrl: 'menu#steaks',
-    icon: steakicon,
+    imageSource: steakMenuTitleImage,
   },
   {
     id: 3,
-    imageSource: soupsImage,
     title: 'soups',
     linkFor: 'hashed',
     toUrl: 'menu#soups',
-    icon: soupicon,
+    imageSource: soupMenuTitleImage,
   },
 ];

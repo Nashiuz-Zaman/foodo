@@ -44,6 +44,8 @@
 
 @media (min-width: 48em) {
   .mobile-header-main {
+    position: -webkit-sticky;
+    position: sticky;
     background-color: rgba(255, 255, 255, 0.8); } }
 
 /*# sourceMappingURL=MobileHeader.module.css.map */

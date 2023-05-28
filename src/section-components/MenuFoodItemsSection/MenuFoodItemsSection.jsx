@@ -1,5 +1,6 @@
 //component
 import CardsCollectionWithHeading from '../../components/CardsCollectionWithHeading/CardsCollectionWithHeading';
+import ShowcaseWithTitle from '../../components/ShowcaseWithTitle/ShowcaseWithTitle';
 
 //styles
 import styles from './MenuFoodItemsSection.module.css';
@@ -19,17 +20,27 @@ export default function MenuFoodItemsSection({
         extraClass ? extraClass.join(' ') : 'no-extra-class'
       }`}
     >
-      {categories.map((category, i, arr) => {
+      {categories.map((category) => {
         return (
-          <CardsCollectionWithHeading
+          <div
+            id={category.title}
+            className={`${styles['menu-food-items-section-main__single-category']} scroll-offset`}
             key={category.id}
-            divId={category.title}
-            imageSource={category.icon}
-            heading={category.title}
-            dataArray={allItems.filter((item) => {
-              return item.category === category.title;
-            })}
-          />
+          >
+            <ShowcaseWithTitle
+              dataObject={category}
+              extraClass={[
+                styles[
+                  'menu-food-items-section-main__single-category__showcase-with-title-main'
+                ],
+              ]}
+            />
+            <CardsCollectionWithHeading
+              dataArray={allItems.filter((item) => {
+                return item.category === category.title;
+              })}
+            />
+          </div>
         );
       })}
     </section>

@@ -11,11 +11,9 @@ import styles from './CardsCollectionWithHeading.module.css';
 
 //CardsCollectionWithHeading starts here
 export default function CardsCollectionWithHeading({
-  divId = '',
-  heading = 'no heading provided',
+  headingData = null,
   dataArray = undefined,
   extraClass = undefined,
-  imageSource,
 }) {
   const { customSizeDetector } = usemMediaQueryMatcher();
 
@@ -25,16 +23,17 @@ export default function CardsCollectionWithHeading({
   // jsx template
   return (
     <div
-      id={divId}
-      className={`${
-        styles['cards-collection-with-heading-main']
-      } scroll-offset ${extraClass ? extraClass.join(' ') : 'no-extra-class'}`}
+      className={`${styles['cards-collection-with-heading-main']} ${
+        extraClass ? extraClass.join(' ') : 'no-extra-class'
+      }`}
     >
-      <TertiaryHeading
-        imageSource={imageSource}
-        heading={heading}
-        extraClass={[styles['cards-collection-with-heading-main__heading']]}
-      />
+      {headingData && (
+        <TertiaryHeading
+          imageSource={headingData.imageSource}
+          heading={headingData.heading}
+          extraClass={[styles['cards-collection-with-heading-main__heading']]}
+        />
+      )}
 
       {!breakpointReached && <HorizontalScrollGallery dataArray={dataArray} />}
       {breakpointReached && (

@@ -3,5 +3,27 @@
 
 .menu-food-items-section-main {
   @include flex-col;
-  gap: 5rem;
+  gap: 7.5rem;
+
+  &__single-category {
+    &__showcase-with-title-main {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+@include mediaMin(48em) {
+  .menu-food-items-section-main {
+    gap: 12rem;
+  }
+}
+
+@include mediaMin(62em) {
+  .menu-food-items-section-main {
+    &__single-category {
+      &__showcase-with-title-main {
+        margin-bottom: 5rem;
+      }
+    }
+  }
 }

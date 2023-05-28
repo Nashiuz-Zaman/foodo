@@ -12,6 +12,15 @@
   -webkit-box-align: normal;
       -ms-flex-align: normal;
           align-items: normal;
-  gap: 5rem; }
+  gap: 7.5rem; }
+  .menu-food-items-section-main__single-category__showcase-with-title-main {
+    margin-bottom: 2.5rem; }
+
+@media (min-width: 48em) {
+  .menu-food-items-section-main {
+    gap: 12rem; } }
+@media (min-width: 62em) {
+  .menu-food-items-section-main__single-category__showcase-with-title-main {
+    margin-bottom: 5rem; } }
 
 /*# sourceMappingURL=MenuFoodItemsSection.module.css.map */

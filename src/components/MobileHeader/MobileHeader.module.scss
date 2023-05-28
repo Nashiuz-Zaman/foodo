@@ -23,6 +23,7 @@
 
 @include mediaMin(48em) {
   .mobile-header-main {
+    position: sticky;
     @include bg-trans($white, 0.8);
   }
 }

@@ -21,8 +21,8 @@
   &__scroller {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 90%;
-    gap: 1rem;
+    grid-auto-columns: 70%;
+    gap: 2rem;
     overflow-x: auto;
     padding: 0.75rem 2.5rem;
     scroll-snap-type: x mandatory;
@@ -56,6 +56,14 @@
   .horizontal-scroll-gallery {
     &__scroller {
       grid-auto-columns: 26.5rem;
+    }
+  }
+}
+
+@include mediaMin(50em) {
+  .horizontal-scroll-gallery {
+    &__scroller {
+      grid-auto-columns: 31.5%;
     }
   }
 }

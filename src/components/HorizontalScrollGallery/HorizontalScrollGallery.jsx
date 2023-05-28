@@ -1,7 +1,5 @@
-//react
-
 //component
-import FoodCard from '../FoodCard/FoodCard';
+import LargeFoodCard from '../LargeFoodCard/LargeFoodCard';
 
 //styles
 import styles from './HorizontalScrollGallery.module.css';
@@ -13,7 +11,7 @@ export default function HorizontalScrollGallery({ dataArray = [] }) {
         {dataArray &&
           dataArray.map((single) => {
             return (
-              <FoodCard
+              <LargeFoodCard
                 extraClass={[
                   styles['horizontal-scroll-gallery__scroller__gallery-item'],
                 ]}

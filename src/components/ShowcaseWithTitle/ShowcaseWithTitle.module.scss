@@ -1,0 +1,132 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.showcase-with-title-main {
+  width: 100%;
+  aspect-ratio: 16/12.5;
+  position: relative;
+
+  &__image {
+    @include same-size;
+    @include bg-cover-center;
+  }
+
+  &__title {
+    font-size: 4rem;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    @include bg-trans($primary, 0.9);
+    color: $white;
+    @include bg-blur(3px);
+    text-transform: capitalize;
+    border-top-right-radius: 100rem;
+    border-bottom-right-radius: 100rem;
+    font-weight: 500;
+  }
+}
+
+@include mediaMin(31em) {
+  .showcase-with-title-main {
+    aspect-ratio: 16/10;
+  }
+}
+
+@include mediaMin(37em) {
+  .showcase-with-title-main {
+    aspect-ratio: 16/9;
+
+    &__title {
+      font-size: 4rem;
+    }
+  }
+}
+
+@include mediaMin(45em) {
+  .showcase-with-title-main {
+    width: calc(100% - 2.5rem);
+    margin-left: auto;
+    aspect-ratio: 16/7.5;
+    @include flex-row-rev(_, center);
+
+    &__image {
+      flex-basis: 77.5%;
+      @include border-radius(3rem, 0, 0, 3rem);
+    }
+
+    &__title {
+      width: 20rem;
+      @include squarebox;
+      @include border-radius(100rem, 10rem, 10rem, 100rem);
+      @include bg($primary);
+      @include flex-row-center;
+      top: 50%;
+      left: 0;
+      bottom: unset;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@include mediaMin(50em) {
+  .showcase-with-title-main {
+    aspect-ratio: 16/6.5;
+  }
+}
+
+@include mediaMin(62em) {
+  .showcase-with-title-main {
+    width: 80%;
+    margin: 0 auto;
+
+    &__image {
+      @include border-radius(3rem, 3rem, 3rem, 3rem);
+    }
+
+    &__title {
+      left: 2%;
+    }
+  }
+}
+
+@include mediaMin(75em) {
+  .showcase-with-title-main {
+    width: 100%;
+    aspect-ratio: 16/5;
+
+    &__image {
+      @include border-radius(3rem, 0, 0, 3rem);
+    }
+
+    &__title {
+      width: 27.5rem;
+      left: 5rem;
+    }
+  }
+}
+
+@include mediaMin(81em) {
+  .showcase-with-title-main {
+    &__title {
+      font-size: 5rem;
+      left: 4.5%;
+    }
+  }
+}
+
+@include mediaMin(87em) {
+  .showcase-with-title-main {
+    &__title {
+      left: 8%;
+    }
+  }
+}
+
+@include mediaMin(118em) {
+  .showcase-with-title-main {
+    &__title {
+      left: 10%;
+    }
+  }
+}

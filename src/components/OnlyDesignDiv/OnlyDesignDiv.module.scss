@@ -3,11 +3,21 @@
 
 .only-design-div {
   padding: 0rem 0;
-  @include flex-row(center, center);
+  @include flex-row(flex-end, center);
+  margin-block: 10rem;
 
   &__core {
-    width: 50%;
-    height: 0.1rem;
-    background-color: $lightestGray;
+    width: 80%;
+    height: 20rem;
+    @include primary-gradient;
+    border-top-left-radius: 10rem;
+  }
+}
+
+@include mediaMin(48em) {
+  .only-design-div {
+    padding: 0rem 0;
+    @include flex-row(center, center);
+    margin-block: 10rem;
   }
 }

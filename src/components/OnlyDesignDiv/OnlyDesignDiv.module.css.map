@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAGA,gBAAiB;EACf,OAAO,EAAE,MAAM;ECqIf,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EDtIG,MAAM;ECuIxB,WAAW,EDvIe,MAAM;EAEhC,sBAAQ;IACN,KAAK,EAAE,GAAG;IACV,MAAM,EAAE,MAAM;IACd,gBAAgB,EEYL,IAAI",
-"sources": ["OnlyDesignDiv.module.scss","../../scss/_mixins.scss","../../scss/_variables.scss"],
+"mappings": "AAGA,gBAAiB;EACf,OAAO,EAAE,MAAM;ECqIf,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EDtIG,QAAQ;ECuI1B,WAAW,EDvIiB,MAAM;EAClC,YAAY,EAAE,KAAK;EAEnB,sBAAQ;IACN,KAAK,EAAE,GAAG;IACV,MAAM,EAAE,KAAK;IC4Of,gBAAgB,EAAE,2CAA6C;ID1O7D,sBAAsB,EAAE,KAAK;;AC0V/B,wBAAgC;EDrVhC,gBAAiB;IACf,OAAO,EAAE,MAAM;ICuHjB,OAAO,EAAE,IAAI;IACb,cAAc,EAAE,GAAG;IACnB,eAAe,EDxHK,MAAM;ICyH1B,WAAW,EDzHiB,MAAM;IAChC,YAAY,EAAE,KAAK",
+"sources": ["OnlyDesignDiv.module.scss","../../scss/_mixins.scss"],
 "names": [],
 "file": "OnlyDesignDiv.module.css"
 }

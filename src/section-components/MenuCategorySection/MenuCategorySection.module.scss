@@ -3,7 +3,7 @@
 
 .menu-category-section-main {
   padding: 0 2.5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 
   &__section-title {
     margin-bottom: 3rem;
@@ -20,8 +20,6 @@
 
 @include mediaMin(62em) {
   .menu-category-section-main {
-    margin-bottom: 7.5rem;
-
     &__section-title {
       margin-bottom: 4rem;
     }
@@ -45,8 +43,10 @@
 
 @include mediaMin(75em) {
   .menu-category-section-main {
+    margin-bottom: 15rem;
+
     &__category-container {
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
   }
 }

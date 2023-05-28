@@ -135,19 +135,14 @@
 @media (min-width: 62em) {
   .wide-hero-section-main {
     height: 60rem; }
-    .wide-hero-section-main__text-container__heading-description-button-main {
-      -webkit-transform: translateY(2.5rem);
-              transform: translateY(2.5rem); }
-      .wide-hero-section-main__text-container__heading-description-button-main > [class*='short-introduction'] {
-        font-size: 2rem;
-        margin-bottom: 1.2rem; }
-      .wide-hero-section-main__text-container__heading-description-button-main > [class*='__heading'] {
-        font-size: 3rem;
-        margin-bottom: 1.5rem; }
+    .wide-hero-section-main__text-container__heading-description-button-main > [class*='short-introduction'] {
+      font-size: 2rem;
+      margin-bottom: 1.2rem; }
+    .wide-hero-section-main__text-container__heading-description-button-main > [class*='__heading'] {
+      font-size: 3rem;
+      margin-bottom: 1.5rem; }
     .wide-hero-section-main__carousel-container__carousel {
-      width: 42.5rem;
-      -webkit-transform: translateY(2.5rem);
-              transform: translateY(2.5rem); } }
+      width: 42.5rem; } }
 @media (min-width: 65em) {
   .wide-hero-section-main__text-container {
     padding-left: 10rem; }

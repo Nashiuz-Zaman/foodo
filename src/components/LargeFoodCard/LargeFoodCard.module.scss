@@ -4,6 +4,7 @@
 .large-food-card-main {
   width: 100%;
   height: auto;
+  scroll-snap-align: start;
 
   &__item {
     border-radius: 3rem;
