@@ -1,5 +1,7 @@
 # Foodo
 
+Live link: http://foodo.epizy.com
+
 This is a sample website for a online food delivery service. The website currently contains the home page and the menu page. It is fully responsive. The website is a fullstack project where data is served from the server side created using PHP and MySQL.
 
 # Technologies
